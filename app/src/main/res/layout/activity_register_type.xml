@@ -55,10 +55,9 @@
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Google"
-                    android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -92,10 +91,9 @@
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Facebook"
-                    android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -129,10 +127,9 @@
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Email"
-                    android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -166,10 +163,9 @@
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Mobile"
-                    android:textAlignment="center"
                     android:textColor="@android:color/black" />
 
             </LinearLayout>

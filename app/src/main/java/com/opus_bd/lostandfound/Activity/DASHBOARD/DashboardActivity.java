@@ -230,7 +230,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     @OnClick({R.id.fablost, R.id.llfablost})
     public void fablost() {
         Constants.ENTRY_TYPE_ID = Constants.LOST;
-        Intent intent = new Intent(DashboardActivity.this, InformationEntryActivity.class);
+        Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);
         finish();
     }

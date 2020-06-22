@@ -672,7 +672,7 @@
                     android:layout_height="wrap_content"
                     android:text="If you need assistance please call-"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textColor="#480049"
                     android:textStyle="bold"/>
 
@@ -698,7 +698,7 @@
                     android:text="+880 1730336339"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="#480049"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"/>
 
                 <View
@@ -717,7 +717,7 @@
                     android:layout_alignParentRight="true"
                     android:text=" +880 248311043"
                     android:textColor="#480049"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>

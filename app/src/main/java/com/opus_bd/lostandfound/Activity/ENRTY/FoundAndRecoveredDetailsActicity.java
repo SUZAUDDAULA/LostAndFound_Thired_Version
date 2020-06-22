@@ -61,4 +61,21 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    @OnClick(R.id.ivappLogo)
+    public void ivappLogo() {
+        Intent intent = new Intent(this, DashboardActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, DashboardActivity.class);
+        startActivity(intent);
+        finish();
+        super.onBackPressed();
+    }
 }

@@ -1026,7 +1026,7 @@ public class VehicleEntryActivity extends AppCompatActivity {
     //InformationEntryActivity
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, InformationEntryActivity.class);
+        Intent intent = new Intent(this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);
         finish();
         super.onBackPressed();
@@ -1035,6 +1035,14 @@ public class VehicleEntryActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab)
     public void fab() {
+        Intent intent = new Intent(this, DashboardActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
+    }
+@OnClick(R.id.ivappLogo)
+    public void ivappLogo() {
         Intent intent = new Intent(this, DashboardActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

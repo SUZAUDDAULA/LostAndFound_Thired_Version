@@ -37,7 +37,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.ENRTY.FoundAndRecoveredDetailsActicity"></activity>
+        <activity android:name=".Activity.ENRTY.FoundAndRecoveredDetailsActicity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Activity.LOGREG.RegisterTypeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -87,7 +88,8 @@
         <activity
             android:name=".Activity.ENRTY.OthersItemEntryActivity"
             android:label="@string/othersitemlevel" />
-        <activity android:name=".Activity.ENRTY.VehicleEntryActivity" />
+        <activity android:name=".Activity.ENRTY.VehicleEntryActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Activity.ENRTY.UnknownManActivity"
             android:label="@string/missingpersonlevel" />
