@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_5">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/mDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/custom_toolbar"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white">
+
+                    <LinearLayout
+                        android:id="@+id/llAlligation"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/ivAlligation"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_complaint"
+                            android:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tvAlligation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:text="@string/allegation"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white">
+
+                    <LinearLayout
+                        android:id="@+id/llReject"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/ivReject"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_cancle"
+                            android:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tvReject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:text="@string/Cancel_item"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white">
+
+                    <LinearLayout
+                        android:id="@+id/llInvestigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/ivInvestigation"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_investigation"
+                            android:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tvInvestigation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:text="@string/investigation"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white">
+
+                    <LinearLayout
+                        android:id="@+id/llFinish"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/ivFinish"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_disposal"
+                            android:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tvFinish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:text="@string/disposal"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/actionBarSize"
+                android:scrollbars="none"
+                android:scrollingCache="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:visibility="visible"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rlProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prifile_pic"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/circle_men"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_toRightOf="@+id/user_prifile_pic"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/profile_Name"
+                                        android:layout_width="250dp"
+                                        android:layout_height="35dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="Suzauddaula Suza"
+                                        android:textColor="@color/black"
+                                        android:textSize="17sp"/>
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+<!--                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey_10" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey_10" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_middle" />-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/rlProfile"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="30dp"
+                                    android:text="Found/Recovered"
+                                    android:fontFamily="bold"
+                                    android:textSize="25dp"
+                                    android:textColor="@color/black"></TextView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                tools:ignore="DisableBaselineAlignment">
+
+                                <LinearLayout
+                                    android:id="@+id/llBus"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                    <ImageView
+                                        android:id="@+id/Bus"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/bus"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llCar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/Car"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/car"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llCng"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/Cng"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/cng"
+                                        />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_middle" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                tools:ignore="DisableBaselineAlignment">
+
+                                <LinearLayout
+                                    android:id="@+id/llCoveredVan"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                    <ImageView
+                                        android:id="@+id/CoveredVan"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/coveredvan"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llLegona"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/Legona"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/leguna"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llMicrobus"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/Microbus"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/microbus"
+                                        />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                tools:ignore="DisableBaselineAlignment">
+
+                                <LinearLayout
+                                    android:id="@+id/llMotorbike"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                    <ImageView
+                                        android:id="@+id/Motorbike"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/motorbike"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llPickup"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/Pickup"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/pickup"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llTruck"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/Truck"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:clickable="true"
+                                        android:src="@drawable/truck"
+                                        />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:visibility="gone"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/spacing_middle"
+                                android:text="@string/information_search"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_60"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey_10" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_middle" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/llManSearch"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/fabManSearch"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:clickable="true"
+                                        android:src="@drawable/ic_human_db"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_medium"
+                                        android:text="@string/man"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                        android:textColor="@color/grey_40" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llVehicleSearch"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/fabVehicleSearch"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:scaleType="fitXY"
+                                        android:clickable="true"
+                                        android:src="@drawable/ic_vehicle" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_medium"
+                                        android:text="@string/vehicle"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                        android:textColor="@color/grey_40" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llOthersSearch"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/fabOthersSearch"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:clickable="true"
+                                        android:src="@drawable/ic_others_db"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_medium"
+                                        android:text="@string/others"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                        android:textColor="@color/grey_40" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_middle" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_middle" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_middle" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/home_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorAccent" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvCIDHeading1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If you need assistance please call-"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textSize="20sp"
+                    android:textColor="#480049"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mobilephone" />
+
+                <TextView
+                    android:id="@+id/tvCIDMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="+880 1730336339"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="#480049"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_telephone" />
+
+                <TextView
+                    android:id="@+id/tvCIDTelephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=" +880 248311043"
+                    android:textColor="#480049"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/bar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
