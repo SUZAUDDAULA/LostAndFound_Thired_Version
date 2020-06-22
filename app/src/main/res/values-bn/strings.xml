@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lost &amp; Found</string>
+    <string name="lost_found_apps"><![CDATA[LOST & FOUND APPS]]></string>
+    <string name="welcome_to">Welcome To bangla</string>
+    <string name="user_name">মো: দেলোয়ার হোসেন মিয়া</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="bangla">বাংলা</string>
+    <string name="english">English</string>
+    <string name="location_request">আপনার লোকেশন অবশ্যই চালু রাখুন</string>
+    <string name="id_request">নিবন্ধনের জন্য নিচের যেকোনো একটি অপশন সিলেক্ট করুন .</string>
+    <string name="camera_request">নিচের ক্যামেরা ট্যাপ করে আপনার ছবি তুলুন.</string>
+    <string name="address_verification_request">জাতীয় পরিচয় পত্রের ঠিকানাটা কি আপনি বর্তমান ঠিকানা হিসেবে ব্যবহার করবেন?</string>
+    <string name="foreigner">বিদেশী</string>
+    <string name="citizen">বাংলাদেশী</string>
+    <string name="log_in">সাইন ইন</string>
+    <string name="registration">নিবন্ধন</string>
+    <string name="password_forget">পাসওয়ার্ড ভুলে গেছেন</string>
+    <string name="remember_password">পাসওয়ার্ড মনে রাখুন</string>
+    <string name="password">পাসওয়ার্ড</string>
+    <string name="password_confirmation">পাসওয়ার্ড নিশ্চিতকরণ</string>
+    <string name="user_id">আইডি</string>
+    <string name="login">লগইন</string>
+    <string name="or_new_user">নতুন ব্যবহারকারী?</string>
+    <string name="nid">জাতীয় পরিচয় পত্র</string>
+    <string name="nidnum">জাতীয় পরিচয় পত্রের নম্বর</string>
+    <string name="bin">জন্ম নিবন্ধন</string>
+    <string name="binnum">জন্ম নিবন্ধন নম্বর</string>
+    <string name="passport">পাসপোর্ট</string>
+    <string name="passnum">পাসপোর্ট নম্বর</string>
+    <string name="expirydate">মেয়াদ উত্তীর্ণের তারিখ</string>
+
+    <string name="police_admin">পুলিশ অ্যাডমিন প্যানেল</string>
+
+    <string name="head_front_pic">মাথার সামনের অংশ</string>
+    <string name="head_back_pic">মাথার পিছনের অংশ</string>
+    <string name="face_pic">মুখের ছবি</string>
+    <string name="front_throat">গলার সামনে</string>
+    <string name="behind_neck">গলার পিছনে</string>
+    <string name="chest_pic">বুকের ছবি</string>
+    <string name="back_pic">পিঠের ছবি</string>
+    <string name="ear_pic">কানের ছবি</string>
+
+
+    <string-array name="lost_and_found_search_type">
+        <item>Item one</item>
+        <item>Item two</item>
+        <item>Item three</item>
+        <item>Item four</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">পরবর্তী</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="no">না</string>
+    <string name="phnno">মোবাইল নম্বর</string>
+    <string name="otp_confirmation"> ও টি পি নিশ্চিতকরণ</string>
+    <string name="otp_confirmation_text">ও টি পি কোড প্রবেশ করান</string>
+    <string name="otp_warning">৪ অংকের ও টি পি কোড আপনার মোবাইলে পাঠানো হয়েছে .</string>
+    <string name="help">সাহায্য</string>
+    <string name="gps_network_not_enabled">gps_network_not_enabled</string>
+    <string name="open_location_settings">open_location_settings</string>
+    <string name="Cancel">বাতিল</string>
+    <string name="Cancel_item">বাতিল (2)</string>
+    <string name="allegation">অভিযোগ</string>
+    <string name="investigation">তদন্তাধীন</string>
+    <string name="disposal">নিষ্পত্তি</string>
+    <string-array name="array_status_type">
+        <item>@string/investigation</item>
+        <item>@string/disposal</item>
+        <item>@string/Cancel</item>
+    </string-array>
+    <string name="logout">লগআউট</string>
+    <string name="email">ইমেইল </string>
+    <string name="email_op">ইমেইল (ঐচ্ছিক)</string>
+    <string name="field_null_error">এই ক্ষেত্রটি খালি রাখা যাবে না</string>
+    <string name="registration_information">রেজিস্ট্রেশন তথ্য</string>
+    <string name="visa_type">ভিসার ধরন</string>
+    <string name="country_name">দেশের নাম</string>
+    <string name="admin_panal">পুলিশ অ্যাডমিন প্যানেল</string>
+
+    <string name="please_choose_one_of_below">নীচের একটি পছন্দ করুন</string>
+    <string name="purpose_of_visit">ভ্রমণের উদ্দেশ্য</string>
+    <string name="please_fill_up_your_imigartion_address">বাংলাদেশে অবস্থানকালীন ঠিকানাটি পূরণ করুন</string>
+    <string name="support">সাপোর্ট</string>
+    <string name="forget_password">পাসওয়ার্ড ভুলে গেছেন ?</string>
+    <string name="live_chat">লাইভ চাটিং</string>
+    <string name="live_call">লাইভ কলিং</string>
+    <string name="welcome_to_lost_and_found_application">"Lost &amp; Found অ্যাপ্লিকেশনে আপনাকে স্বাগতম                                লস্ট এন্ড ফাউন্ড অ্যাপ্লিকেশনে আপনাকে স্বাগতম "</string>
+    <string name="vehicle">যানবাহন</string>
+    <string name="information_entry">তথ্য এন্ট্রি</string>
+    <string name="theft">চুরি</string>
+    <string name="to_lose">হারানো</string>
+    <string name="found">পাওয়া</string>
+    <string name="information_search">তথ্য খোঁজা</string>
+    <string name="man">মানুষ</string>
+    <string name="report_status">রিপোর্ট স্থিতি</string>
+    <string name="others">অন্যান্য</string>
+    <string name="tracking_number">ট্র্যাকিং নম্বর</string>
+    <string name="date">তারিখ</string>
+    <string name="status">স্টেটাস</string>
+    <string name="report">রিপোর্ট</string>
+    <string name="doc_type">ডকুমেন্ট ধরণ</string>
+    <string name="doc_type_if_found">ডকুমেন্ট ধরণ (যদি পাওয়া যায়)</string>
+
+
+    <string name="entry_code">তথ্য প্রণয়ন সম্পন্ন হয়েছে</string>
+    <string name="entry_code1">লস্ট এন্ড ফাউন্ড কোডটি সংরক্ষণ করুন</string>
+    <string name="entry_code2">তথ্য দিয়ে সহায়তার জন্য বাংলাদেশ পুলিশের পক্ষ থেকে ধন্যবাদ</string>
+    <string name="entry_code3">অ্যাপ সংক্রান্ত যে কোন তথ্যের জন্য  যোগাযোগ করুন (01***)</string>
+    <string name="district">জেলা </string>
+    <string name="thana">থানা</string>
+    <string name="village">গ্রাম </string>
+    <string name="name">নাম</string>
+    <string name="name_if_found">নাম (যদি পাওয়া যায়)</string>
+    <string name="father_s_name">পিতার নাম</string>
+    <string name="if_found">(যদি পাওয়া যায়)</string>
+    <string name="husband_wife_name">স্বামী / স্ত্রীর নাম</string>
+    <string name="husband_wife_name_if_found">স্বামী / স্ত্রীর নাম  (যদি পাওয়া যায়)</string>
+    <string name="religion">ধর্ম</string>
+    <string name="occupation">পেশা</string>
+    <string name="blood_group">রক্তের গ্রুপ</string>
+
+    <string name="laptop">ল্যাপটপ</string>
+    <string name="desktop">ডেস্কটপ</string>
+    <string name="hybrid">হাইব্রিড</string>
+    <string name="omni">অমনি</string>
+    <string name="note_book">নোট বুক</string>
+    <string name="accessories">কম্পিউটার একসেসোরিজ</string>
+    <string name="vehicle_entry">যানবাহনের</string>
+    <!--    vehicle information-->
+    <string name="vehicleType">যানবাহনের ধরণ</string>
+    <string name="vehicleBrand">ব্রান্ডের নাম</string>
+    <string name="vehicleModel">মডেল</string>
+    <string name="vehicleRegiPart1">মেট্রো অঞ্চল</string>
+    <string name="vehicleRegiPart2">লেভেল</string>
+    <string name="vehicleRegiNo">রেজিস্ট্রেশন নং</string>
+    <string name="engineNo">ইঞ্জিন নং</string>
+    <string name="chesisNo">চেসিস নং</string>
+    <string name="ccNo">সিসি</string>
+
+    <string name="madeIn">প্রস্তুতকারক দেশ</string>
+    <string name="madeDate">উৎপাদনের তারিখ</string>
+
+    <!--    vehicle document info-->
+    <string name="identityInfo">সনাক্তকরন তথ্য</string>
+    <string name="colorName">রং</string>
+    <string name="vehicleSign">সনাক্তকারী চিহ্ন</string>
+    <string name="photo">ছবি</string>
+    <string name="documentType">ডকুমেন্ট এর ধরণ</string>
+
+    <!--    vehicle space and time info-->
+    <string name="theftplaceAndTimeInfo"> চুরির স্থান ও সময়ের বিবরণ</string>
+    <string name="lostplaceAndTimeInfo">নিখোঁজ এর স্থান ও সময়ের বিবরণ</string>
+    <string name="lostplaceAndTimeInfo1">হারানোর স্থান ও সময়ের  বিবরণ</string>
+    <string name="division">বিভাগ</string>
+    <string name="addressDetails">স্থানের বিবরণ</string>
+    <string name="time">সময়</string>
+    <string name="for_own">নিজের জন্য</string>
+    <string name="for_others">অন্যের জন্য</string>
+    <string name="fill_the_information_of_the_person">ব্যক্তির তথ্য পূরণ করুন</string>
+    <string name="number">নম্বর</string>
+    <string name="mobile_no">মোবাইল নম্বর</string>
+    <string name="attachment">সংযুক্তি</string>
+    <string name="blue_book">ব্লু বুক</string>
+    <string name="tax_token">ট্যাক্স টোকেন</string>
+    <string name="fitness_certificate">ফিটনেস সার্টিফিকেট</string>
+    <string name="image">ছবি</string>
+
+    <string name="select_list">Select List</string>
+    <string name="gender">লিঙ্গ</string>
+    <string name="doc_number">ডকুমেন্ট নম্বর</string>
+    <string name="doc_number_if_found">ডকুমেন্ট নম্বর (যদি পাওয়া যায়)</string>
+    <string name="applicant">আবেদনকারী</string>
+    <string name="notification">প্রজ্ঞাপন</string>
+    <string name="insurance_paper">ইন্সুরেন্সের কাগজ</string>
+    <string name="person_information">ব্যক্তির প্রাথমিক তথ্য</string>
+    <string name="dead_person_information">মৃতব্যক্তির প্রাথমিক তথ্য</string>
+    <string name="age">বয়স </string>
+    <string name="approximate_age">আনুমানিক বয়স</string>
+    <string name="number_type">নম্বরের প্রকার</string>
+    <string name="person_address">ব্যক্তির ঠিকানা</string>
+    <string name="country">দেশ</string>
+    <string name="one_line_address">এক লাইন ঠিকানা</string>
+    <string name="habit">অভ্যাস</string>
+    <string name="speech">বচন ভঙ্গি</string>
+    <string name="newpassword">নতুন পাসওয়ার্ড</string>
+    <string name="watch_Information">ঘড়ির তথ্য</string>
+    <string name="watch_type">ঘড়ির ধরণ</string>
+    <string name="mobilePhone_information">মোবাইল/ফোন এর তথ্য</string>
+    <string name="keys_information">চাবি এর তথ্য</string>
+    <string name="umbrella_information">ছাতা এর তথ্য</string>
+    <string name="dna_profile">ডিএনএ প্রোফাইল</string>
+    <string name="cards_information">কার্ড এর তথ্য</string>
+    <string name="money_information">অর্থের তথ্য</string>
+    <string name="shoes_information">জুতার তথ্য</string>
+    <string name="electronics_information">ইলেকট্রনিক্স সমূহের তথ্য</string>
+    <string name="sorothal">সুরতহাল রিপোর্ট</string>
+    <string name="lostfoundreport">চোরাই/হারানো/উদ্ধার</string>
+    <string name="searchwithphoto">ছবি দিয়ে অসনাক্তকারী ব্যক্তি সার্চ</string>
+    <string name="case_description">ঘটনার বিবরণ</string>
+    <string name="information_type">ইনফরমেশন ধরণ</string>
+    <string name="information_no">ইনফরমেশন নম্বর</string>
+    <string name="deathperson_description">মৃত ব্যক্তির বিবরণ</string>
+
+    <string name="police_interface_lost_and_found_search">হারিয়ে গেছে অনুসন্ধান করুন</string>
+    <string name="police_interface_type">ধরণ</string>
+    <string name="police_interface_number">নাম্বার</string>
+    <string name="police_interface_theft_lost_found">চুরি, নিখোঁজ, পাওয়া </string>
+    <string name="police_interface_sorothal">সুরতহাল</string>
+    <string name="police_interface_identify_with_photoes">ফটো সহ সনাক্ত করুন</string>
+    <string name="police_interface_identify_with_img">ফটো সহ সনাক্ত করুন</string>
+
+    <string-array name="array_information_type">
+        <item>@string/select_option</item>
+        <item>জিডি</item>
+        <item>মামলা</item>
+    </string-array>
+    <string-array name="array_electronics_brand">
+        <item>@string/select_option</item>
+        <item>Philips</item>
+        <item>Rangs</item>
+        <item>Sony</item>
+    </string-array>
+    <string-array name="array_electronics_type">
+        <item>@string/select_option</item>
+        <item>Home Appearance</item>
+        <item>Kitchen appearance</item>
+        <item>Small Appearance</item>
+        <item>Self Appearance</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_home_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Television</item>
+        <item>Refrigerator</item>
+        <item>Microwave Oven</item>
+        <item>Air Condition</item>
+        <item>Washing Machine</item>
+        <item>Hair Drier</item>
+        <item>Iron Machine</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_kitchen_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Blender and Juicer</item>
+        <item>Chooper</item>
+        <item>Coffee Maker</item>
+        <item>Cook ware</item>
+        <item>Electric Kettle</item>
+        <item>Electric Oven</item>
+        <item>Food Processor</item>
+        <item>Gas Burner</item>
+        <item>Induction Cooker</item>
+        <item>Mixer Grinder</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_small_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Baby Care</item>
+        <item>Beauty And Health</item>
+        <item>Iron</item>
+        <item>Room Heater</item>
+        <item>Sewing Mechine</item>
+        <item>Thermopot</item>
+        <item>V-Guard Water Heater</item>
+        <item>Vacuum Cleaner</item>
+        <item>Water Purifier</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_self_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Camera</item>
+        <item>Play Station</item>
+        <item>Joystick</item>
+        <item>Calculator</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_shoes_model">
+        <item>@string/select_option</item>
+    </string-array>
+    <string-array name="array_shoes_brand">
+        <item>@string/select_option</item>
+    </string-array>
+    <string-array name="array_shoes_type">
+        <item>@string/select_option</item>
+        <item>Snikers</item>
+        <item>Converse</item>
+        <item>Casual Shoe</item>
+        <item>Office Shoe</item>
+        <item>Loffer</item>
+    </string-array>
+
+    <string-array name="array_card_type">
+        <item>@string/select_option</item>
+        <item>Electronics Card</item>
+        <item>NID Card</item>
+        <item>ID Card</item>
+    </string-array>
+
+    <string-array name="array_electronic_card_type">
+        <item>@string/select_option</item>
+        <item>Debit Card</item>
+        <item>Credit Card</item>
+        <item>Master Card</item>
+        <item>Nexus Card</item>
+    </string-array>
+
+    <string-array name="array_umbrella_model">
+        <item>@string/select_option</item>
+
+    </string-array>
+    <string-array name="array_umbrella_brand">
+        <item>@string/select_option</item>
+
+    </string-array>
+    <string-array name="array_umbrella_type">
+        <item>@string/select_option</item>
+        <item>Straight Umbrella </item>
+        <item>Folded Umbrella </item>
+        <item>Dubble Folded Umbrella </item>
+        <item>Wind Resistant Umbrella  </item>
+        <item>Automatic Umbrella </item>
+        <item>Golf Umbrella</item>
+    </string-array>
+    <string-array name="array_pet_type">
+        <item>@string/select_option</item>
+        <item>Cow </item>
+        <item>Goat</item>
+        <item>Lamb</item>
+        <item>Dog </item>
+        <item>Cat</item>
+        <item>Rabbit</item>
+        <item>Hen</item>
+        <item>Duck</item>
+    </string-array>
+    <string-array name="array_keys_type">
+        <item>@string/select_option</item>
+        <item>Mechanical Type</item>
+        <item>Automatic Type</item>
+    </string-array>
+
+    <string-array name="array_phone_model">
+        <item>@string/select_option</item>
+        <item>iPhone SE (2nd generation)</item>
+        <item>iPhone 11 Pro</item>
+        <item>iPhone 11 Pro Max</item>
+        <item>iPhone 11</item>
+        <item>iPhone XS</item>
+        <item>iPhone XS Max</item>
+        <item>Nokia 8.3 5G</item>
+        <item>Nokia 7.2</item>
+        <item>Nokia 5310</item>
+        <item>Nokia 3310 3G</item>
+        <item>Samsung Galaxy M21</item>
+        <item>Samsung Galaxy S20+</item>
+        <item>Samsung Galaxy M31</item>
+        <item>Samsung Galaxy S10 Lite</item>
+    </string-array>
+
+    <string-array name="array_phone_brand">
+        <item>@string/select_option</item>
+        <item>i-Phone</item>
+        <item>Nokia</item>
+        <item>Sumsung</item>
+        <item>VIVO</item>
+        <item>Motorola</item>
+        <item>OPPO</item>
+        <item>Xiaomi</item>
+        <item>Huawei</item>
+    </string-array>
+
+    <string-array name="array_phone_accessories_type">
+        <item>@string/select_option</item>
+        <item>Headphone</item>
+        <item>Charger</item>
+        <item>Bluetooth</item>
+        <item>Cases And Covers</item>
+        <item>Screen protectors</item>
+        <item>Power banks</item>
+        <item>Data cables</item>
+        <item>Mass storage</item>
+        <item>Selfie stick</item>
+        <item>Smartphone tripod mount</item>
+        <item>External batteries</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="byte_array">
+        <item>@string/select_list </item>
+        <item> MB </item>
+        <item> GB </item>
+        <item> TB </item>
+    </string-array>
+
+    <string-array name="array_glasses_type">
+        <item>@string/select_list </item>
+        <item>Reading Glasses</item>
+        <item>Sun Glasses</item>
+        <item>Lense</item>
+    </string-array>
+    <string-array name="array_jewelry_type">
+        <item>@string/select_list</item>
+        <item>Enamel Jewelry</item>
+        <item>Quill Jewelry</item>
+        <item>Shellac Jewelry</item>
+        <item>Plastic Jewelry</item>
+        <item>Diamond Jewelry</item>
+        <item>Crystal Jewelry</item>
+        <item>Fashion  jewelry</item>
+        <item>Shell jewelry</item>
+        <item>Leather jewelry</item>
+        <item>Silver jewelry</item>
+        <item>Gold jewelry</item>
+        <item>Resin Jewelry</item>
+        <item>Imitation</item>
+    </string-array>
+
+    <string-array name="array_jewelry_for_type">
+        <item>@string/select_list</item>
+        <item>Hair</item>
+        <item>Neck</item>
+        <item>Hand</item>
+        <item>Finger</item>
+        <item>Feet</item>
+        <item>Arms</item>
+
+
+    </string-array>
+
+
+    <string-array name="array_garments_type">
+        <item>@string/select_list</item>
+        <item>Tees</item>
+        <item>Knitwear/Heavy knit</item>
+        <item>Shirts &amp; Light woven Tops(Boluse)</item>
+        <item>Dress and Skirts</item>
+        <item>Jeans</item>
+        <item>Trousers and Shorts</item>
+        <item>Blazers and Waist Coats</item>
+        <item>outwear (Functional)</item>
+        <item>Outwear (Non-Functional)</item>
+        <item>Socks &amp; Stockings</item>
+        <item>Underwear</item>
+        <item>Leggings</item>
+        <item>Nightwear</item>
+        <item>Swimwear</item>
+
+    </string-array>
+
+
+    <string-array name="array_glasses_shape">
+        <item>@string/select_list </item>
+        <item>Oval face shape.</item>
+        <item>Heart-shaped face.</item>
+        <item>Oblong face shape.</item>
+        <item>Square face shape.</item>
+        <item>Diamond face shape.</item>
+        <item>Round face shape.</item>
+        <item>Base-down triangle.</item>
+    </string-array>
+    <string-array name="array_cosmetics_type">
+        <item>@string/select_option</item>
+        <item>Lipstick </item>
+        <item>Lip balm</item>
+        <item>Lip gloss</item>
+        <item>Lip liner</item>
+        <item>Lip plumper</item>
+        <item>Lip conditioner</item>
+        <item>Lip plumper</item>
+        <item>Lip primer</item>
+        <item>Lip boosters</item>
+        <item>Primer</item>
+        <item>Concealer </item>
+        <item>Foundation</item>
+        <item>Face powder</item>
+        <item>Blush</item>
+        <item>Highlighter</item>
+        <item>Mascara</item>
+        <item>Mascara primer</item>
+        <item>eye primers</item>
+        <item>eyelash glue</item>
+        <item>eyelash curler</item>
+        <item>Eyeshadow</item>
+        <item>Perfume</item>
+        <item>Talcom Powders</item>
+        <item>Ointments/ Pastes</item>
+        <item>Lotions </item>
+        <item>Duck </item>
+        <item>Nail polish </item>
+        <item>nail gloss </item>
+        <item>blush powder </item>
+        <item>bronzer </item>
+        <item>setting spray </item>
+        <item>contour powder/cream </item>
+        <item>eyebrow pencils </item>
+        <item>creams </item>
+        <item>waxes </item>
+        <item>gels </item>
+        <item>powders </item>
+        <item>Face Cleanser</item>
+        <item>Body Lotion</item>
+        <item>Tumer</item>
+        <item>Mitt</item>
+        <item>Mirror</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+
+    <string-array name="array_cosmetics_brand_type">
+        <item>@string/select_option</item>
+        <item>MAC </item>
+        <item>Bobbi Brown</item>
+        <item>L’Oreal</item>
+        <item>Chanel</item>
+        <item>NYX</item>
+        <item>NARS</item>
+        <item>Maybelline</item>
+        <item>Estee Lauder</item>
+        <item>Revlon</item>
+        <item>Lancome</item>
+        <item>Clinique</item>
+        <item>Covergirl</item>
+        <item>Sephora</item>
+        <item>Dior</item>
+        <item>Cover FX</item>
+        <item>bareMinerals</item>
+        <item>Yves Saint Laurent </item>
+        <item>Napoleon Perdis</item>
+        <item>Olay</item>
+        <item>Urban Decay</item>
+        <item>By Terry</item>
+        <item>Mecca</item>
+        <item>Stila Cosmetics</item>
+        <item>Nude by Nature</item>
+        <item>Marc Jacobs Beauty</item>
+        <item>Anastasia Beverly Hills </item>
+        <item>RMS Beauty</item>
+        <item>Avon </item>
+        <item>Make Up For Ever</item>
+        <item>Makeup Revolution </item>
+        <item>The Body Shop</item>
+        <item>Lakme </item>
+        <item>Colorbar</item>
+        <item>L.A. Girl </item>
+        <item>Clinique </item>
+        <item>Revlon </item>
+        <item>PAC </item>
+        <item>theBalm Cosmetics</item>
+        <item>Huda Beauty</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+    <string-array name="array_bag_type">
+        <item>@string/select_list</item>
+        <item>Hand bag</item>
+        <item>Hobo bag</item>
+        <item>Tote bag</item>
+        <item>Duffle bag</item>
+        <item>Messenger bag</item>
+        <item>Backpack</item>
+        <item>Satchel</item>
+        <item>Doctor’s bag</item>
+        <item>Laptop Bag</item>
+        <item>Bucket bag</item>
+        <item>Bowler bag</item>
+        <item>Wristlet</item>
+        <item>Pouch</item>
+        <item>Clutch</item>
+        <item>Beach Bag</item>
+        <item>Shoulder bag</item>
+        <item>Miniaudiere</item>
+        <item>Shopping/Grocery bag</item>
+        <item>Drawstring bag</item>
+        <item>Make up bags</item>
+        <item>Foldover Bags</item>
+        <item>Phone bag</item>
+        <item>Camera case bags</item>
+        <item>Baguette bags</item>
+        <item>Barrel Bag</item>
+        <item>Basket Bag</item>
+        <item>Fanny Pack</item>
+        <item>Kelly Bag</item>
+        <item>Lunch Bags</item>
+    </string-array>
+    <string-array name="array_phone_type">
+        <item>@string/select_option</item>
+        <item>Tap Phone</item>
+        <item>Smart Phone</item>
+        <item>Codeless Phone</item>
+        <item>TNT Phone</item>
+        <item>Phone Accessories</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+    <string-array name="array_watch_type">
+        <item>@string/select_option</item>
+        <item>Wall Clock</item>
+        <item>Stop Watch</item>
+        <item>Smart Watch</item>
+        <item>Fitness Watch</item>
+        <item>Digital Watch</item>
+        <item>Samsung Watch</item>
+        <item>Apple Watch</item>
+        <item>Analogue Watch</item>
+        <item>Calculator Watch</item>
+        <item>Alarm Watch</item>
+        <item>Table Watch</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string name="spn_others">Others</string>
+    <string-array name="array_watch_brand">
+        <item>@string/select_option</item>
+        <item>Casio</item>
+        <item>Titan</item>
+        <item>Longines</item>
+        <item>Ulysse Nardin</item>
+        <item>Omega</item>
+        <item>Rolex</item>
+        <item>Tissot</item>
+        <item>Citizen</item>
+        <item>Boss</item>
+    </string-array>
+
+    <string-array name="array_watch_body_type">
+        <item>@string/select_option</item>
+        <item>Leather</item>
+        <item>Chain</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="array_watch_structure_type">
+        <item>@string/select_option</item>
+        <item>Simple Dialed Watch</item>
+        <item>Mechanical Watch</item>
+        <item>Chronograph Watch</item>
+        <item>Digital Watch</item>
+        <item>Smart Watch</item>
+    </string-array>
+    <!--
+        <string name="select_option">নির্বাচন করুন</string>-->
+    <string name="select_option">Select List</string>
+
+    <string name="address_type">ঠিকানার ধরণ</string>
+
+    <string-array name="array_habit">
+        <item>@string/select_list</item>
+        <item>BRAGGING</item>
+        <item>CHEWS BETAL/PAN</item>
+        <item>CHEWS GUM  </item>
+        <item>CHEWPS PAN MASALA</item>
+        <item>CHEWS SUPARI</item>
+        <item>CHEWS TOBACCO</item>
+        <item>CHEWS CRAZY</item>
+        <item>DRINKS LIQUOR</item>
+        <item>DRUG ADDICT</item>
+        <item>EYES BLINKING</item>
+        <item>EYES SHIFTING</item>
+        <item>GAMBLER</item>
+        <item>HOMOSEXUAL</item>
+        <item>LIP BITING</item>
+        <item>LOTTERY PLAYER</item>
+        <item>MOUSTACHE TWISTING</item>
+        <item>NAIL BITING</item>
+        <item>PROSTITUTE MONGER</item>
+        <item>RACE-GORE</item>
+        <item>SMOKER</item>
+        <item>SNUFF TAKER</item>
+        <item>STRETCHING</item>
+        <item>OTHERS</item>
+        <item>GUTKA</item>
+        <item>NO HABIT</item>
+        <item>NO PECULIARITY</item>
+    </string-array>
+
+    <string-array name="array_speech">
+        <item>@string/select_list</item>
+        <item>স্বাভাবিক</item>
+        <item>দ্রুত</item>
+        <item>ধীর</item>
+        <item>তোতলামি</item>
+        <item>অট্ট</item>
+        <item>নরম</item>
+        <item>গুরুগম্ভীর</item>
+        <item>নাকি</item>
+        <item>মেয়েলি(পুরুষ)</item>
+        <item>পুরুষালী (মহিলা)</item>
+        <item>বিস্ময়কর</item>
+        <item>পুরান ঢাকা আঞ্চলিকতা</item>
+        <item>চট্টগ্রাম আঞ্চলিকতা</item>
+        <item>বরিশাল আঞ্চলিকতা</item>
+        <item>খুলনা আঞ্চলিকতা</item>
+        <item>ময়মেনসিংহ আঞ্চলিকতা</item>
+        <item>রাজশাহী আঞ্চলিকতা</item>
+        <item>রংপুর আঞ্চলিকতা</item>
+        <item>সিলেট আঞ্চলিকতা</item>
+        <item>নোয়াখালী আঞ্চলিকতা</item>
+    </string-array>
+
+    <string-array name="purpose_of_visit">
+        <item>ভিসার ধরণ</item>
+        <item>ট্যুরিস্ট ভিসা</item>
+        <item>ব্যবসায় ভিসা</item>
+        <item>শিক্ষার্থী ভিসা</item>
+        <item>কর্মসংস্থান ভিসা </item>
+        <item>কূটনৈতিক / অফিসিয়াল ভিসা</item>
+        <item>বিনিয়োগকারী ভিসা</item>
+        <item>সাংবাদিক ভিসা</item>
+        <item>এনজিও ভিসা</item>
+    </string-array>
+
+    <string-array name="doc_type">
+        <item>@string/select_list</item>
+        <item>জাতীয় পরিচয় পত্র</item>
+        <item>জন্ম নিবন্ধন </item>
+        <item>পাসপোর্ট </item>
+    </string-array>
+
+    <string-array name="array_beard">
+        <item>@string/select_option</item>
+        <item>লম্বা</item>
+        <item>ছোট</item>
+        <item>পাকা</item>
+        <item>কাঁচা</item>
+        <item>কোকড়ানো</item>
+        <item>কাঁচা-পাকা</item>
+    </string-array>
+    <string-array name="address_type">
+        <item>@string/select_list</item>
+        <item> অন্যান্য উৎস হতে প্রাপ্ত</item>
+        <item>সম্ভাব্য ঠিকানা</item>
+        <item>বর্তমান</item>
+        <item>স্থায়ী</item>
+        <item>কর্মক্ষেত্রের ঠিকানা</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="array_body_color">
+        <item>@string/select_option</item>
+        <item>কাল</item>
+        <item>উজ্জ্বল</item>
+        <item>তামাটে</item>
+        <item>শ্যামলা</item>
+        <item>বাদামী</item>
+    </string-array>
+
+    <string-array name="array_body_structure">
+        <item>@string/select_option</item>
+        <item>লম্বা</item>
+        <item>হালকা পাতলা</item>
+        <item>বেটে</item>
+        <item>মাঝারি</item>
+        <item>মোটা</item>
+    </string-array>
+
+    <string-array name="array_body_Chin">
+        <item>@string/select_option</item>
+        <item>লম্বাটে</item>
+        <item>গোলাকার</item>
+        <item>থ্যাতলানো</item>
+        <item>পাতলা</item>
+        <item>চিকন</item>
+    </string-array>
+
+
+    <string-array name="NUMBERTYPE">
+        <item>@string/select_list</item>
+        <item>টেলিফোন</item>
+        <item>ড্রাইভিং লাইসেন্স</item>
+        <item>টি আই এন নাম্বার</item>
+        <item>পাসপোর্ট</item>
+        <item>মোবাইল</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+
+    <string-array name="array_care_type">
+        <item>@string/select_option</item>
+        <item>Wife</item>
+        <item>Government office</item>
+        <item>Military forces</item>
+        <item>Paramilitary</item>
+        <item>Unofficial</item>
+        <item>স্ব-নিয়োজিত প্রতিষ্ঠান</item>
+        <item>বেসরকারী অফিস</item>
+        <item>স্বামী</item>
+        <item>সহযোগী</item>
+        <item>শিক্ষা প্রতিষ্ঠান</item>
+    </string-array>
+
+    <string-array name="array_complextion">
+        <item>@string/select_option</item>
+        <item>উজ্জ্বল</item>
+        <item>পিতল</item>
+        <item>কাল</item>
+        <item>শ্যামলা</item>
+        <item>তামাটে</item>
+    </string-array>
+
+    <string-array name="array_cust">
+        <item>@string/select_option</item>
+        <item>ইহুদী</item>
+        <item>রোমান ক্যাথলিক</item>
+        <item>ক্ষত্রিয়</item>
+        <item>শিনো</item>
+        <item>নাস্তিক</item>
+        <item>ব্রাহ্মণ</item>
+        <item>শিয়া</item>
+        <item>শিখ</item>
+        <item>সুন্নি</item>
+        <item>জৈন</item>
+    </string-array>
+
+    <string-array name="array_death_type">
+        <item>@string/select_option</item>
+        <item>সাপের কামড়</item>
+        <item>অন্যান্য</item>
+        <item>বিষপান</item>
+        <item>আত্মহত্যা</item>
+        <item>বন্য জন্তুর আক্রমন</item>
+        <item>সড়ক দুর্ঘটনা</item>
+        <item>পানিতে ডুবিয়া</item>
+        <item>পক্ষাঘাত</item>
+        <item>ফাঁসি</item>
+    </string-array>
+
+    <string-array name="array_ear">
+        <item>@string/select_option</item>
+        <item>প্রশস্থ</item>
+        <item>লম্বা</item>
+        <item>খাটো</item>
+        <item>লতি কাঁটা</item>
+        <item>কুলার মতো</item>
+        <item>গোলাকার</item>
+    </string-array>
+
+    <string-array name="array_eye">
+        <item>@string/select_option</item>
+        <item>কোটরাগত</item>
+        <item>রঙ্গিন</item>
+        <item>টানা টানা</item>
+        <item>বাদামী</item>
+        <item>পাতলা ভুরু</item>
+        <item>ডান/বাম চোখ অন্ধ</item>
+        <item>মোটা ভুরু</item>
+        <item>ভাষা ভাষা</item>
+        <item>ভাষা ও টেরা</item>
+        <item>জোড়া ভুরু</item>
+        <item>কালোমনি</item>
+        <item>ঘন ভুরু</item>
+    </string-array>
+
+    <string-array name="array_face_shape">
+        <item>@string/select_option</item>
+        <item>চ্যাপটা</item>
+        <item>স্বাভাবিক</item>
+        <item>লম্বাটে</item>
+
+    </string-array>
+
+    <string-array name="religion">
+        <item>@string/select_option</item>
+        <item>Muslim</item>
+        <item>Hindu</item>
+        <item>Cristian</item>
+        <item>Buddhist</item>
+        <item>Others</item>
+
+    </string-array>
+    <string-array name="array_forehead">
+        <item>@string/select_option</item>
+        <item>প্রশস্থ</item>
+        <item>চওড়া</item>
+        <item>খাড়া</item>
+    </string-array>
+
+    <string-array name="array_gender">
+        <item>@string/select_option</item>
+        <item>মহিলা</item>
+        <item>পুরুষ</item>
+        <item>তৃতীয় লিঙ্গ</item>
+    </string-array>
+
+    <string-array name="array_hair">
+        <item>@string/select_option</item>
+        <item>সাদা-পাকা</item>
+        <item>টাক</item>
+        <item>লম্বা</item>
+        <item>ছোট/খাট</item>
+        <item>বাদামী</item>
+        <item>কোঁকড়ানো</item>
+        <item>কালো-লম্বা</item>
+    </string-array>
+
+    <string-array name="array_head">
+        <item>@string/select_option</item>
+        <item>লম্বা</item>
+        <item>খাটো</item>
+        <item>গোল</item>
+    </string-array>
+
+    <string-array name="array_material_condition">
+        <item>@string/select_option</item>
+        <item>ইনটেক অবস্থা</item>
+        <item>ধ্বংস প্রাপ্ত</item>
+        <item>নষ্ট</item>
+        <item>পরিত্যক্ত</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="array_marital_status">
+        <item>@string/select_option</item>
+        <item>তালাক প্রাপ্ত</item>
+        <item>বিপত্নীক</item>
+        <item>অবিবাহিত</item>
+        <item>একাধিক বিবাহ</item>
+        <item>বিধবা</item>
+        <item>বিবাহিত</item>
+    </string-array>
+
+    <string-array name="array_moustache">
+        <item>@string/select_option</item>
+        <item>ছোট</item>
+        <item>সাদা</item>
+        <item>কালো</item>
+        <item>কালো সাদা</item>
+        <item>বড়</item>
+    </string-array>
+
+    <string-array name="array_mouth">
+        <item>@string/select_option</item>
+        <item>মোটা ঠোট</item>
+        <item>বড়</item>
+        <item>ছোট</item>
+        <item>খোলা</item>
+        <item>কালচে ঠোট</item>
+        <item>সামনে দাঁত বের হওয়া</item>
+        <item>পাতলা ঠোট</item>
+    </string-array>
+
+    <string-array name="array_neck">
+        <item>@string/select_option</item>
+        <item>সরু</item>
+        <item>ছোট</item>
+        <item>লম্বা</item>
+        <item>মোটা</item>
+    </string-array>
+
+    <string-array name="array_nose">
+        <item>@string/select_option</item>
+        <item>লম্বা</item>
+        <item>মোটা</item>
+        <item>খাটো</item>
+        <item>চ্যাপটা</item>
+        <item>বাঁকানো</item>
+    </string-array>
+
+    <string-array name="array_religion">
+        <item>@string/select_option</item>
+        <item>অন্যান্য</item>
+        <item>হিন্দু</item>
+        <item>বৌদ্ধ</item>
+        <item>ইসলাম</item>
+        <item>খ্রীস্টান</item>
+    </string-array>
+
+    <string-array name="array_number_type">
+        <item>@string/select_option</item>
+        <item>টেলিফোন</item>
+        <item>ড্রাইভিং লাইসেন্স</item>
+        <item>টিন নাম্বার</item>
+        <item>পাসপোর্ট</item>
+        <item>অন্যান্য</item>
+        <item>মোবাইল</item>
+    </string-array>
+
+    <string-array name="array_height_feet">
+        <item>@string/select_option</item>
+        <item>৩ ফুট</item>
+        <item>৪ ফুট</item>
+        <item>৫ ফুট</item>
+        <item>৬ ফুট</item>
+        <item>৭ ফুট</item>
+        <item>৮ ফুট</item>
+    </string-array>
+
+    <string-array name="array_height_inch">
+        <item>@string/select_option</item>
+        <item>১ ইঞ্চি</item>
+        <item>২ ইঞ্চি</item>
+        <item>৩ ইঞ্চি</item>
+        <item>৪ ইঞ্চি</item>
+        <item>৫ ইঞ্চি</item>
+        <item>৬ ইঞ্চি</item>
+        <item>৭ ইঞ্চি</item>
+        <item>৮ ইঞ্চি</item>
+        <item>৯ ইঞ্চি</item>
+        <item>১০ ইঞ্চি</item>
+        <item>১১ ইঞ্চি</item>
+    </string-array>
+
+    <string-array name="array_measurement_type">
+        <item>@string/select_option</item>
+        <item>কেজি</item>
+        <item>ফুট</item>
+        <item>পাউন্ড</item>
+        <item>লিটার</item>
+        <item>মিটার</item>
+        <item>গজ</item>
+        <item>মিলি মিটার</item>
+        <item>গ্রাম</item>
+        <item>ভরি</item>
+    </string-array>
+
+    <string-array name="array_given_type">
+        <item>@string/select_option</item>
+        <item>অন্যান্য</item>
+        <item>IME নং</item>
+        <item>ইঞ্জিন নং</item>
+        <item>চেসিস নং</item>
+    </string-array>
+    <string name="deadbody_condition">মৃতদেহের অবস্থা</string>
+    <string name="date_of_death">মৃত্যুর তারিখ</string>
+    <string name="image_type">ফটোর ধরণ</string>
+    <string name="image_name">ফটোর নাম</string>
+    <string name="deadbody_location">মৃতদেহের প্রাপ্তিস্থান </string>
+    <string name="physical_details">দৈহিক বিবরণ যোগ</string>
+    <string name="eye">চোখ</string>
+    <string name="nose">নাক</string>
+    <string name="hair">চুল</string>
+    <string name="forehead">কপাল</string>
+    <string name="beard">দাঁড়ি</string>
+    <string name="weight_kg">ওজন (কেজি)</string>
+    <string name="physical_constitution">শারিরিক গড়ন</string>
+    <string name="shape_of_face">মুখের আকার</string>
+    <string name="chin">চিবুক</string>
+    <string name="skin_color">গায়ের রং</string>
+    <string name="mustache">গোঁফ</string>
+    <string name="ears">কান</string>
+    <string name="neck">গলা</string>
+    <string name="height">উচ্চতা </string>
+    <string name="feet">(ফুট)</string>
+    <string name="inches">(ইঞ্চি)</string>
+    <string name="description_of_teeth">দাঁতের বর্ণনা</string>
+    <string name="special_physical_description">বিশেষ শারিরিক বর্ণনা</string>
+    <string name="identification_mark">সনাক্তকারী চিহ্ন</string>
+    <string name="others_identification_mark">অন্যান্য সনাক্তকারী চিহ্ন</string>
+    <string name="dress_descrioption">পোশাকের বিবরণ</string>
+    <string name="dhead">মাথায়</string>
+    <string name="dcolor">রং</string>
+    <string name="deye">চোখে</string>
+    <string name="dthroat">গলায়</string>
+    <string name="dbody">দেহের উর্ধাংশ</string>
+    <string name="dwaist">দেহের নিন্মাংশ</string>
+    <string name="dlegs">পায়ে</string>
+    <string name="person_identification_info">ব্যক্তির সনাক্তকরণের তথ্য</string>
+    <string name="missingpersonlevel">নিখোঁজ ব্যক্তির তথ্য</string>
+    <string name="othersitemlevel">অন্যান্য আইটেম</string>
+    <string name="unknowndeadbody">অজ্ঞাতনামা মৃতদেহ</string>
+    <string name="marital_status">বৈবাহিক অৱস্থা</string>
+
+    <string-array name="ImageType">
+        <item>@string/select_option</item>
+        <item>Right Side</item>
+        <item>Left Side</item>
+        <item>Front Side</item>
+        <item>Back Side</item>
+    </string-array>
+
+
+    <string-array name="special_body_condition">
+        <item> @string/select_list </item>
+        <item> পা খোঁড়া </item>
+        <item> পায়ের আঙুল কম </item>
+        <item> পায়ের আঙুল জোড়া লাগানো </item>
+        <item> পায়ের আঙুল বেশি </item>
+        <item> হাত খোড়া </item>
+        <item> হাতের আঙ্গুল বেশি </item>
+        <item> হাতের আঙ্গুল কম </item>
+        <item> হাতের আঙ্গুল জোড়া লাগানো </item>
+    </string-array>
+    <string-array name="array_teeth">
+        <item> @string/select_list </item>
+        <item>নকল দাঁত</item>
+        <item>ভাঙা দাঁত</item>
+    </string-array>
+    <string-array name="array_deadbody_condition">
+        <item> @string/select_list </item>
+        <item>অক্ষত</item>
+        <item>অর্ধগলিত</item>
+        <item>গলিত</item>
+        <item>আংশিক গলিত</item>
+        <item>কঙ্কাল</item>
+
+    </string-array>
+
+    <string-array name="array_in_the_head">
+        <item> @string/select_list </item>
+        <item>ওড়না</item>
+        <item>হিজাব</item>
+        <item>রুমাল</item>
+        <item>টুপি</item>
+        <item>পাগড়ী</item>
+    </string-array>
+    <string-array name="array_Special_birthmarks">
+        <item> @string/select_list </item>
+        <item>তিল</item>
+        <item>আঁচিল</item>
+        <item>পুড়া দাগ</item>
+        <item>কাঁটা দাগ</item>
+        <item>জন্ম দাগ</item>
+    </string-array>
+    <string-array name="array_Special_birthmarks_limbs">
+        <item> @string/select_list </item>
+        <item>পায়ে</item>
+        <item>হাতে</item>
+        <item>কানে </item>
+        <item>চোখে </item>
+        <item>গালে</item>
+        <item>ঠুটে </item>
+        <item>গলায় </item>
+        <item>পেটে </item>
+        <item>পিঠে </item>
+        <item>মাথায় </item>
+        <item>নাকে</item>
+    </string-array>
+    <string name="limbs">অঙ্গ</string>
+    <string name="limbs_position">অবস্থান</string>
+    <string-array name="array_birthmarks_position">
+        <item> @string/select_list </item>
+        <item>ডানে</item>
+        <item>বামে </item>
+        <item>উপরে </item>
+        <item>নিচে </item>
+        <item>উপরে ডানে</item>
+        <item>উপরে বামে </item>
+        <item>নিচে ডানে</item>
+        <item>পিচে বামে</item>
+        <item>মাঝখানে</item>
+    </string-array>
+    <string-array name="array_in_the_eye">
+        <item> @string/select_list </item>
+        <item>চশমা</item>
+        <item>সানগ্লাস</item>
+        <item>Contact lenses</item>
+    </string-array>
+
+    <string-array name="array_in_the_throt">
+        <item> @string/select_list </item>
+        <item>ওড়না</item>
+        <item>গামছা</item>
+        <item>তোয়ালে</item>
+        <item>মাফ্লার</item>
+    </string-array>
+
+    <string-array name="array_in_the_body">
+        <item> @string/select_list </item>
+        <item>কামিজ</item>
+        <item>গেনজি</item>
+        <item>ট্রি-শার্ট</item>
+        <item>ব্লেজার</item>
+        <item>সোয়েটার</item>
+    </string-array>
+
+    <string-array name="array_in_the_waist">
+        <item> @string/select_list </item>
+        <item>লুঙ্গি</item>
+        <item>ধুতি</item>
+        <item>প্যান্ট</item>
+        <item>সালোয়ার</item>
+    </string-array>
+    <string-array name="array_in_the_legs">
+        <item> @string/select_list </item>
+        <item>জুতা/সু</item>
+        <item>বুট</item>
+        <item>কেডস</item>
+        <item>সেন্ডেল</item>
+        <item>খড়ম</item>
+    </string-array>
+    <string name="in_leg_text">মাপ</string>
+    <string-array name="array_DLeg_size_MT">
+    <item> @string/select_list </item>
+    <item>ব্রিটিশ পদ্ধতি</item>
+    <item>ইউ.এস.এ পদ্ধতি</item>
+    <item>ই.ইউ. পদ্ধতি</item>
+    <item>ইঞ্চি</item>
+</string-array>
+    <string-array name="Ageperiod">
+        <item> @string/select_list </item>
+        <item> নবজাতক (০-২)বছর</item>
+        <item>শিশু (৩-১২)বছর</item>
+        <item>কিশোর (১৩-১৯)</item>
+        <item>যুবক (২০-৩৫)</item>
+        <item>বয়োবৃদ্ধ (৩৬-৬০)</item>
+        <item>বৃদ্ধ (৬১-তদুর্ধ)</item>
+    </string-array>
+
+
+    <string name="unknown_dead_body">অসনাক্তকৃত মৃতদেহ</string>
+    <string name="dress">পোশাক</string>
+    <string name="position">অবস্থান</string>
+    <string name="vehicle_information">যানবাহন তথ্য</string>
+    <string name="relation_with_lost_person">নিখোঁজ ব্যক্তির সাথে সম্পর্ক</string>
+    <string name="age_period">বয়স কাল</string>
+    <string name="add">যুক্ত করুন</string>
+    <string name="add_image">ছবি যুক্ত করুন</string>
+    <string name="mothersName">মায়ের নাম</string>
+    <string name="mentally_handicapped">মানসিক প্রতিবন্ধী</string>
+    <string name="toast_succss">সফলভাবে সম্পন্ন!</string>
+    <string name="bag_information">ব্যাগের তথ্য</string>
+    <string name="brand">ব্র্যান্ড</string>
+    <string name="serial_number">সিরিয়াল নম্বর</string>
+    <string name="model">মডেল</string>
+    <string name="bag_type">ব্যাগের ধরণ</string>
+    <string name="glass_type">চশমার ধরণ</string>
+    <string name="glass_shape">চশমার আকার</string>
+    <string name="garments_information">গার্মেন্টস তথ্য</string>
+    <string name="jewelry_information">গহনার তথ্য</string>
+    <string name="jewellary_type">গহনার ধরণ</string>
+    <string name="jewellary_for">গহনা </string>
+    <string name="weight">ওজন</string>
+    <string name="battery">ব্যাটারি</string>
+    <string name="cosmetics_information">প্রসাধনী তথ্য</string>
+    <string name="cosmetics_type">প্রসাধনী ধরণ</string>
+    <string name="ammount">পরিমাণ</string>
+    <string name="visible_tattoos">দৃশ্যমান ট্যাটু</string>
+    <string name="special_birthmarks">বিশেষ জন্মদাগ</string>
+    <string name="description_of_circumcision">সুন্নতে খাৎনার বিবরণ</string>
+    <string name="price">মূল্য</string>
+    <string name="computer_accessories">কম্পিউটারের যন্ত্রপাতি</string>
+    <string name="product_brand">প্রোডাক্ট ব্র্যান্ড</string>
+    <string name="service_tag_serial_number">সার্ভিস ট্যাগ/ সিরিয়াল নম্বর</string>
+    <string name="emc_product_id">ইএমসি প্রোডাক্ট  আইডি</string>
+    <string name="product_number_express_service_code">প্রোডাক্ট নম্বর/ এক্সপ্রেস সার্ভিস কোড</string>
+    <string name="document_information">নথি তথ্য</string>
+
+    <string-array name="array_doc_type">
+    <item>@string/select_list</item>
+    <item>জাতীয় পরিচয়পত্র</item>
+    <item>@string/edu_certificate </item>
+    <item>জন্ম সনদ</item>
+    <item>পাসপোর্ট </item>
+    <item>স্টুডেন্ট আইডি কার্ড </item>
+    <item>অফিস আইডি </item>
+    <item>ব্যাংকিং কাগজ </item>
+    <item>চালানপত্র </item>
+    <item>@string/spn_others</item>
+</string-array>
+    <string name="edu_certificate">শিক্ষা  সনদপত্র</string>
+    <string name="registration_number">রেজিস্ট্রেশন নম্বর</string>
+    <string name="roll_number">রোল নম্বর</string>
+    <string name="product_information">প্রোডাক্ট তথ্য</string>
+    <string name="pet_information">পোষা প্রাণী সম্পর্কিত তথ্য</string>
+    <string name="pet_type">পোষা প্রাণীর ধরণ</string>
+    <string name="size">আকার</string>
+    <string name="carat">ক্যারেট</string>
+    <string name="glass_information">চশমার তথ্য</string>
+    <string name="thanks">ধন্যবাদ</string>
+    <string name="support_msg">লষ্ট &amp; ফাউণ্ড অ্যাপস্‌ সংক্রান্ত যেকোন তথ্য বা সহায়তার জন্য অ্যাপস্‌ সাপোর্ট সেন্টারে কর্তব্যরত প্রতিনিধির সাথে নিচের নম্বরে যোগাযোগ করুন- +৮৮০১৭৩৭৩৬৬০২৮ এছাড়া আমাদের সাথে যোগাযোগের জন্য নিচের মাধ্যমগুলো ব্যবহার করতে পারেন</string>
+    <string name="select_item_for_support">একটি নির্বাচন করুন</string>
+    <string name="date_of_birth">জন্ম তারিখ</string>
+    <string name="shoesize">জুতার মাপ</string>
+    <string name="computer_information_entry">কম্পিউটারের তথ্য এন্ট্রি</string>
+    <string name="password_strength_weak">দুর্বল</string>
+    <string name="password_strength_medium">মধ্যম</string>
+    <string name="password_strength_strong">শক্তিশালী</string>
+    <string name="password_strength_very_strong">খুব শক্তিশালী</string>
+    <string name="select_passport">নিচের পাসপোর্ট অপশনটি ট্যাপ করুন</string>
+    <string name="your_password_must_be_at_least_6_characters_with_at_least_1_number_and_1_special_character">আপনার পাসওয়ার্ড কমপক্ষে 6 টি অক্ষর হতে হবে।</string>
+    <string name="your_mobile_number_must_be_11_characters">11 ডিজিটের মোবাইল নম্বর</string>
+    <string name="post_code">পোস্ট কোড</string>
+    <string name="select_region">দেশ নির্বাচন করুন</string>
+    <string name="roaming">রোমিং</string>
+    <string name="localoperator">লোকাল অপারেটর</string>
+    <string name="mobileoperator">মোবাইল অপারেটর</string>
+    <string name="robi">রবি</string>
+    <string name="graminphone">গ্রামীণফোন</string>
+    <string name="airtel">এয়ারটেল</string>
+    <string name="teletalk">টেলিটক</string>
+    <string name="banglalink">বাংলালিংক</string>
+    <string name="if_didn_t_get">যদি না পাই</string>
+    <string name="resend">পুনরায় পাঠান</string>
+    <string name="back">পূর্ববর্তী</string>
+    <string name="otpverified">ওটিপি যাচাই</string>
+
+    <!--   Search-->
+    <string name="vehicle_search_information">যানবাহন অনুসন্ধান তথ্য</string>
+    <string name="men_search_information">মানুষ  অনুসন্ধান তথ্য</string>
+    <string name="mobile_search_information">মুঠোফোন অনুসন্ধান তথ্য</string>
+    <string name="Pleasefollow">অনুগ্রহ করে নির্দেশাবলী অনুসরণ করে ছবি তোলার জন্য প্রস্তুত হোন</string>
+    <string name="you_have_to_situate_you_face_inside_the_camera_frame">* ক্যামেরার ফ্রেমের ভিতর আপনার চেহারা থাকতে হবে</string>
+    <string name="there_should_be_enough_light_around_when_taking_pictures_for_a_clear_picture">* স্পষ্ট ছবির জন্য ছবি তোলার সময় চারিপাশে পর্যাপ্ত আলো থাকতে হবে</string>
+    <string name="Waitawhile">* স্বয়ংক্রিয়ভাবে অটো ক্যাপচারের জন্য কিছুক্ষন অপেক্ষা করতে হবে</string>
+    <string name="capture_image">ছবি তুলুন</string>
+    <string name="re_capture">রি-ক্যাপচার</string>
+    <string name="please_confirm_that_the_capture_is_clear">ছবিটি পরিষ্কার হয়েছে তা নিশ্চিত করুন</string>
+    <string name="submit">সাবমিট</string>
+
+</resources>

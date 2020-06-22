@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/actionBarSize"
+        android:background="@drawable/card_backgound"
+        tools:context=".Activity.UnknownManActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_middle">
+            <!-- input -->
+            <LinearLayout
+                android:id="@+id/llInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Case description-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvCaseDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlCaseDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvCaseDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/case_description"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivCaseDescription"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCaseDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/district" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDistrict"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/thana" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnThana"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/village" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etLostVillage"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/information_type" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnInfoType"
+                                        android:entries="@array/array_information_type"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/information_no" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etInformatinoNo"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/date" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:focusable="false"
+                                        android:drawableRight="@drawable/ic_date"
+                                        android:drawableTint="@color/colorPrimary"
+                                        android:id="@+id/etVehicleDate"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/date"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/time" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:focusable="false"
+                                        android:drawableRight="@drawable/ic_time"
+                                        android:drawableTint="@color/colorPrimary"
+
+                                        android:id="@+id/etVehicleTime"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/time"
+                                        />
+                                </TableRow>
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnNext1"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Death Person Information-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvDeathDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlDeathDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvDeathDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/deathperson_description"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivDeathDescription"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDeathDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etName"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/approximate_age" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etAge"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/gender" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnGender"
+                                        style="@style/InformationEntryEditText"
+                                        android:entries="@array/array_gender" />
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/father_s_name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etFathersName"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/mothersName" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/husband_wife_name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etSpouseName"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnNext2"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Person  Idendity Information-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvDeathIdendityInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlDeathIdendityInformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_identification_info"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivDeathIdendityInformation"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDeathIdendityInformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <Button
+                                android:id="@+id/btnAddPhotoes"
+                                style="@style/BtnNext"
+                                android:text="@string/add_image"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/ivImage"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"/>
+                            <GridView
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:minHeight="300dp"
+                                android:id="@+id/gvGallery"
+                                android:numColumns="4">
+                            </GridView>
+
+                            <Button
+                                android:id="@+id/btnNext3"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <!--Person Photoes-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvDeathPersonPhotoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlDeathPersonPhotoes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvDeathPersonPhotoes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/photo"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivDeathPersonPhotoes"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDeathPersonPhotoes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/head_front_pic"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/head_back_pic"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivFrontHead"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/head_front_pic"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivBackHead"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/head_back_pic"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/face_pic"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/front_throat"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivFacePic"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/face_pic"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivFrontThroat"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/front_throat"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/behind_neck"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/chest_pic"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivBehindNeck"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/behind_neck"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivChestPic"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/chest_pic"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/back_pic"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/ear_pic"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivBackPic"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/back_pic"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivEarPic"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/ear_pic"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                            </TableLayout>
+
+
+                            <Button
+                                android:id="@+id/btnNextPhotoes"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <!-- Report -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:id="@+id/llReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--Report Case Description-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/case_description"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Button"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/district" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvDistrict"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/thana" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvThana"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/village" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvLostVillage"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/information_type" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvInfoType"
+                                        android:entries="@array/array_information_type"
+                                        style="@style/InformationEntryEditText"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/information_no" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <TextView
+                                        android:id="@+id/tvInformatinoNo"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/date" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <TextView
+                                        android:focusable="false"
+                                        android:drawableRight="@drawable/ic_date"
+                                        android:drawableTint="@color/colorPrimary"
+                                        android:id="@+id/tvVehicleDate"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/date"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/time" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <TextView
+                                        android:focusable="false"
+                                        android:drawableRight="@drawable/ic_time"
+                                        android:drawableTint="@color/colorPrimary"
+
+                                        android:id="@+id/tvVehicleTime"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/time"
+                                        />
+                                </TableRow>
+                            </TableLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Report Death Person Information-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlPersonIdentification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvTPersonIdentification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/deathperson_description"
+
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Button"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvName"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/approximate_age" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvAge"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/gender" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvGender"
+                                        style="@style/InformationEntryEditText"
+                                        android:entries="@array/array_gender" />
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/father_s_name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvFathersName"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/mothersName" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/husband_wife_name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/tvSpouseName"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Report Person  Identitfication Information-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlPersonAddressInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvRPersonAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_identification_info"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Button"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/ivImage_rpt"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"/>
+                            <GridView
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:minHeight="300dp"
+                                android:id="@+id/gvGallery_rpt"
+                                android:numColumns="4">
+                            </GridView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Report Death Person Photoes-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/photo"
+
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Button"
+                                android:textColor="@android:color/black"  android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/head_front_pic"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/head_back_pic"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivFrontHead_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/head_front_pic"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivBackHead_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/head_back_pic"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/face_pic"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/front_throat"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivFacePic_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/face_pic"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivFrontThroat_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/front_throat"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/behind_neck"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/chest_pic"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivBehindNeck_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/behind_neck"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivChestPic_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/chest_pic"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/back_pic"
+                                        android:gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/ear_pic"
+                                        android:gravity="center" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivBackPic_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:contentDescription="@string/back_pic"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivEarPic_rpt"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="@string/ear_pic"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+                                </TableRow>
+
+                            </TableLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Edit Button-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/spacing_large">
+                        <Button
+                            android:id="@+id/Edit"
+                            style="@style/BtnNext"
+                            android:text="Edit"
+                            android:layout_alignParentLeft="true"/>
+
+                        <Button
+                            android:id="@+id/Submit"
+                            style="@style/BtnNext"
+                            android:text="  Final Submit "
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorAccent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/bar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

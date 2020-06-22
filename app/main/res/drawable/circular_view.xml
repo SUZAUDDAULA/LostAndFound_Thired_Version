@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gray shadow. -->
+    <item >
+        <shape android:shape="oval">
+            <solid android:color="#FF9800" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    <!-- White foreground. -->
+    <item android:bottom="10dp" android:right="10dp" android:left="10dp" android:top="10dp">
+        <shape android:shape="oval">
+            <solid android:color="#FF5722"/>
+            <!--<stroke android:color="#861C1A1E" android:width="2dp" />-->
+            <!--corners allow us to make the rounded corners button-->
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+</layer-list>

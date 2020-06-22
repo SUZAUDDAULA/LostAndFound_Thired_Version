@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "335180491960",
+    "firebase_url": "https://my-project-1550126969367.firebaseio.com",
+    "project_id": "my-project-1550126969367",
+    "storage_bucket": "my-project-1550126969367.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335180491960:android:7d9ece5a35c152a72ad84d",
+        "android_client_info": {
+          "package_name": "com.opus_bd.lostandfound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335180491960-qvtv22nu6605sb41n78bnmkq10fndpbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTccwvgurj9s8Xq3SEN_LUAHoI2TbOGN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335180491960-qvtv22nu6605sb41n78bnmkq10fndpbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

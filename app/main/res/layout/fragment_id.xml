@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Registration.IdFragment">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:gravity="center"
+     android:layout_margin="20dp"
+   android:orientation="vertical">
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/id_request"
+       android:gravity="center"
+       android:layout_margin="20dp"
+       android:textColor="@android:color/holo_red_dark"
+       android:textSize="15dp"/>
+   <RelativeLayout
+       android:id="@+id/rl"
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toTopOf="@id/cvpassport"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/textView2">
+
+     <androidx.cardview.widget.CardView
+         android:id="@+id/cvNID"
+         style="@style/HomeItemCard"
+         app:cardElevation="8dp"
+         app:cardCornerRadius="10dp"
+         app:layout_columnWeight="1"
+         android:layout_alignParentLeft="true"
+         app:layout_rowWeight="1">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal|center_vertical"
+           android:layout_margin="16dp"
+           android:orientation="vertical">
+
+         <ImageView
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_gravity="center_horizontal"
+             android:tint="@color/colorPrimaryDark"
+             android:src="@drawable/ic_nid" />
+
+         <TextView
+             style="@style/HomeTextStyle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:text="@string/nidnum"
+             android:textAlignment="center"
+
+             android:textColor="@android:color/black" />
+
+       </LinearLayout>
+
+     </androidx.cardview.widget.CardView>
+     <androidx.cardview.widget.CardView
+         android:id="@+id/cvBID"
+         style="@style/HomeItemCard"
+         app:cardElevation="8dp"
+         app:cardCornerRadius="10dp"
+         app:layout_columnWeight="1"
+
+         android:layout_alignParentRight="true"
+         app:layout_rowWeight="1">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal|center_vertical"
+           android:layout_margin="16dp"
+           android:orientation="vertical">
+
+         <ImageView
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_gravity="center_horizontal"
+             android:tint="@color/colorPrimaryDark"
+             android:src="@drawable/birth" />
+
+         <TextView
+             style="@style/HomeTextStyle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:text="@string/binnum"
+             android:textAlignment="center"
+
+             android:textColor="@android:color/black" />
+
+       </LinearLayout>
+
+     </androidx.cardview.widget.CardView>
+
+     <!-- <Button
+          android:id="@+id/button1"
+          style="@style/ButtonStyle"
+          android:layout_width="250dp"
+          android:layout_margin="20dp"
+          android:layout_height="wrap_content"
+          android:text="@string/citizen"
+          android:textColor="@android:color/white"
+          />
+
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="250dp"
+          style="@style/ButtonStyle"
+          android:layout_margin="20dp"
+          android:layout_height="wrap_content"
+          android:text="@string/foreigner"
+          android:textColor="@android:color/white" />-->
+   </RelativeLayout>
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cvpassport"
+       style="@style/HomeItemCard"
+       app:cardElevation="8dp"
+       app:cardCornerRadius="10dp"
+       app:layout_columnWeight="1"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/rl"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_rowWeight="1">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal|center_vertical"
+         android:layout_margin="16dp"
+         android:orientation="vertical">
+
+       <ImageView
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:layout_gravity="center_horizontal"
+           android:tint="@color/colorPrimaryDark"
+           android:src="@drawable/ic_nationality_select" />
+
+       <TextView
+           style="@style/HomeTextStyle"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:text="@string/passnum"
+           android:textAlignment="center"
+
+           android:textColor="@android:color/black" />
+
+     </LinearLayout>
+
+   </androidx.cardview.widget.CardView>
+ </LinearLayout>
+  <RelativeLayout
+      android:background="@color/colorPrimaryDark"
+      android:id="@+id/rr2"
+      android:padding="10dip"
+      android:layout_height="@dimen/actionBarSize"
+      android:layout_width="fill_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent">
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textNext"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/next"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textSize="20sp"
+        android:drawablePadding="7dp"
+        android:drawableRight="@drawable/ic_forward_arrow"
+        android:textColor="@android:color/white"
+        android:drawableTint="@android:color/white"/>
+  </RelativeLayout>
+<!--  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:layout_gravity="center">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id_request"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="15dp"/>
+
+
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/ButtonStyle"
+        android:layout_width="250dp"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nidnum"
+        android:textColor="@android:color/white"
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="250dp"
+        style="@style/ButtonStyle"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/binnum"
+        android:textColor="@android:color/white" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="250dp"
+        style="@style/ButtonStyle"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/passnum"
+        android:textColor="@android:color/white" />
+
+  </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

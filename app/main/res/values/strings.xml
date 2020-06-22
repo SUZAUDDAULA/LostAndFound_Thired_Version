@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lost &amp; Found</string>
+    <string name="lost_found_apps"><![CDATA[LOST & FOUND APPS]]></string>
+    <string name="welcome_to">Welcome To</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="bangla">বাংলা</string>
+    <string name="english">English</string>
+    <string name="location_request">Keep your location on</string>
+    <string name="id_request">Select one of the options below for registration.</string>
+    <string name="camera_request">Take your picture by tapping the camera below.</string>
+    <string name="address_verification_request">Will you use the National ID card as your current address?</string>
+    <string name="foreigner">Foreigner</string>
+    <string name="citizen">Bangladeshi</string>
+    <string name="log_in">Log In</string>
+    <string name="registration">Registration</string>
+    <string name="password_forget">Password Forget</string>
+    <string name="remember_password">Remember Password</string>
+    <string name="password">Password</string>
+    <string name="password_confirmation">Confirm Password</string>
+    <string name="user_id">User ID</string>
+    <string name="login">Login</string>
+    <string name="or_new_user">Or New User?</string>
+    <string name="nidnum">National ID Number</string>
+    <string name="binnum">Birth registration Number</string>
+    <string name="passnum">Passport Number</string>
+    <string name="expirydate">Expire Date</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="phnno">Phone Number</string>
+    <string name="otp_confirmation"> One Time Password Confirmation</string>
+    <string name="otp_confirmation_text">Enter the One Time Password code</string>
+    <string name="otp_warning">A 4-digit One Time Password code has been sent to your mobile.</string>
+    <string name="help">Help</string>
+    <string name="gps_network_not_enabled">Your Location is not enabled. Please Press YES for Location Update</string>
+    <string name="open_location_settings">open_location_settings</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Cancel_item">Cancel (2)</string>
+    <string name="allegation">Allegation</string>
+
+    <string name="investigation">Investigation (3)</string>
+    <string name="disposal">Disposal (2)</string>
+    <string name="logout">Logout</string>
+    <string name="email_op">Email (Optional)</string>
+    <string name="email">Email</string>
+    <string name="field_null_error">This field can not be empty</string>
+    <string name="please_choose_one_of_below">Please Choose One of below</string>
+    <string name="purpose_of_visit">Purpose of Visit</string>
+    <string name="please_fill_up_your_imigartion_address">Fill in the address during your stay in Bangladesh</string>
+    <string name="support">Support</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="live_call">Live Call</string>
+    <string name="welcome_to_lost_and_found_application">"Welcome to Lost and Found Application                                 Welcome to Lost and Found Application"</string>
+
+    <string name="information_entry">Information Entry</string>
+    <string name="theft">Theft</string>
+    <string name="to_lose">To lose</string>
+    <string name="found">Found</string>
+    <string name="information_search">Information Search</string>
+    <string name="man">Man</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="report_status">Report Status</string>
+    <string name="others">Others</string>
+    <string name="tracking_number">Tracking Number</string>
+    <string name="date">Date</string>
+    <string name="status">Status</string>
+    <string name="report">Report</string>
+    <string name="doc_type">Document Type</string>
+    <string name="doc_type_if_found">Document Type (If Found)</string>
+    <string name="entry_code">Your entry is complete save the code below</string>
+    <string name="entry_code1">Thanks for the information entry You\'ll be contacted later</string>
+    <string name="entry_code2">Bangladesh Police is always deployed with your help</string>
+    <string name="entry_code3">Call 01737366028 for any help</string>
+    <string name="district">District</string>
+    <string name="thana">Thana</string>
+    <string name="village">Village</string>
+    <string name="name">Name</string>
+    <string name="name_if_found">Name (If found)</string>
+
+    <string name="father_s_name">Father\'s Name</string>
+    <string name="if_found">(If found)</string>
+    <string name="husband_wife_name">Husband/Wife Name</string>
+    <string name="husband_wife_name_if_found">Husband/Wife Name (If found)</string>
+    <string name="religion">Religion</string>
+    <string name="gender">Gender</string>
+    <string name="occupation">Occupation</string>
+    <string name="blood_group">Blood Group</string>
+    <!--    vehicle information-->
+    <string name="vehicleType">Vehicle Type</string>
+    <string name="vehicleBrand">Brand</string>
+    <string name="vehicleModel">Model</string>
+    <string name="vehicleRegiPart1">Matro Area</string>
+    <string name="vehicleRegiPart2">Level</string>
+    <string name="vehicleRegiNo">Regi No</string>
+    <string name="engineNo">Engine No</string>
+    <string name="chesisNo">Chesis No</string>
+    <string name="ccNo">CC</string>
+    <string name="madeIn">Made In</string>
+    <string name="madeDate">Manufecture Date</string>
+
+    <!--    vehicle document info-->
+    <string name="identityInfo">Identity Information</string>
+    <string name="colorName">Color</string>
+    <string name="vehicleSign">Identity Sign</string>
+    <string name="photo">Photo</string>
+    <string name="documentType">Document Type</string>
+
+    <!--    vehicle space and time info-->
+    <string name="theftplaceAndTimeInfo">Theft Place And Times Information</string>
+    <string name="lostplaceAndTimeInfo">Lost Place And Times Information</string>
+    <string name="lostplaceAndTimeInfo1">Lost Place And Times Information</string>
+    <string name="division">Division</string>
+    <string name="addressDetails">Address Details</string>
+    <string name="time">Time</string>
+    <string name="for_own">For Own</string>
+    <string name="for_others">For others</string>
+    <string name="fill_the_information_of_the_person">Fill the information of the person</string>
+    <string name="number">Number</string>
+    <string name="doc_number">Document Number</string>
+    <string name="doc_number_if_found">Document Number (If Found)</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="attachment">Attachment</string>
+    <string name="blue_book">Blue Book</string>
+    <string name="tax_token">Tax Token</string>
+    <string name="fitness_certificate">Fitness Certificate</string>
+    <string name="image">Image</string>
+    <string name="applicant">Applicant</string>
+    <string name="notification">Notification</string>
+    <string name="insurance_paper">Insurance Paper</string>
+    <string name="person_information">Person Information</string>
+    <string name="dead_person_information">Dead Person Information</string>
+    <string name="person_address">Person Address</string>
+
+    <string name="age">Age</string>
+    <string name="approximate_age">Approximate Age</string>
+
+    <string name="image_type">Image Type</string>
+    <string name="image_name">Image Name</string>
+    <string name="select_list">Select List</string>
+    <string name="number_type">Number Type</string>
+    <string name="country">Country</string>
+    <string name="one_line_address">One Line Address</string>
+    <string name="habit">Habit</string>
+    <string name="speech">Speech</string>
+    <string name="address_type">Address Type</string>
+    <string name="deadbody_condition">DeadBody Condition</string>
+    <string name="date_of_death">Date of death</string>
+    <string name="deadbody_location">The location of the corpse</string>
+    <string name="physical_details">Physical Details</string>
+    <string name="eye">Eye</string>
+    <string name="nose">Nose</string>
+    <string name="hair">Hair</string>
+    <string name="forehead">Forehead</string>
+    <string name="beard">Beard</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="physical_constitution">Physical constitution</string>
+    <string name="shape_of_face">Shape of face</string>
+    <string name="chin">Chin</string>
+    <string name="skin_color">Skin color</string>
+    <string name="mustache">Mustache</string>
+    <string name="ears">Ears</string>
+    <string name="neck">Neck</string>
+    <string name="height">Height</string>
+    <string name="feet">(Feet)</string>
+    <string name="inches">(Inches)</string>
+    <string name="description_of_teeth">Description of teeth</string>
+    <string name="special_physical_description">Special physical description</string>
+    <string name="identification_mark">Identification mark</string>
+    <string name="others_identification_mark">Others Identification mark</string>
+    <string name="dress_descrioption">Dress Descrioption</string>
+    <string name="dhead">Head</string>
+    <string name="dcolor">Color</string>
+    <string name="deye">Eye</string>
+    <string name="dthroat">In the throat</string>
+    <string name="dbody">In the body</string>
+    <string name="dwaist">In the waist</string>
+    <string name="dlegs">Legs</string>
+    <string name="person_identification_info">Person identification information</string>
+    <string name="missingpersonlevel">Information of the missing person</string>
+    <string name="othersitemlevel">Others Item</string>
+    <string name="unknowndeadbody">Anonymous corpses</string>
+    <string name="newpassword">New Password</string>
+    <string name="watch_Information">Watch Information</string>
+    <string name="watch_type">Watch Type</string>
+    <string name="mobilePhone_information">Mobile/Phone Information</string>
+    <string name="keys_information">Keys Information</string>
+    <string name="umbrella_information">Umbrella Information</string>
+    <string name="dna_profile">DNA Profile</string>
+    <string name="cards_information">Cards Inforamtion</string>
+    <string name="money_information">Money Inforamtion</string>
+    <string name="shoes_information">Shoes Inforamtion</string>
+    <string name="electronics_information">Electronics Inforamtion</string>
+    <string name="sorothal">Sorothal Report</string>
+    <string name="lostfoundreport">Theft/Lost/Rescue</string>
+    <string name="searchwithphoto">Search for identifiers with photoes</string>
+    <string name="case_description">Case Description</string>
+    <string name="information_type">Inforamtion Type</string>
+    <string name="information_no">Information No</string>
+    <string name="deathperson_description">Death Person Description</string>
+    <string name="police_interface_lost_and_found_search">Lost And Found Search</string>
+    <string name="police_interface_type">Type</string>
+    <string name="police_interface_number">Number</string>
+    <string-array name="array_information_type">
+        <item>@string/select_option</item>
+        <item>GD</item>
+        <item>Case</item>
+    </string-array>
+    <string-array name="array_electronics_brand">
+        <item>@string/select_option</item>
+        <item>Philips</item>
+        <item>Rangs</item>
+        <item>Sony</item>
+    </string-array>
+    <string-array name="array_electronics_type">
+        <item>@string/select_option</item>
+        <item>Home Appearance</item>
+        <item>Kitchen appearance</item>
+        <item>Small Appearance</item>
+        <item>Self Appearance</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_home_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Television</item>
+        <item>Refrigerator</item>
+        <item>Microwave Oven</item>
+        <item>Air Condition</item>
+        <item>Washing Machine</item>
+        <item>Hair Drier</item>
+        <item>Iron Machine</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_kitchen_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Blender and Juicer</item>
+        <item>Chooper</item>
+        <item>Coffee Maker</item>
+        <item>Cook ware</item>
+        <item>Electric Kettle</item>
+        <item>Electric Oven</item>
+        <item>Food Processor</item>
+        <item>Gas Burner</item>
+        <item>Induction Cooker</item>
+        <item>Mixer Grinder</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_small_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Baby Care</item>
+        <item>Beauty And Health</item>
+        <item>Iron</item>
+        <item>Room Heater</item>
+        <item>Sewing Mechine</item>
+        <item>Thermopot</item>
+        <item>V-Guard Water Heater</item>
+        <item>Vacuum Cleaner</item>
+        <item>Water Purifier</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_self_appearnce_type">
+        <item>@string/select_option</item>
+        <item>Camera</item>
+        <item>Play Station</item>
+        <item>Joystick</item>
+        <item>Calculator</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_shoes_model">
+        <item>@string/select_option</item>
+    </string-array>
+    <string-array name="array_shoes_brand">
+        <item>@string/select_option</item>
+    </string-array>
+    <string-array name="array_shoes_brand_type">
+        <item>@string/select_option</item>
+        <item>Brand</item>
+        <item>Non-Brand</item>
+    </string-array>
+    <string-array name="array_shoes_type">
+        <item>@string/select_option</item>
+        <item>Snikers</item>
+        <item>Converse</item>
+        <item>Casual Shoe</item>
+        <item>Office Shoe</item>
+        <item>Loffer</item>
+    </string-array>
+
+    <string-array name="array_penny_type">
+        <item>@string/select_option</item>
+        <item>Stile Made</item>
+        <item>Bronge  Made</item>
+        <item>Hybrade type</item>
+    </string-array>
+
+    <string-array name="array_card_type">
+        <item>@string/select_option</item>
+        <item>Electronics Card</item>
+        <item>NID Card</item>
+        <item>ID Card</item>
+    </string-array>
+
+    <string-array name="array_electronic_card_type">
+        <item>@string/select_option</item>
+        <item>Debit Card</item>
+        <item>Credit Card</item>
+        <item>Master Card</item>
+        <item>Nexus Card</item>
+    </string-array>
+
+    <string-array name="array_umbrella_model">
+        <item>@string/select_option</item>
+
+    </string-array>
+    <string-array name="array_umbrella_brand">
+        <item>@string/select_option</item>
+
+    </string-array>
+
+    <string-array name="array_umbrella_type">
+        <item>@string/select_option</item>
+        <item>Straight Umbrella </item>
+        <item>Folded Umbrella </item>
+        <item>Dubble Folded Umbrella </item>
+        <item>Wind Resistant Umbrella  </item>
+        <item>Automatic Umbrella </item>
+        <item>Golf Umbrella</item>
+    </string-array>
+
+    <string-array name="array_pet_type">
+        <item>@string/select_option</item>
+        <item>Cow </item>
+        <item>Goat</item>
+        <item>Lamb</item>
+        <item>Dog </item>
+        <item>Cat</item>
+        <item>Rabbit</item>
+        <item>Hen</item>
+        <item>Duck</item>
+    </string-array>
+
+
+    <string-array name="array_cosmetics_type">
+        <item>@string/select_option</item>
+        <item>Lipstick </item>
+        <item>Lip balm</item>
+        <item>Lip gloss</item>
+        <item>Lip liner</item>
+        <item>Lip plumper</item>
+        <item>Lip conditioner</item>
+        <item>Lip plumper</item>
+        <item>Lip primer</item>
+        <item>Lip boosters</item>
+        <item>Primer</item>
+        <item>Concealer </item>
+        <item>Foundation</item>
+        <item>Face powder</item>
+        <item>Blush</item>
+        <item>Highlighter</item>
+        <item>Mascara</item>
+        <item>Mascara primer</item>
+        <item>eye primers</item>
+        <item>eyelash glue</item>
+        <item>eyelash curler</item>
+        <item>Eyeshadow</item>
+        <item>Perfume</item>
+        <item>Talcom Powders</item>
+        <item>Ointments/ Pastes</item>
+        <item>Lotions </item>
+        <item>Duck </item>
+        <item>Nail polish </item>
+        <item>nail gloss </item>
+        <item>blush powder </item>
+        <item>bronzer </item>
+        <item>setting spray </item>
+        <item>contour powder/cream </item>
+        <item>eyebrow pencils </item>
+        <item>creams </item>
+        <item>waxes </item>
+        <item>gels </item>
+        <item>powders </item>
+        <item>Face Cleanser</item>
+        <item>Body Lotion</item>
+        <item>Tumer</item>
+        <item>Mitt</item>
+        <item>Mirror</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+
+    <string-array name="array_cosmetics_brand_type">
+        <item>@string/select_option</item>
+        <item>MAC </item>
+        <item>Bobbi Brown</item>
+        <item>L’Oreal</item>
+        <item>Chanel</item>
+        <item>NYX</item>
+        <item>NARS</item>
+        <item>Maybelline</item>
+        <item>Estee Lauder</item>
+        <item>Revlon</item>
+        <item>Lancome</item>
+        <item>Clinique</item>
+        <item>Covergirl</item>
+        <item>Sephora</item>
+        <item>Dior</item>
+        <item>Cover FX</item>
+        <item>bareMinerals</item>
+        <item>Yves Saint Laurent </item>
+        <item>Napoleon Perdis</item>
+        <item>Olay</item>
+        <item>Urban Decay</item>
+        <item>By Terry</item>
+        <item>Mecca</item>
+        <item>Stila Cosmetics</item>
+        <item>Nude by Nature</item>
+        <item>Marc Jacobs Beauty</item>
+        <item>Anastasia Beverly Hills </item>
+        <item>RMS Beauty</item>
+        <item>Avon </item>
+        <item>Make Up For Ever</item>
+        <item>Makeup Revolution </item>
+        <item>The Body Shop</item>
+        <item>Lakme </item>
+        <item>Colorbar</item>
+        <item>L.A. Girl </item>
+        <item>Clinique </item>
+        <item>Revlon </item>
+        <item>PAC </item>
+        <item>theBalm Cosmetics</item>
+        <item>Huda Beauty</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+    <string-array name="array_keys_type">
+        <item>@string/select_option</item>
+        <item>Mechanical Type</item>
+        <item>Automatic Type</item>
+    </string-array>
+
+    <string-array name="array_phone_model">
+        <item>@string/select_option</item>
+        <item>iPhone SE (2nd generation)</item>
+        <item>iPhone 11 Pro</item>
+        <item>iPhone 11 Pro Max</item>
+        <item>iPhone 11</item>
+        <item>iPhone XS</item>
+        <item>iPhone XS Max</item>
+        <item>Nokia 8.3 5G</item>
+        <item>Nokia 7.2</item>
+        <item>Nokia 5310</item>
+        <item>Nokia 3310 3G</item>
+        <item>Samsung Galaxy M21</item>
+        <item>Samsung Galaxy S20+</item>
+        <item>Samsung Galaxy M31</item>
+        <item>Samsung Galaxy S10 Lite</item>
+    </string-array>
+
+    <string-array name="array_phone_brand">
+        <item>@string/select_option</item>
+        <item>i-Phone</item>
+        <item>Nokia</item>
+        <item>Sumsung</item>
+        <item>VIVO</item>
+        <item>Motorola</item>
+        <item>OPPO</item>
+        <item>Xiaomi</item>
+        <item>Huawei</item>
+    </string-array>
+
+    <string-array name="array_phone_type">
+        <item>@string/select_option</item>
+        <item>Tap Phone</item>
+        <item>Smart Phone</item>
+        <item>Codeless Phone</item>
+        <item>TNT Phone</item>
+        <item>Phone Accessories</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string-array name="array_phone_accessories_type">
+        <item>@string/select_option</item>
+        <item>Headphone</item>
+        <item>Charger</item>
+        <item>Bluetooth</item>
+        <item>Cases And Covers</item>
+        <item>Screen protectors</item>
+        <item>Power banks</item>
+        <item>Data cables</item>
+        <item>Mass storage</item>
+        <item>Selfie stick</item>
+        <item>Smartphone tripod mount</item>
+        <item>External batteries</item>
+        <item>@string/spn_others</item>
+    </string-array>
+    <string name="spn_others">Others</string>
+    <string-array name="array_watch_type">
+        <item>@string/select_option</item>
+        <item>Wall Clock</item>
+        <item>Stop Watch</item>
+        <item>Smart Watch</item>
+        <item>Fitness Watch</item>
+        <item>Digital Watch</item>
+        <item>Samsung Watch</item>
+        <item>Apple Watch</item>
+        <item>Analogue Watch</item>
+        <item>Calculator Watch</item>
+        <item>Alarm Watch</item>
+        <item>Table Watch</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+    <string-array name="array_watch_brand">
+        <item>@string/select_option</item>
+        <item>Casio</item>
+        <item>Titan</item>
+        <item>Longines</item>
+        <item>Ulysse Nardin</item>
+        <item>Omega</item>
+        <item>Rolex</item>
+        <item>Tissot</item>
+        <item>Citizen</item>
+        <item>Boss</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+    <string-array name="array_watch_body_type">
+        <item>@string/select_option</item>
+        <item>Leather</item>
+        <item>Chain</item>
+        <item>@string/spn_others</item>
+
+    </string-array>
+    <string-array name="array_watch_structure_type">
+        <item>@string/select_option</item>
+        <item>Simple Dialed Watch</item>
+        <item>Mechanical Watch</item>
+        <item>Chronograph Watch</item>
+        <item>Digital Watch</item>
+        <item>Smart Watch</item>
+        <item>@string/spn_others</item>
+    </string-array>
+
+    <string-array name="array_habit">
+        <item>@string/select_list</item>
+        <item>BRAGGING</item>
+        <item>CHEWS BETAL/PAN</item>
+        <item>CHEWS GUM  </item>
+        <item>CHEWPS PAN MASALA</item>
+        <item>CHEWS SUPARI</item>
+        <item>CHEWS TOBACCO</item>
+        <item>CHEWS CRAZY</item>
+        <item>DRINKS LIQUOR</item>
+        <item>DRUG ADDICT</item>
+        <item>EYES BLINKING</item>
+        <item>EYES SHIFTING</item>
+        <item>GAMBLER</item>
+        <item>HOMOSEXUAL</item>
+        <item>LIP BITING</item>
+        <item>LOTTERY PLAYER</item>
+        <item>MOUSTACHE TWISTING</item>
+        <item>NAIL BITING</item>
+        <item>PROSTITUTE MONGER</item>
+        <item>RACE-GORE</item>
+        <item>SMOKER</item>
+        <item>SNUFF TAKER</item>
+        <item>STRETCHING</item>
+        <item>OTHERS</item>
+        <item>GUTKA</item>
+        <item>NO HABIT</item>
+        <item>NO PECULIARITY</item>
+    </string-array>
+
+    <string-array name="array_speech">
+        <item>@string/select_list</item>
+        <item>NORMAL</item>
+        <item>FAST</item>
+        <item>SLOW</item>
+        <item>STAMMERING</item>
+        <item>LOUD</item>
+        <item>SOFT</item>
+        <item>DEEP-HEAVY</item>
+        <item>NASAL</item>
+        <item>FEMININE(FOR MALE)</item>
+        <item>MASCULINE (FOR FEMALE)</item>
+        <item>STAGGERING</item>
+        <item>Old Dhaka Regionalism</item>
+        <item>Chittagong Regionalism</item>
+        <item>Barisal Regionalism</item>
+        <item>Khulna Regionalism</item>
+        <item>Mymensingh Regionalism</item>
+        <item>Rajshahi Regionalism</item>
+        <item>Rangpur Regionalism</item>
+        <item>Sylhet Regionalism</item>
+        <item>Noakhali Regionalism</item>
+    </string-array>
+    <string-array name="purpose_of_visit">
+        <item>@string/select_option</item>
+        <item>Purpose of Visit</item>
+        <item>Tourist visa</item>
+        <item>Business visa</item>
+        <item>Student visa</item>
+        <item>Employment visa</item>
+        <item> Diplomatic/Official visa</item>
+        <item>Investor visa</item>
+        <item>Journalist visa</item>
+        <item> NGO visa</item>
+    </string-array>
+    <string-array name="religion">
+        <item>@string/select_option</item>
+        <item>Muslim</item>
+        <item>Hindu</item>
+        <item>Cristian</item>
+        <item>Buddhist</item>
+        <item>Others</item>
+
+    </string-array>
+    <string-array name="ImageType">
+        <item>@string/select_option</item>
+        <item>Right Side</item>
+        <item>Left Side</item>
+        <item>Front Side</item>
+        <item>Back Side</item>
+
+    </string-array>
+
+
+    <string-array name="array_gender">
+        <item>@string/select_option</item>
+        <item>Female</item>
+        <item>Male</item>
+        <item>Third Gender</item>
+    </string-array>
+    <string-array name="blood_groups">
+        <item>@string/select_option</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="gender">
+        <item>@string/select_option</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="marital_status">
+        <item>@string/select_option</item>
+        <item>single</item>
+        <item>Married</item>
+    </string-array>
+    <string-array name="occupations">
+        <item>@string/select_option</item>
+        <item>Govt. Job</item>
+        <item>Private Job</item>
+        <item>Business</item>
+        <item>Teacher</item>
+        <item>Others</item>
+    </string-array>
+
+
+    <string-array name="NUMBERTYPE">
+        <item>@string/select_list</item>
+        <item>Telephone</item>
+        <item>Driving Licence</item>
+        <item>TIN Number</item>
+        <item>Passport</item>
+        <item>Mobile</item>
+        <item>Others</item>
+    </string-array>
+
+
+    <string-array name="doc_type">
+        <item>@string/select_list</item>
+        <item>NID</item>
+        <item>Birth Certificate </item>
+        <item>Passport </item>
+    </string-array>
+
+    <string-array name="array_doc_type">
+        <item> @string/select_list </item>
+        <item> National Identity Card </item>
+        <item> @string/edu_certificate </item>
+        <item> Birth Certificate </item>
+        <item> Passport </item>
+        <item> Student ID Card </item>
+        <item> Office ID </item>
+        <item> Banking paper </item>
+        <item> Invoice </item>
+        <item> @string/spn_others </item>
+    </string-array>
+    <string name="edu_certificate">Certificate of Education</string>
+
+    <string-array name="array_beard">
+        <item>@string/select_option</item>
+        <item>Long</item>
+        <item>Short</item>
+        <item>Ripe</item>
+        <item>Young</item>
+        <item>Curl</item>
+        <item>Young Ripe</item>
+    </string-array>
+
+    <string-array name="array_body_color">
+        <item>@string/select_option</item>
+        <item>Black</item>
+        <item>Bright</item>
+        <item>Copper</item>
+        <item>Green</item>
+        <item>Brown</item>
+    </string-array>
+
+    <string-array name="array_body_structure">
+        <item>@string/select_option</item>
+        <item>Tall</item>
+        <item>Light</item>
+        <item>Short</item>
+        <item>Medium</item>
+        <item>Fat</item>
+    </string-array>
+
+    <string-array name="array_body_Chin">
+        <item>@string/select_option</item>
+        <item>Long</item>
+        <item>Round</item>
+        <item>Smashed</item>
+        <item>Thin</item>
+        <item>Slim</item>
+    </string-array>
+
+    <string name="select_option">Select One</string>
+
+
+    <string-array name="array_care_type">
+        <item>@string/select_option</item>
+        <item> Wife </item>
+        <item> Government Office </item>
+        <item> Military </item>
+        <item> para-military </item>
+        <item> Unofficial </item>
+        <item> Self-employed organization </item>
+        <item> Private Office </item>
+        <item> Husband </item>
+        <item> Collaborators </item>
+        <item> Educational Institutions </item>
+    </string-array>
+
+    <string-array name="array_complextion">
+        <item>@string/select_option</item>
+        <item>Bright</item>
+        <item>Brass</item>
+        <item>rtret</item>
+        <item>Cream</item>
+        <item>Bronze</item>
+    </string-array>
+
+    <string-array name="array_cust">
+        <item>@string/select_option</item>
+        <item>Jew</item>
+        <item> Roman Catholic </item>
+        <item> Kshatriya </item>
+        <item> Sino </item>
+        <item> Atheist </item>
+        <item> Brahmin </item>
+        <item> Shia </item>
+        <item> Shikh </item>
+        <item> Sunni </item>
+        <item> Jain </item>
+    </string-array>
+
+    <string-array name="array_death_type">
+        <item>@string/select_option</item>
+        <item> Snake bite </item>
+        <item> Other </item>
+        <item> poisoning </item>
+        <item> Suicide </item>
+        <item> Wild Animal Attack </item>
+        <item> Road Accident </item>
+        <item> Submerged in water </item>
+        <item> Paralysis </item>
+        <item> Hang </item>
+    </string-array>
+    <string-array name="array_ear">
+        <item>@string/select_option</item>
+        <item>Width</item>
+        <item>Long</item>
+        <item>Short</item>
+        <item>Loti kata</item>
+        <item>Kula</item>
+        <item>Round</item>
+    </string-array>
+    <string-array name="array_eye">
+        <item>@string/select_option</item>
+        <item>Inside</item>
+        <item>Bright Colour</item>
+        <item>Long</item>
+        <item>Brown</item>
+        <item>Thin</item>
+        <item>One eyes</item>
+        <item>Thick</item>
+        <item>Fade</item>
+        <item>Sahint</item>
+        <item>Twin</item>
+        <item>Black eyris</item>
+        <item>oo</item>
+    </string-array>
+
+    <string-array name="array_face_shape">
+        <item>@string/select_option</item>
+        <item>Flat</item>
+        <item>Normal</item>
+        <item>Long</item>
+        <item>Round</item>
+    </string-array>
+
+    <string-array name="array_forehead">
+        <item>@string/select_option</item>
+        <item>Wide</item>
+        <item>Straight</item>
+        <item>Stand</item>
+    </string-array>
+
+
+    <string-array name="array_hair">
+        <item>@string/select_option</item>
+        <item>White-Ripe</item>
+        <item>Blad</item>
+        <item>Long</item>
+        <item>Short</item>
+        <item>Brown</item>
+        <item>Grey-White</item>
+        <item>Curl</item>
+        <item>Black</item>
+    </string-array>
+
+    <string-array name="array_head">
+        <item>@string/select_option</item>
+        <item>Long</item>
+        <item>Short</item>
+        <item>Round</item>
+    </string-array>
+
+    <string-array name="array_material_condition">
+        <item>@string/select_option</item>
+        <item>ইনটেক অবস্থা</item>
+        <item>ধ্বংস প্রাপ্ত</item>
+        <item>নষ্ট</item>
+        <item>পরিত্যক্ত</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="array_marital_status">
+        <item>@string/select_option</item>
+        <item> Divorced </item>
+        <item> Widow </item>
+        <item> Unmarried </item>
+        <item> Multiple marriages </item>
+        <item> Widow </item>
+        <item> Married </item>
+    </string-array>
+
+    <string-array name="array_moustache">
+        <item>@string/select_option</item>
+        <item>ছোট</item>
+        <item>সাদা</item>
+        <item>কালো</item>
+        <item>কালো সাদা</item>
+        <item>বড়</item>
+    </string-array>
+
+    <string-array name="array_mouth">
+        <item>@string/select_option</item>
+        <item>Thick Lips</item>
+        <item>Big</item>
+        <item>Small</item>
+        <item>Swell</item>
+        <item>Black Lips</item>
+        <item>Teath ahead</item>
+        <item>Thin Lips</item>
+    </string-array>
+
+    <string-array name="array_neck">
+        <item>@string/select_option</item>
+        <item>Thin</item>
+        <item>ছোট</item>
+        <item>লম্বা</item>
+        <item>মোটা</item>
+    </string-array>
+
+    <string-array name="array_nose">
+        <item>@string/select_option</item>
+        <item>Long</item>
+        <item>Fat</item>
+        <item>Short</item>
+        <item>Flat</item>
+        <item>Curve</item>
+    </string-array>
+
+    <string-array name="array_religion">
+        <item>@string/select_option</item>
+        <item>ইসলাম</item>
+
+        <item>হিন্দু</item>
+        <item>বৌদ্ধ</item>
+
+        <item>খ্রীস্টান</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="array_number_type">
+        <item>@string/select_option</item>
+        <item>টেলিফোন</item>
+        <item>Driveing Lisence</item>
+        <item>টিন নাম্বার</item>
+        <item>পাসপোর্ট</item>
+        <item>অন্যান্য</item>
+        <item>Mobile</item>
+    </string-array>
+
+    <string-array name="array_height_feet">
+        <item>@string/select_option</item>
+        <item>3 feet</item>
+        <item>4 feet</item>
+        <item>5 feet</item>
+        <item>6 feet</item>
+        <item>7 feet</item>
+        <item>8 feet</item>
+    </string-array>
+
+    <string-array name="array_height_inch">
+        <item>@string/select_option</item>
+        <item>1 Inch</item>
+        <item>2 Inch</item>
+        <item>3 Inch</item>
+        <item>4 Inch</item>
+        <item>5 Inch</item>
+        <item>6 Inch</item>
+        <item>7 Inch</item>
+        <item>8 Inch</item>
+        <item>9 Inch</item>
+        <item>10 Inch</item>
+        <item>11 Inch</item>
+    </string-array>
+
+    <string-array name="array_measurement_type">
+        <item>@string/select_option</item>
+        <item>কেজি</item>
+        <item>ফুট</item>
+        <item>পাউন্ড</item>
+        <item>লিটার</item>
+        <item>মিটার</item>
+        <item>গজ</item>
+        <item>মিলি মিটার</item>
+        <item>গ্রাম</item>
+        <item>ভরি</item>
+    </string-array>
+
+    <string-array name="array_given_type">
+        <item>@string/select_option</item>
+        <item>অন্যান্য</item>
+        <item>IME নং</item>
+        <item>ইঞ্জিন নং</item>
+        <item>চেসিস নং</item>
+    </string-array>
+
+
+    <string name="marital_status">Marital Status</string>
+
+    <string-array name="address_type">
+        <item> @string/select_list </item>
+        <item> Obtained from other sources </item>
+        <item> Possible addresses </item>
+        <item> Current </item>
+        <item> Permanent </item>
+        <item> Workplace Address </item>
+        <item> Other </item>
+    </string-array>
+    <string-array name="special_body_condition">
+        <item> @string/select_list </item>
+        <item> Lame legs </item>
+        <item> The toes are low </item>
+        <item>Pairing the toes </item>
+        <item> More toes </item>
+        <item> Hands clasped </item>
+        <item> More fingers </item>
+        <item> fingers of the hand are low </item>
+        <item>Pair of fingers </item>
+
+    </string-array>
+    <string-array name="array_teeth">
+        <item> @string/select_list </item>
+        <item>Fake teeth</item>
+        <item>Broken teeth</item>
+    </string-array>
+    <string-array name="array_deadbody_condition">
+        <item> @string/select_list </item>
+        <item>Intact</item>
+        <item>Hemispherical</item>
+        <item>Melted</item>
+        <item>Partially Melted</item>
+        <item>Skeleton</item>
+    </string-array>
+
+    <string-array name="array_in_the_head">
+        <item> @string/select_list </item>
+        <item>ওড়না</item>
+        <item>হিজাব</item>
+        <item>রুমাল</item>
+        <item>টুপি</item>
+        <item>পাগড়ী</item>
+    </string-array>
+
+    <string-array name="array_in_the_eye">
+        <item> @string/select_list </item>
+        <item>Glasses</item>
+        <item>Sunglasses</item>
+        <item>Sunglasses</item>
+    </string-array>
+
+    <string-array name="array_in_the_throt">
+        <item> @string/select_list </item>
+        <item>ওড়না</item>
+        <item>গামছা</item>
+        <item>তোয়ালে</item>
+        <item>মাফ্লার</item>
+    </string-array>
+
+    <string-array name="array_in_the_body">
+        <item> @string/select_list </item>
+        <item>কামিজ</item>
+        <item>গেনজি</item>
+        <item>ট্রি-শার্ট</item>
+        <item>ব্লেজার</item>
+        <item>সোয়েটার</item>
+    </string-array>
+    <string name="limbs">Limbs</string>
+    <string name="limbs_position">Position</string>
+    <string-array name="array_Special_birthmarks">
+        <item> @string/select_list </item>
+        <item>Sesame</item>
+        <item>Mole</item>
+        <item>Burn marks</item>
+        <item>In the eyes</item>
+        <item>Cut marks</item>
+        <item>Birthmarks</item>
+    </string-array>
+    <string-array name="array_Special_birthmarks_limbs">
+        <item> @string/select_list </item>
+        <item>Legs</item>
+        <item>In hand</item>
+        <item>In the ears</item>
+        <item>In the eyes</item>
+        <item>Cheeks</item>
+        <item>On the lips</item>
+        <item>In the throat</item>
+        <item>On the back</item>
+        <item>In the head</item>
+        <item>Nose</item>
+    </string-array>
+
+    <string-array name="array_birthmarks_position">
+        <item> @string/select_list </item>
+        <item>Right</item>
+        <item>Left </item>
+        <item>Upstairs </item>
+        <item>Down </item>
+        <item>Top right</item>
+        <item>Top left</item>
+        <item>Down right</item>
+        <item>Down left</item>
+        <item>In the middle</item>
+    </string-array>
+
+    <string-array name="array_in_the_waist">
+        <item> @string/select_list </item>
+        <item>লুঙ্গি</item>
+        <item>ধুতি</item>
+        <item>প্যান্ট</item>
+        <item>সালোয়ার</item>
+    </string-array>
+    <string-array name="array_in_the_legs">
+        <item> @string/select_list </item>
+        <item> shoes / su </item>
+        <item> Boot </item>
+        <item> Sneakers </item>
+        <item> Sandals </item>
+        <item> Clogs </item>
+    </string-array>
+    <string name="in_leg_text">Size</string>
+    <string-array name="array_DLeg_size_MT">
+        <item> @string/select_list </item>
+        <item>British method</item>
+        <item>USA method</item>
+        <item>EU method</item>
+        <item>Inchi</item>
+    </string-array>
+
+    <string-array name="Ageperiod">
+        <item>@string/select_list </item>
+        <item> Newborn (0–2) years </item>
+        <item> Children (3–12) years </item>
+        <item> Teenagers (13–19) </item>
+        <item> Young (20–35) </item>
+        <item> Elderly (36–60) </item>
+        <item> Older (over 61) </item>
+    </string-array>
+    <string-array name="byte_array">
+        <item>@string/select_list </item>
+        <item> MB </item>
+        <item> GB </item>
+        <item> TB </item>
+    </string-array>
+
+    <string-array name="array_glasses_type">
+        <item>@string/select_list </item>
+        <item>Reading Glasses</item>
+        <item>Sun Glasses</item>
+        <item>Lense</item>
+    </string-array>
+
+    <string-array name="array_glasses_shape">
+        <item>@string/select_list </item>
+        <item>Oval face shape.</item>
+        <item>Heart-shaped face.</item>
+        <item>Oblong face shape.</item>
+        <item>Square face shape.</item>
+        <item>Diamond face shape.</item>
+        <item>Round face shape.</item>
+        <item>Base-down triangle.</item>
+    </string-array>
+
+
+    <string-array name="array_bag_type">
+        <item>@string/select_list</item>
+        <item>Hand bag</item>
+        <item>Hobo bag</item>
+        <item>Tote bag</item>
+        <item>Duffle bag</item>
+        <item>Messenger bag</item>
+        <item>Backpack</item>
+        <item>Satchel</item>
+        <item>Doctor’s bag</item>
+        <item>Laptop Bag</item>
+        <item>Bucket bag</item>
+        <item>Bowler bag</item>
+        <item>Wristlet</item>
+        <item>Pouch</item>
+        <item>Clutch</item>
+        <item>Beach Bag</item>
+        <item>Shoulder bag</item>
+        <item>Miniaudiere</item>
+        <item>Shopping/Grocery bag</item>
+        <item>Drawstring bag</item>
+        <item>Make up bags</item>
+        <item>Foldover Bags</item>
+        <item>Phone bag</item>
+        <item>Camera case bags</item>
+        <item>Baguette bags</item>
+        <item>Barrel Bag</item>
+        <item>Basket Bag</item>
+        <item>Fanny Pack</item>
+        <item>Kelly Bag</item>
+        <item>Lunch Bags</item>
+    </string-array>
+
+    <string-array name="array_jewelry_type">
+        <item>@string/select_list</item>
+        <item>Enamel Jewelry</item>
+        <item>Quill Jewelry</item>
+        <item>Shellac Jewelry</item>
+        <item>Plastic Jewelry</item>
+        <item>Diamond Jewelry</item>
+        <item>Crystal Jewelry</item>
+        <item>Fashion  jewelry</item>
+        <item>Shell jewelry</item>
+        <item>Leather jewelry</item>
+        <item>Silver jewelry</item>
+        <item>Gold jewelry</item>
+        <item>Resin Jewelry</item>
+        <item>Imitation</item>
+    </string-array>
+
+    <string-array name="array_jewelry_for_type">
+        <item>@string/select_list</item>
+        <item>Hair</item>
+        <item>Neck</item>
+        <item>Hand</item>
+        <item>Finger</item>
+        <item>Feet</item>
+        <item>Arms</item>
+
+
+    </string-array>
+    <string-array name="array_garments_type">
+        <item>@string/select_list</item>
+        <item>Tees</item>
+        <item>Knitwear/Heavy knit</item>
+        <item>Shirts &amp; Light woven Tops(Boluse)</item>
+        <item>Dress and Skirts</item>
+        <item>Jeans</item>
+        <item>Trousers and Shorts</item>
+        <item>Blazers and Waist Coats</item>
+        <item>outwear (Functional)</item>
+        <item>Outwear (Non-Functional)</item>
+        <item>Socks &amp; Stockings</item>
+        <item>Underwear</item>
+        <item>Leggings</item>
+        <item>Nightwear</item>
+        <item>Swimwear</item>
+
+    </string-array>
+
+    <string-array name="lost_and_found_search_type">
+        <item>Item one</item>
+        <item>Item two</item>
+        <item>Item three</item>
+        <item>Item four</item>
+    </string-array>
+
+    <string name="unknown_dead_body">Unknown DeadBody</string>
+    <string name="dress">Dress</string>
+    <string name="position">Position</string>
+    <string name="vehicle_information">Vehicle Information</string>
+    <string name="relation_with_lost_person">Relation with Lost Person</string>
+    <string name="age_period">Age period</string>
+    <string name="add">Add</string>
+    <string name="add_image">Add Images</string>
+    <string name="mothersName">Mother\'s Name</string>
+    <string name="mentally_handicapped">Mentally Handicapped</string>
+    <string name="toast_succss">Successfully Done!</string>
+    <string name="bag_information">Bag\'s Information</string>
+    <string name="brand">Brand</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="model">Model</string>
+    <string name="bag_type">Bag Type</string>
+    <string name="glass_type">Glass Type</string>
+    <string name="glass_shape">Glass Shape</string>
+    <string name="garments_information">Garments Information</string>
+    <string name="jewelry_information">Jewellery Information</string>
+    <string name="jewellary_type">Jewellery type</string>
+    <string name="jewellary_for">Jewellery For</string>
+    <string name="weight">Weight</string>
+    <string name="battery">Battery</string>
+    <string name="cosmetics_information">Cosmetics Information</string>
+    <string name="cosmetics_type">Cosmetics Type</string>
+    <string name="ammount">Amount</string>
+    <string name="visible_tattoos">Visible Tattoos</string>
+    <string name="special_birthmarks">Special Birthmarks</string>
+    <string name="description_of_circumcision">Description of Circumcision</string>
+    <string name="price">Price</string>
+    <string name="computer_accessories">Computer Accessories</string>
+    <string name="product_brand">Product Brand</string>
+    <string name="service_tag_serial_number">Service Tag/ Serial Number</string>
+    <string name="emc_product_id">EMC Product ID</string>
+    <string name="product_number_express_service_code">Product Number/ Express Service Code</string>
+    <string name="document_information">Document Information</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="roll_number">Roll Number</string>
+    <string name="product_information">Product Information</string>
+    <string name="pet_information">Pet Information</string>
+    <string name="pet_type">Pet Type</string>
+    <string name="size">Size</string>
+    <string name="carat">Carat</string>
+    <string name="glass_information">Glass Information</string>
+    <string name="thanks">Thanks</string>
+    <string name="support_msg">For any information or assistance regarding Lost and Found Apps, please contact the representative on duty at the Apps Support Center at the following number: +8801737366028,
+You can also use the following media to communicate with us</string>
+    <string name="select_item_for_support">Select one for Support</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="shoesize">Shoe\'s Size</string>
+
+
+</resources>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HardwareInformationActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/actionBarSize"
+        android:background="@drawable/card_backgound">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPersonInfromation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey_10"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tvTPersonInfromation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="Device Information"
+                            android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="IMEI Number" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/IMEINumber"
+                                    style="@style/InformationEntryTextViewColon"
+                                 />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="Subscriber ID" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/SubscriberID"
+                                    style="@style/InformationEntryTextViewColon" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="SIM Serial Number" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/SIMNumber"
+                                    style="@style/InformationEntryTextViewColon"
+                                    />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="Operator Name" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/OperatorName"
+                                    style="@style/InformationEntryTextViewColon"
+                                    />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="Country Code" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/CountryCode"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:layout_height="32dp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="IP Address" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/IPAddress"
+                                    style="@style/InformationEntryTextViewColon"
+                                     />
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="DNS Address" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/DNSAddress"
+                                    style="@style/InformationEntryTextViewColon"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="MAC Address" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/WiFiMACAddress"
+                                    style="@style/InformationEntryTextViewColon"
+                                    />
+                            </TableRow>
+ <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="MotherBoard ID" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/MotherBoard"
+                                    style="@style/InformationEntryTextViewColon"
+                                     />
+                            </TableRow>
+<TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="Processor ID" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/Processor"
+                                    style="@style/InformationEntryTextViewColon"
+                                     />
+                            </TableRow>
+<TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="Device Serial Number" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/DeviceSerialNumber"
+                                    style="@style/InformationEntryTextViewColon"
+                                     />
+                            </TableRow>
+
+
+                        </TableLayout>
+
+                        <Button
+                            android:id="@+id/btnNext1"
+                            style="@style/BtnNext"
+                            android:text="Tap To Login"
+                            android:layout_margin="16dp"
+                            android:layout_width="match_parent"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

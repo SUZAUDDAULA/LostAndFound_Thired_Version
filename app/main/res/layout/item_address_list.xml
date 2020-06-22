@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:id="@+id/rlPersonAddressInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvRPersonAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/person_address"
+
+                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Button"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/country" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvccp"
+                        style="@style/InformationEntryEditText"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/district" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+                    <TextView
+                        android:id="@+id/tvSPDistrict"
+                        style="@style/InformationEntryEditText"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/thana" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvSPThana"
+                        style="@style/InformationEntryEditText"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/village" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvVillage"
+                        style="@style/InformationEntryEditText"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/addressDetails" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:id="@+id/tvAddressDetails"
+                        style="@style/InformationEntryEditText"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/address_type" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvAddressType"
+                        style="@style/InformationEntryEditText"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InformationEntryTextView"
+                        android:text="@string/one_line_address" />
+
+                    <TextView
+                        style="@style/InformationEntryTextViewColon"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:id="@+id/tvOneLineAddress"
+                        style="@style/InformationEntryEditText"
+                        />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </LinearLayout>

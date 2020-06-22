@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/ihelp"
+        android:title="@string/help"
+        android:iconTint="@color/colorPrimaryDark"
+        android:icon="@drawable/ic_help"/>
+    <item android:id="@+id/iSupport"
+        android:title="@string/support"
+
+        android:iconTint="@color/colorPrimaryDark"
+        android:icon="@drawable/ic_support"/>
+
+    <item android:id="@+id/iNotification"
+        android:title="@string/notification"
+
+        android:iconTint="@color/colorPrimaryDark"
+        android:icon="@drawable/ic_notification"/>
+
+    <item android:id="@+id/ilogout"
+        android:title="@string/logout"
+
+        android:iconTint="@color/colorPrimaryDark"
+        android:icon="@drawable/ic_logout"/>
+<!--
+   <group>
+       <item android:id="@+id/iadd"
+           android:title="@string/logout"
+           android:icon="@drawable/ic_camera"
+           app:showAsAction="always"
+           android:titleCondensed="Logout"/>
+
+       <item android:id="@+id/iadd2"
+           android:title="@string/logout"
+           android:icon="@drawable/ic_camera"
+           app:showAsAction="always"
+           android:titleCondensed="Logout"/>
+   </group>-->
+
+
+
+
+
+
+</menu>

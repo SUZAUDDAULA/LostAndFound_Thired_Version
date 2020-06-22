@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.opus_bd.lostandfound">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="face" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:noHistory="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.LOGREG.RegisterTypeActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Activity.SEARCH.VehicleDetailsViewActivity" />
+        <activity android:name=".Activity.DASHBOARD.GDInformationDetailsActivity" />
+        <activity android:name=".Activity.PoliceInterface.PoliceSearchTypeActivity" />
+        <activity android:name=".Activity.DASHBOARD.DeatailsViewActivity" />
+        <activity android:name=".Activity.SEARCH.OthersItemSearchActivity" />
+        <activity android:name=".Activity.SEARCH.MenSearchActivity" />
+        <activity android:name=".Activity.SEARCH.VehicleSearchActivity" />
+        <activity android:name=".Activity.PoliceInterface.SorothalReportActivity" />
+        <activity
+            android:name=".Activity.LOGREG.CameraCaptureActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Activity.PoliceInterface.PoliceMainActivity"
+            android:label="@string/admin_panal" />
+        <activity android:name=".Activity.PoliceInterface.ContactActivity" />
+        <activity android:name=".Activity.OtherItem.CosmeticsActivity" />
+        <activity android:name=".Activity.OtherItem.ElectronicsActivity" />
+        <activity android:name=".Activity.OtherItem.ShoesActivity" />
+        <activity android:name=".Activity.OtherItem.MoneyActivity" />
+        <activity android:name=".Activity.OtherItem.GarmentsActivity" />
+        <activity android:name=".Activity.OtherItem.CardsActivity" />
+        <activity android:name=".Activity.OtherItem.JewelryActivity" />
+        <activity android:name=".Activity.OtherItem.GlassActivity" />
+        <activity android:name=".Activity.OtherItem.BagActivity" />
+        <activity android:name=".Activity.OtherItem.DocumentActivity" />
+        <activity android:name=".Activity.OtherItem.PetActivity" />
+        <activity android:name=".Activity.OtherItem.UmbrellaActivity" />
+        <activity android:name=".Activity.OtherItem.KeysInformationActivity" />
+        <activity android:name=".Activity.OtherItem.MobilePhoneActivity" />
+        <activity android:name=".Activity.OtherItem.OtherItemDetailsActivity" />
+        <activity android:name=".Activity.LOGREG.ForgetPasswordActivity" />
+        <activity android:name=".Activity.LOGREG.RegistrationActivity"></activity>
+        <activity android:name=".Activity.DASHBOARD.HardwareInformationActivity" />
+        <activity android:name=".Activity.OtherItem.CategoryListActivity" />
+        <activity android:name=".Activity.OtherItem.ComputerActivity" />
+        <activity
+            android:name=".Activity.ENRTY.DeadBodyFoundActivity"
+            android:label="@string/unknowndeadbody" />
+        <activity
+            android:name=".Activity.LOGREG.ChatBotActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.ENRTY.CodeGenerateActivity" />
+        <activity
+            android:name=".Activity.ENRTY.OthersItemEntryActivity"
+            android:label="@string/othersitemlevel" />
+        <activity android:name=".Activity.ENRTY.VehicleEntryActivity" />
+        <activity
+            android:name=".Activity.ENRTY.UnknownManActivity"
+            android:label="@string/missingpersonlevel" />
+        <activity
+            android:name=".Activity.ENRTY.InformationEntryActivity"
+            android:label="@string/information_entry" />
+        <activity
+            android:name=".Activity.DASHBOARD.DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Activity.LOGREG.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.DASHBOARD.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

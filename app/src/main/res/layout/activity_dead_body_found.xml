@@ -1,0 +1,2231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/actionBarSize"
+        android:background="@drawable/card_backgound">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_middle">
+            <!-- input -->
+            <LinearLayout
+                android:id="@+id/llInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Person Information-->
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlPersonInfromation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvTPersonInfromation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/person_information"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivTPersonInfromation"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPersonInfromation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etName"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/if_found" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/approximate_age" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etAge"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/father_s_name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etFathersName"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/if_found" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/mothersName" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etMotherName"
+                                        android:hint="@string/if_found"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/husband_wife_name" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etSpouseName"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/if_found" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/doc_type" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDocType"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/doc_number" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etNidNum"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/if_found" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/number_type" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnNumberType"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/number" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etNum"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/deadbody_condition" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <Spinner
+                                        android:id="@+id/spnDeadBodyCondition"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/date_of_death" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etDateofdeath"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/religion" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnReligion"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/gender" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spngender"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/description_of_circumcision" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+                                            <RadioButton
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:text="@string/yes"
+                                                />
+                                            <RadioButton
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:text="@string/no"
+                                                />
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/visible_tattoos" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etVisibleTattoos"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/image_type" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <TextView
+                                        style="@style/InformationEntryEditText"
+                                        android:text="Select Images Below" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivFront"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="100dp"
+                                        android:contentDescription="Front Image"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivBack"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="100dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="Front Image"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivRight"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="100dp"
+                                        android:contentDescription="Front Image"
+                                        android:scaleType="fitXY"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/ivLeft"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="100dp"
+                                        android:layout_margin="5dp"
+                                        android:contentDescription="Front Image"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_image_icon" />
+
+                                </TableRow> <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Front Image"
+                                        android:gravity="center"
+                                       />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Back Image"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Right Image"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Left Image"
+                                        android:gravity="center" />
+
+                                </TableRow>
+
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnNext1"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Person  Address Information-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvPersonAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlPersonAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvTPersonAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/deadbody_location"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivTPersonAddress"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPersonAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/district" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnSPDistrict"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/thana" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnSPThana"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/village" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etVillage"
+                                        style="@style/InformationEntryEditText" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/addressDetails" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etAddressDetails"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/addressDetails" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/address_type" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnAddressType"
+                                        style="@style/InformationEntryEditText"
+                                        android:entries="@array/address_type" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/one_line_address" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etOneLineAddress"
+                                        style="@style/InformationEntryEditText"
+                                        android:hint="@string/one_line_address" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/date" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etfoundDate"
+                                        style="@style/InformationEntryEditText"
+                                        android:drawableRight="@drawable/ic_date"
+                                        android:drawableTint="@color/colorPrimary"
+                                        android:focusable="false"
+                                        android:hint="@string/date" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/time" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+
+                                    <EditText
+                                        android:id="@+id/etfoundTime"
+                                        style="@style/InformationEntryEditText"
+                                        android:drawableRight="@drawable/ic_time"
+
+                                        android:drawableTint="@color/colorPrimary"
+                                        android:focusable="false"
+                                        android:hint="@string/time" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnNext2"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!--Person  Physical Information-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvPersonPhysical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlPersonPhysical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvTPersonPhysical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/physical_details"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivTPersonPhysical"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPersonPhysical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/eye" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnEye"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/nose" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnNose"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/hair" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnHair"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/forehead" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnforehead"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/beard" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnbeard"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/weight_kg" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etWeightkg"
+                                        style="@style/InformationEntryEditText"
+                                        android:inputType="number" />
+
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/physical_constitution" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnphysical_constitution"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/shape_of_face" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnshape_of_face"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/chin" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnchin"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/skin_color" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnskin_color"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/mustache" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnmustache"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/ears" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnears"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/neck" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnneck"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/height" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:entries="@array/array_face_shape"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/etFeet"
+                                            android:layout_width="35dp"
+                                            android:layout_height="match_parent"
+                                            android:inputType="number" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:text="@string/feet" />
+
+                                        <EditText
+                                            android:id="@+id/etInches"
+                                            android:layout_width="35dp"
+                                            android:layout_height="match_parent"
+                                            android:inputType="number" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:text="@string/inches" />
+                                    </LinearLayout>
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/description_of_teeth" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spndescription_of_teeth"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/special_physical_description" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnspecial_physical_description"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/special_birthmarks" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/etSpecialBirthmarks"
+                                            style="@style/InformationEntryEditText"
+                                            />
+                                        <Spinner
+                                            android:id="@+id/spnBirtMarkType"
+                                            android:layout_width="90dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@android:color/transparent"/>
+                                        <Spinner
+                                            android:id="@+id/spnBirtMartBodyPart"
+                                            android:layout_width="70dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@android:color/transparent"/>
+                                        <Spinner
+                                            android:id="@+id/spnBirthMarkBodyPosition"
+                                            android:layout_width="80dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@android:color/transparent"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="@string/others_identification_mark" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etidentification_mark"
+                                        style="@style/InformationEntryEditText" />
+
+                                </TableRow>
+<!--                                <TableRow-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content">-->
+
+<!--                                    <TextView-->
+<!--                                        style="@style/InformationEntryTextView"-->
+<!--                                        android:text="@string/shoesize" />-->
+
+<!--                                    <TextView-->
+<!--                                        style="@style/InformationEntryTextViewColon"-->
+<!--                                        android:text=":" />-->
+
+
+<!--                                    <EditText-->
+<!--                                        android:id="@+id/etShoeSize"-->
+<!--                                        android:inputType="number"-->
+<!--                                        style="@style/InformationEntryEditText" />-->
+<!--                                </TableRow>-->
+
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnNext3"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <!--Person lost Dress Information-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvDressDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlDressDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvDressDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/dress_descrioption"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivDressDescription"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDressDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/position"
+
+                                        android:textStyle="bold" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/dress"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/colorName"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/dhead" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDHead"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:layout_width="wrap_content"
+                                        android:gravity="start|center_vertical" />
+
+
+                                    <Spinner
+                                        android:id="@+id/spnDHeadColor"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text="@string/deye" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:entries="@array/array_in_the_eye"
+                                        android:id="@+id/spnDEye"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+
+
+                                    <Spinner
+                                        android:id="@+id/spnDEyeColor"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text="@string/dthroat" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDThroat"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+
+                                    <Spinner
+
+                                        android:id="@+id/spnDThroatColor"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text="@string/dbody" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDBody"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+
+                                    <Spinner
+
+                                        android:id="@+id/spnDBodyColor"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text="@string/dwaist" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDWaist"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDWaistColor"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:gravity="start|center_vertical" />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text="@string/dlegs" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <Spinner
+                                        android:id="@+id/spnDLeg"
+                                        android:gravity="start|center_vertical"
+                                        style="@style/InformationEntryTextViewColon"
+                                        />
+                                    <Spinner
+                                        android:id="@+id/spnDLegColor"
+                                        android:gravity="start|center_vertical"
+                                        style="@style/InformationEntryTextViewColon"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tvDLegSize"
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text="@string/in_leg_text" />
+
+                                    <TextView
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/etDLegMes"
+                                        android:gravity="start|center_vertical"
+                                        style="@style/InformationEntryEditText"
+                                        />
+                                    <Spinner
+                                        android:id="@+id/spnDLegMT"
+                                        android:entries="@array/array_DLeg_size_MT"
+                                        android:gravity="start|center_vertical"
+                                        style="@style/InformationEntryTextViewColon"
+                                        />
+                                </TableRow>
+
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnNext4"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Person  DNA Profile-->
+                <com.google.android.material.card.MaterialCardView
+                    android:visibility="gone"
+                    android:id="@+id/mcvDNAProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:backgroundTint="@android:color/white"
+                    app:cardCornerRadius="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlDNAProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_10"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tvDNAProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/dna_profile"
+                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivDNAProfile"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_drop_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDNAProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:textStyle="bold"
+                                        android:text="Locous" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:textStyle="bold"
+                                        android:text=":" />
+
+                                    <TextView
+                                        style="@style/InformationEntryEditText"
+                                        android:textStyle="bold"
+                                        android:text="Genotype" />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D3S1358 " />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/etDS3"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/etDS333"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="vWA " />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/etRegNoNamess"
+                                            android:inputType="number"
+                                            android:maxLength="7"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/etRegNoName"
+                                            android:inputType="number"
+                                            android:maxLength="7"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D16S539 " />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D16S5391"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D16S5392"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="CSF1PO" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/CSF1PO"
+                                        android:inputType="number"
+                                        style="@style/InformationEntryEditText" />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="TPOX " />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/TPOX1"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/TPOX2"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="Y indel" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/Yindel"
+                                        android:inputType="number"
+                                        style="@style/InformationEntryEditText" />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="Amelogenin" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/Amelogenin1"
+                                            android:maxLength="1"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/Amelogenin2"
+                                            android:maxLength="1"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D8S1179" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D8S11791"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D8S11792"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D21S11" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D21S111"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D21S112"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D18S51" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D18S511"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D18S512"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        style="@style/InformationEntryTextView"
+                                        android:text="DYS391" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:text=":" />
+
+                                    <EditText
+                                        android:id="@+id/DYS391"
+                                        android:inputType="number"
+                                        style="@style/InformationEntryEditText" />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D2S441" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D2S4411"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D2S4412"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D19S433" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D19S4331"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D19S4332"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="TH01" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/TH011"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/TH012"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="FGA" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/FGA1"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/FGA2"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D22S1045" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D22S10451"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D22S10452"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D5S818" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D5S8181"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D5S8182"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D13S317" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D13S3171"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D13S3172"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        
+                                        style="@style/InformationEntryTextView"
+                                        android:text="D7S820" />
+
+                                    <TextView
+
+                                        style="@style/InformationEntryTextViewColon"
+                                        android:paddingRight="0dp"
+                                        android:text=":" />
+
+
+                                    <LinearLayout
+                                        style="@style/InformationEntryEditText"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/D7S8201"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText" />
+                                        <TextView
+
+                                            style="@style/InformationEntryTextViewColon"
+                                            android:paddingRight="0dp"
+                                            android:text="," />
+                                        <EditText
+                                            android:id="@+id/D7S8202"
+                                            android:inputType="number"
+                                            android:maxLength="2"
+                                            style="@style/absltEditText"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                            </TableLayout>
+
+                            <Button
+                                android:id="@+id/btnDNA"
+                                style="@style/BtnNext" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <!-- Report -->
+            <include
+                android:id="@+id/mcvReport"
+                layout="@layout/deadbodyfoundreport" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorAccent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/bar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

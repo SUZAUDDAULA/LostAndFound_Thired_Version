@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_xmedium"
+        android:layout_marginBottom="@dimen/actionBarSize"
+        android:background="@drawable/card_backgound"
+        tools:context=".Activity.ENRTY.UnknownManActivity">
+
+        <LinearLayout
+            android:id="@+id/llInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Person Information-->
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPersonInfromation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tvTPersonInfromation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/person_information"
+                            android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivTPersonInfromation"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_drop_down"
+                            android:tint="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPersonInfromation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/name" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/etName"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/approximate_age" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etAge"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/age_period" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnAgeperiod"
+                                    style="@style/InformationEntryEditText"
+                                    android:entries="@array/Ageperiod" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/gender" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnGender"
+                                    style="@style/InformationEntryEditText"
+                                    android:entries="@array/array_gender" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/mentally_handicapped" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <LinearLayout
+                                    style="@style/InformationEntryEditText"
+                                    android:orientation="horizontal">
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:text="@string/yes" />
+
+                                        <RadioButton
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:text="@string/no" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/father_s_name" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etFathersName"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/mothersName" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/husband_wife_name" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etSpouseName"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/colorName" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+
+                                <Spinner
+                                    android:id="@+id/spnColor1"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--Person  Physical Information-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvPersonPhysical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPersonPhysical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tvTPersonPhysical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/physical_details"
+                            android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivTPersonPhysical"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_drop_down"
+                            android:tint="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPersonPhysical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/eye" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnEye"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/nose" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnNose"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/hair" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+
+                                <Spinner
+                                    android:id="@+id/spnHair"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/forehead" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+
+                                <Spinner
+                                    android:id="@+id/spnForhead"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/beard" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnBeard"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/weight_kg" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etWeight"
+                                    style="@style/InformationEntryEditText"
+                                    android:inputType="numberSigned" />
+                            </TableRow>
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/physical_constitution" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnBodyStucture"
+                                    style="@style/InformationEntryEditText"
+                                    android:entries="@array/array_body_structure" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/shape_of_face" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnFaceShape"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/chin" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnChin"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/skin_color" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnSkinColor"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/mustache" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnMustache"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/ears" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnEar"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/neck" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnNeck"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/height" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <LinearLayout
+                                    style="@style/InformationEntryEditText"
+                                    android:entries="@array/array_face_shape"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/etHeight_feet"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:inputType="numberSigned" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="@string/feet" />
+
+                                    <EditText
+                                        android:id="@+id/etHeight_Inch"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:inputType="numberSigned" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="@string/inches" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/special_birthmarks" />
+
+                                <TextView
+
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:paddingRight="0dp"
+                                    android:text=":" />
+
+
+                                <LinearLayout
+                                    style="@style/InformationEntryEditText"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/etSpecialBirthmarks"
+                                        style="@style/InformationEntryEditText"
+                                        android:visibility="gone" />
+
+                                    <Spinner
+                                        android:id="@+id/spnRegNoName1"
+                                        android:layout_width="90dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@android:color/transparent"
+                                        android:entries="@array/array_Special_birthmarks" />
+
+                                    <Spinner
+                                        android:id="@+id/spnRegNoName2"
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@android:color/transparent"
+                                        android:entries="@array/array_Special_birthmarks_limbs" />
+
+                                    <Spinner
+                                        android:id="@+id/spnRegNoName3"
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@android:color/transparent"
+                                        android:entries="@array/array_birthmarks_position" />
+                                </LinearLayout>
+                            </TableRow>
+                            <!--                                <TableRow-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content">-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        style="@style/InformationEntryTextView"-->
+                            <!--                                        android:text="@string/special_birthmarks" />-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        style="@style/InformationEntryTextViewColon"-->
+                            <!--                                        android:text=":" />-->
+                            <!--                                    <Spinner-->
+                            <!--                                        android:id="@+id/spnBirthMark"-->
+                            <!--                                        android:entries="@array/array_Special_birthmarks"-->
+                            <!--                                        style="@style/InformationEntryEditText" />-->
+                            <!--                                    <EditText-->
+                            <!--                                        android:visibility="gone"-->
+                            <!--                                        android:id="@+id/etSpecialBirthmarks"-->
+                            <!--                                        style="@style/InformationEntryEditText"-->
+                            <!--                                        />-->
+                            <!--                                </TableRow>-->
+
+                            <!--                                <TableRow-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content">-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        style="@style/InformationEntryTextView"-->
+                            <!--                                        android:text="@string/limbs" />-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        style="@style/InformationEntryTextViewColon"-->
+                            <!--                                        android:text=":" />-->
+
+                            <!--                                    <Spinner-->
+                            <!--                                        android:id="@+id/spnLimbs"-->
+                            <!--                                        android:entries="@array/array_Special_birthmarks_limbs"-->
+                            <!--                                        style="@style/InformationEntryEditText" />-->
+
+                            <!--                                </TableRow>-->
+
+                            <!--                                <TableRow-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content">-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        style="@style/InformationEntryTextView"-->
+                            <!--                                        android:text="@string/limbs_position" />-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        style="@style/InformationEntryTextViewColon"-->
+                            <!--                                        android:text=":" />-->
+
+                            <!--                                    <Spinner-->
+                            <!--                                        android:id="@+id/spnLimbs_position"-->
+                            <!--                                        android:entries="@array/array_birthmarks_position"-->
+                            <!--                                        style="@style/InformationEntryEditText" />-->
+
+                            <!--                                </TableRow>-->
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/visible_tattoos" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etVisibleTattoos"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/others_identification_mark" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etIdentityficationMark"
+                                    style="@style/InformationEntryEditText" />
+                            </TableRow>
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/description_of_teeth" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spndescription_of_teeth"
+                                    style="@style/InformationEntryEditText" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/special_physical_description" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnspecial_physical_description"
+                                    style="@style/InformationEntryEditText"
+                                    android:entries="@array/special_body_condition" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextView"
+                                    android:text="@string/description_of_circumcision" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <LinearLayout
+                                    style="@style/InformationEntryEditText"
+                                    android:orientation="horizontal">
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:text="@string/yes" />
+
+                                        <RadioButton
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:text="@string/no" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <!--Person lost Dress Information-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvDressDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlDressDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tvDressDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/dress_descrioption"
+                            android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivDressDescription"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_drop_down"
+                            android:tint="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDressDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:layout_width="match_parent"
+                                    android:text="@string/position"
+
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":"
+                                    android:textStyle="bold" />
+
+                                <TextView
+
+                                    style="@style/InformationEntryEditText"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/dress"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    style="@style/InformationEntryEditText"
+                                    android:layout_width="wrap_content"
+                                    android:paddingLeft="50dp"
+                                    android:text="@string/colorName"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/dhead" />
+
+                                <TextView
+
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnDHead"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="start|center_vertical" />
+
+
+                                <Spinner
+                                    android:id="@+id/spnDHeadColor"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="@string/deye" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnDEye"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:entries="@array/array_in_the_eye"
+                                    android:gravity="start|center_vertical" />
+
+
+                                <Spinner
+                                    android:id="@+id/spnDEyeColor"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="@string/dthroat" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnDThroat"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+
+                                <Spinner
+
+                                    android:id="@+id/spnDThroatColor"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="@string/dbody" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnDBody"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+
+                                <Spinner
+
+                                    android:id="@+id/spnDBodyColor"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="@string/dwaist" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnDWaist"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+
+                                <Spinner
+                                    android:id="@+id/spnDWaistColor"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="@string/dlegs" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <Spinner
+                                    android:id="@+id/spnDLeg"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+
+                                <Spinner
+                                    android:id="@+id/spnDLegColor"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tvDLegSize"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text="@string/in_leg_text" />
+
+                                <TextView
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:text=":" />
+
+                                <EditText
+                                    android:id="@+id/etDLegMes"
+                                    style="@style/InformationEntryEditText"
+                                    android:gravity="start|center_vertical"
+                                    android:inputType="numberSigned" />
+
+                                <Spinner
+                                    android:id="@+id/spnDLegMT"
+                                    style="@style/InformationEntryTextViewColon"
+                                    android:entries="@array/array_DLeg_size_MT"
+                                    android:gravity="start|center_vertical" />
+                            </TableRow>
+
+
+                        </TableLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnSearch"
+                style="@style/BtnNext"
+                android:layout_width="match_parent"
+                android:text="@string/search" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorAccent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/bar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/ihelp"
+        android:title="@string/help"
+        android:icon="@drawable/ic_help"
+        app:showAsAction="always"
+        android:titleCondensed="@string/help"/>
+
+    <item android:id="@+id/iNotification"
+        android:title="Notification"
+        android:icon="@drawable/ic_notification"
+        app:showAsAction="always"
+        android:titleCondensed="@string/help"/>
+
+</menu>

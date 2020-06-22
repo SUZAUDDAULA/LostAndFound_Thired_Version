@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+   <item  android:bottom="350dp" >
+       <shape>
+           <solid android:color="#F7F7F7"/>
+
+       </shape>
+   </item>
+   <!-- Gray shadow. -->
+  <!--  <item  android:bottom="350dp" >
+        <shape>
+            <solid android:color="#A7DCF4"/>
+
+        </shape>
+    </item>
+
+
+    <item android:top="300dp" >
+        <shape android:shape="rectangle">
+            <solid android:color="#AEAEBA"/>
+            &lt;!&ndash;<stroke android:color="#861C1A1E" android:width="2dp" />&ndash;&gt;
+            &lt;!&ndash;corners allow us to make the rounded corners button&ndash;&gt;
+            <corners
+                android:topRightRadius="55dp"
+                android:topLeftRadius="55dp"/>
+        </shape>
+
+    </item>
+
+    <item android:top="350dp" >
+        <shape android:shape="rectangle">
+            <solid android:color="#9C9C9F"/>
+            &lt;!&ndash;<stroke android:color="#861C1A1E" android:width="2dp" />&ndash;&gt;
+            &lt;!&ndash;corners allow us to make the rounded corners button&ndash;&gt;
+            <corners
+                android:topRightRadius="55dp"
+                android:topLeftRadius="55dp"/>
+        </shape>
+
+    </item>
+    &lt;!&ndash; White foreground. &ndash;&gt;
+    <item android:top="400dp" >
+        <shape android:shape="rectangle">
+            <solid android:color="#F5F5F8"/>
+            &lt;!&ndash;<stroke android:color="#861C1A1E" android:width="2dp" />&ndash;&gt;
+            &lt;!&ndash;corners allow us to make the rounded corners button&ndash;&gt;
+            <corners
+                android:topRightRadius="55dp"
+                android:topLeftRadius="55dp"/>
+        </shape>
+
+    </item>-->
+    <item
+
+        android:top="350dp">
+
+
+        <bitmap android:src="@drawable/app_bg_crop"
+
+
+            />
+    </item>
+</layer-list>
