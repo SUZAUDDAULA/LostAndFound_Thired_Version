@@ -45,6 +45,7 @@ import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.navigation.NavigationView;
+import com.opus_bd.lostandfound.Activity.ENRTY.FoundAndRecoveredDetailsActicity;
 import com.opus_bd.lostandfound.Activity.ENRTY.InformationEntryActivity;
 import com.opus_bd.lostandfound.Activity.ENRTY.VehicleEntryActivity;
 import com.opus_bd.lostandfound.Activity.LOGREG.LoginActivity;
@@ -212,7 +213,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     @OnClick({R.id.llTheft, R.id.fabTheft})
     public void llTheft() {
         Constants.ENTRY_TYPE_ID = Constants.THEFT;
-        Intent intent = new Intent(DashboardActivity.this, InformationEntryActivity.class);
+        Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);
         finish();
     }
