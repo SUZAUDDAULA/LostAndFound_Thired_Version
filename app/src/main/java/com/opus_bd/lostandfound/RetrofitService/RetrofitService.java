@@ -136,8 +136,8 @@ public interface RetrofitService {
     Call<List<ComputerAccessoriesBrand>> GetAllComputerAccessoriesBrand();
 //Global data
 
-    @GET("api/LostFound/GetALLNewFeedsInfo/{UserName}")
-    Call<List<NewsFeedViewModel>> GetALLNewFeedsInfo(@Header("Authorization") String token, @Path("UserName") String userName);
+    @GET("api/LostFound/GetALLNewFeedsInfo/{UserName}/{vehicleTypeId}")
+    Call<List<NewsFeedViewModel>> GetALLNewFeedsInfo(@Header("Authorization") String token, @Path("UserName") String userName,@Path("vehicleTypeId") int vehicleTypeId);
 
 
     @GET("api/LostFound/GetGDInformationByUser/{UserName}")

@@ -1,12 +1,16 @@
 
 package com.opus_bd.lostandfound.Model.Vehichel;
 
+import android.content.Intent;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.opus_bd.lostandfound.Model.GDInfoModel.FormFile;
 
 public class VehiclePostModel {
-
+    @SerializedName("gdTypeId")
+    @Expose
+    private Integer gdTypeId;
     @SerializedName("vehicleTypeId")
     @Expose
     private Integer vehicleTypeId;
@@ -41,8 +45,8 @@ public class VehiclePostModel {
     @Expose
     private String encodedImage;
 
-    public VehiclePostModel(String encodedImage,Integer vehicleTypeId,Integer vehicleBrandId,String vehicleRegNo,String regNoFirstPart
-        ,String regNoSecondPart,String regNoThiredPart,String modelNo,String engineNo,String vehicleDescription,String userName) {
+    public VehiclePostModel(String encodedImage, Integer gdTypeId, Integer vehicleTypeId, Integer vehicleBrandId, String vehicleRegNo, String regNoFirstPart
+        , String regNoSecondPart, String regNoThiredPart, String modelNo, String engineNo, String vehicleDescription, String userName) {
         this.encodedImage = encodedImage;
         this.vehicleTypeId=vehicleTypeId;
         this.vehicleBrandId=vehicleBrandId;
@@ -54,6 +58,14 @@ public class VehiclePostModel {
         this.engineNo=engineNo;
         this.vehicleDescription=vehicleDescription;
         this.userName=userName;
+    }
+
+    public Integer getGdTypeId() {
+        return gdTypeId;
+    }
+
+    public void setGdTypeId(Integer gdTypeId) {
+        this.gdTypeId = gdTypeId;
     }
 
     public Integer getVehicleTypeId() {

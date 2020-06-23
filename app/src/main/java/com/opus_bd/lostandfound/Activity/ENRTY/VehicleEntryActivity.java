@@ -43,6 +43,7 @@ import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.material.card.MaterialCardView;
 import com.hbb20.CountryCodePicker;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.DashboardActivity;
+import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
 import com.opus_bd.lostandfound.Adapter.CustomAdapter;
 import com.opus_bd.lostandfound.Adapter.CustomColorAdapter;
 import com.opus_bd.lostandfound.Adapter.GalleryAdapter;
@@ -318,7 +319,10 @@ public class VehicleEntryActivity extends AppCompatActivity {
     TextView tvVSATInfo;
     @BindView(R.id.reportPlaceTv)
     TextView reportPlaceTv;
-
+    @BindView(R.id.tvTagPeople)
+    TextView tvTagPeople;
+    @BindView(R.id.tvVehicleInfromation)
+    TextView tvVehicleInfromation;
 
 
 //Multiple Image add
@@ -352,6 +356,8 @@ public class VehicleEntryActivity extends AppCompatActivity {
         }
         ccp.setDefaultCountryUsingNameCode("JP");
         ccp.resetToDefaultCountry();
+        tvTagPeople.setText(Constants.VEHICLE_TYPE_NAME+" Information");
+        tvVehicleInfromation.setText(Constants.VEHICLE_TYPE_NAME+" Information");
         setProgress();
         mcvVehicleInformation.setVisibility(View.GONE);
         mcvVehicleIdendityInformation.setVisibility(View.GONE);
@@ -732,28 +738,10 @@ public class VehicleEntryActivity extends AppCompatActivity {
         String engineNo=etEngineNo.getText().toString();
         String vehicleDescription=etDescription.getText().toString();
         String modelNo=etModel.getText().toString();
+        Integer GDTYPEID=Constants.ENTRY_TYPE_ID;
+        Integer VEHICLETYPEID=Constants.VEHICLE_TYPE_ID;
 
-        final VehiclePostModel model = new VehiclePostModel(fileInfo,SELECTED_VEHICLETYPE_ID,SELECTED_VEHICLEBANDTYPE_ID,regNo,SELECTED_REGNO_1,SELECTED_REGNO_2,regNoName,modelNo,engineNo,vehicleDescription,UserName);
-
-        //GD Information
-        model.setUserName(UserName);
-       
-        //Vehicle Information
-
-        model.setVehicleTypeId(SELECTED_VEHICLETYPE_ID);
-        model.setVehicleBrandId(SELECTED_VEHICLEBANDTYPE_ID);
-        model.setModelNo(etModel.getText().toString());
-        model.setVehicleRegNo(tvRegNoName.getText().toString());
-        model.setRegNoFirstPart(SELECTED_REGNO_1);
-        model.setRegNoSecondPart(SELECTED_REGNO_2);
-        model.setRegNoThiredPart(etRegNoName.getText().toString());
-        model.setEngineNo(etEngineNo.getText().toString());
-        model.setEncodedImage(fileInfo);
-
-        //vehiclePostModel.setChasisNo(etChesisNo.getText().toString());
-//        vehiclePostModel.setCcNo(fileName);
-//        vehiclePostModel.setIdentifySign(fileInfo);
-
+        final VehiclePostModel model = new VehiclePostModel(fileInfo,GDTYPEID,VEHICLETYPEID,SELECTED_VEHICLEBANDTYPE_ID,regNo,SELECTED_REGNO_1,SELECTED_REGNO_2,regNoName,modelNo,engineNo,vehicleDescription,UserName);
 
         RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
         Call<String> registrationRequest = retrofitService.SaveVehicleWithImage(SharedPrefManager.BEARER + token, model);
@@ -766,7 +754,8 @@ public class VehicleEntryActivity extends AppCompatActivity {
                         progress.dismiss();
                         Toast.makeText(VehicleEntryActivity.this, "Successfully Done!", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(VehicleEntryActivity.this, DashboardActivity.class);
+                        Intent intent = new Intent(VehicleEntryActivity.this, ItemWiseNewsFeedActivity.class);
+
                         startActivity(intent);
                         finish();
 
@@ -1026,7 +1015,9 @@ public class VehicleEntryActivity extends AppCompatActivity {
     //InformationEntryActivity
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, FoundAndRecoveredDetailsActicity.class);
+        Constants.ENTRY_TYPE_ID=Constants.ENTRY_TYPE_ID;
+        Constants.ENTRY_TYPE_Name=Constants.ENTRY_TYPE_Name;
+        Intent intent = new Intent(this, ItemWiseNewsFeedActivity.class);
         startActivity(intent);
         finish();
         super.onBackPressed();

@@ -91,17 +91,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     ArrayList<NewsFeedViewModel> newsFeedViewModelArrayList = new ArrayList<>();
 
     ProgressDialog progress;
-    // First row
-    @BindView(R.id.tvAlligation)
-    TextView tvAlligation;
-    @BindView(R.id.tvReject)
-    TextView tvReject;
-    @BindView(R.id.tvInvestigation)
-    TextView tvInvestigation;
-    @BindView(R.id.tvFinish)
-    TextView tvFinish;
-    @BindView(R.id.rvGDInfo)
-    RecyclerView rvGDInfo;
+
     private final static int REQUEST_CHECK_SETTINGS_GPS = 0x1;
     private final static int REQUEST_ID_MULTIPLE_PERMISSION = 0x3;
     //LOCATION eNABLE
@@ -136,10 +126,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         //setProgress();
-        getAllGDInfoStatus();
+        //getAllGDInfoStatus();
         //getAllGDInfo();
-        getAllNewsFeedInfo();
-        intRecyclerView();
+        //getAllNewsFeedInfo();
+        //intRecyclerView();
 
         //LOCATION eNABLE
         setUpGClient();
@@ -150,13 +140,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         progress.setMessage("Data Loading.... ");
     }
 
-    public void intRecyclerView() {
-        newsFeedAdapter = new NewsFeedAdapter(newsFeedViewModelArrayList, this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setReverseLayout(true);
-        rvGDInfo.setLayoutManager(layoutManager);
-        rvGDInfo.setAdapter(newsFeedAdapter);
-    }
+
 
     @OnClick(R.id.ivappLogo)
     public void ivappLogo() {
@@ -210,90 +194,25 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         mDrawerLayout.closeDrawer(GravityCompat.END);
     }
 
-    @OnClick({R.id.llTheft, R.id.fabTheft})
+    @OnClick({R.id.fabTheft})
     public void llTheft() {
-        Constants.ENTRY_TYPE_ID = Constants.THEFT;
+        Constants.ENTRY_TYPE_ID = 1;
+        Constants.ENTRY_TYPE_Name = "Lost/Stolen";
         Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);
         finish();
     }
 
-@OnClick({R.id.profile_Name})
-    public void profile_Name() {
-        Constants.ENTRY_TYPE_ID = Constants.THEFT;
-        Intent intent = new Intent(DashboardActivity.this, VehicleEntryActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-
-    @OnClick({R.id.fablost, R.id.llfablost})
+    @OnClick({R.id.fablost})
     public void fablost() {
-        Constants.ENTRY_TYPE_ID = Constants.LOST;
+        Constants.ENTRY_TYPE_ID = 2;
+        Constants.ENTRY_TYPE_Name = "Found/Recovered";
         Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);
         finish();
     }
 
-    @OnClick({R.id.ivFound, R.id.llFound})
-    public void ivFound() {
-        Constants.ENTRY_TYPE_ID = Constants.FOUND;
-        Intent intent = new Intent(DashboardActivity.this, InformationEntryActivity.class);
-        startActivity(intent);
-        finish();
-    }
 
-
-    // Search
-    @OnClick({R.id.fabManSearch, R.id.llManSearch})
-    public void ManSearch() {
-       /* Intent intent = new Intent(DashboardActivity.this, MenSearchActivity.class);
-        startActivity(intent);
-        finish();*/
-    }
-
-    @OnClick({R.id.fabVehicleSearch, R.id.llVehicleSearch})
-    public void VehicleSearch() {
-        Constants.isAdmin = 0;
-        Intent intent = new Intent(DashboardActivity.this, VehicleSearchActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    @OnClick({R.id.fabOthersSearch, R.id.llOthersSearch})
-    public void OthersSearch() {
-        Intent intent = new Intent(DashboardActivity.this, VehicleSearchActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    @OnClick({R.id.ivInvestigation, R.id.llInvestigation})
-    public void ivInvestigation() {
-        Constants.GDStatusId = 2;
-        Intent intent = new Intent(DashboardActivity.this, DeatailsViewActivity.class);
-        startActivity(intent);
-    }
-
-    @OnClick({R.id.ivReject, R.id.llReject})
-    public void ivReject() {
-        Constants.GDStatusId = 4;
-        Intent intent = new Intent(DashboardActivity.this, DeatailsViewActivity.class);
-        startActivity(intent);
-    }
-
-    @OnClick({R.id.ivFinish, R.id.llFinish})
-    public void ivFinish() {
-        Constants.GDStatusId = 3;
-        Intent intent = new Intent(DashboardActivity.this, DeatailsViewActivity.class);
-        startActivity(intent);
-    }
-
-    @OnClick({R.id.ivAlligation, R.id.llAlligation})
-    public void ivAlligation() {
-        Constants.GDStatusId = 1;
-        Intent intent = new Intent(DashboardActivity.this, DeatailsViewActivity.class);
-        startActivity(intent);
-    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -307,96 +226,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     }
 
 
-
-    public void getAllGDInfoStatus() {
-
-        String token = SharedPrefManager.getInstance(this).getToken();
-        String UserName = SharedPrefManager.getInstance(this).getUser();
-
-        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
-        Call<StatusTypeViewModel> listCall = retrofitService.GetCountGDInformationStatus(SharedPrefManager.BEARER + token, UserName);
-        listCall.enqueue(new Callback<StatusTypeViewModel>() {
-            @Override
-            public void onResponse(Call<StatusTypeViewModel> call, Response<StatusTypeViewModel> response) {
-                if (response.body() != null) {
-                    tvAlligation.setText(getResources().getText(R.string.allegation) + " (" + response.body().getComplain() + ")");
-                    tvReject.setText(getResources().getText(R.string.Cancel) + " (" + response.body().getReject() + ")");
-                    tvInvestigation.setText(getResources().getText(R.string.investigation) + " (" + response.body().getInvestigation() + ")");
-                    tvFinish.setText(getResources().getText(R.string.disposal) + " (" + response.body().getFinish() + ")");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<StatusTypeViewModel> call, Throwable t) {
-                Toast.makeText(DashboardActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
-    public void getAllGDInfo() {
-
-        String token = SharedPrefManager.getInstance(this).getToken();
-        String UserName = SharedPrefManager.getInstance(this).getUser();
-        Utilities.showLogcatMessage(" token " + token);
-        Utilities.showLogcatMessage(" UserName " + UserName);
-        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
-        Call<List<GDInformation>> listCall = retrofitService.GetGDInformationByUser(SharedPrefManager.BEARER
-                + token, UserName);
-        listCall.enqueue(new Callback<List<GDInformation>>() {
-            @Override
-            public void onResponse(Call<List<GDInformation>> call, Response<List<GDInformation>> response) {
-                Utilities.showLogcatMessage(" r " + response.body());
-                if (response.body() != null) {
-                    Utilities.showLogcatMessage("gdin" + response.body().size());
-                    gdInformationArrayList.clear();
-                    gdInformationArrayList.addAll(response.body());
-                    gdInformationAdapter.notifyDataSetChanged();
-
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<GDInformation>> call, Throwable t) {
-                Toast.makeText(DashboardActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
-    public void getAllNewsFeedInfo() {
-        //progress.show();
-        String token = SharedPrefManager.getInstance(this).getToken();
-        String UserName = SharedPrefManager.getInstance(this).getUser();
-        Utilities.showLogcatMessage(" token " + token);
-        Utilities.showLogcatMessage(" UserName " + UserName);
-        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
-        Call<List<NewsFeedViewModel>> listCall = retrofitService.GetALLNewFeedsInfo(SharedPrefManager.BEARER
-                + token, UserName);
-        listCall.enqueue(new Callback<List<NewsFeedViewModel>>() {
-            @Override
-            public void onResponse(Call<List<NewsFeedViewModel>> call, Response<List<NewsFeedViewModel>> response) {
-                Utilities.showLogcatMessage(" r " + response.body());
-                if (response.body() != null) {
-                    //progress.dismiss();
-                    Utilities.showLogcatMessage("gdin" + response.body().size());
-                    newsFeedViewModelArrayList.clear();
-                    newsFeedViewModelArrayList.addAll(response.body());
-                    newsFeedAdapter.notifyDataSetChanged();
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<NewsFeedViewModel>> call, Throwable t) {
-                //progress.dismiss();
-                Toast.makeText(DashboardActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
     //lOCATION ENABLE
 
 

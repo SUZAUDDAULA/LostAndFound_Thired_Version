@@ -29,9 +29,12 @@ public class Constants {
 
     //Entry type Id
     public static int ENTRY_TYPE_ID;
+    public static String ENTRY_TYPE_Name;
     public static int THEFT = 3;
     public static int LOST = 1;
     public static int FOUND = 2;
+    public static int VEHICLE_TYPE_ID = 1;
+    public static String VEHICLE_TYPE_NAME = "Bus";
 
     public static int isAdmin = 1;
 

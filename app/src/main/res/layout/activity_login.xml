@@ -74,7 +74,6 @@
                 <EditText
                     android:id="@+id/etUserName"
                     android:hint="@string/user_id"
-                    android:textStyle="bold"
                     android:textSize="20sp"
                     style="@style/EditTextEditText" />
 
@@ -89,7 +88,6 @@
                     android:id="@+id/etPassword"
                    style="@style/EditTextEditText"
                     android:maxLength="13"
-                    android:textStyle="bold"
                     android:textSize="20sp"
                     android:hint="@string/password"
                     android:inputType="textPassword"/>

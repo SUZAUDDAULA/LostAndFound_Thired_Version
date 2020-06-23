@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         tools:context=".Activity.ENRTY.VehicleEntryActivity">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -251,7 +250,8 @@
 
                                 <TableRow
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone">
 
                                     <TextView
                                         style="@style/InformationEntryTextView"
@@ -484,6 +484,10 @@
                     android:id="@+id/btnPost"
                     android:text="Post"
                     style="@style/BtnNext" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
 
                 <!--vehicle  Idendity Information-->
                 <com.google.android.material.card.MaterialCardView
@@ -988,10 +992,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:gravity="center"
         app:backgroundTint="@color/colorAccent" >
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
             android:orientation="vertical">
 
             <LinearLayout
