@@ -37,8 +37,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.DASHBOARD.ItemWiseNewsFeedActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Activity.LOGREG.LoginWithGoogleActivity"></activity>
+        <activity
+            android:name=".Activity.DASHBOARD.ItemWiseNewsFeedActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.ENRTY.FoundAndRecoveredDetailsActicity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -108,7 +110,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -49,7 +49,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/document_information"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
                             <ImageView
@@ -220,7 +219,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/identityInfo"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -331,7 +329,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/theftplaceAndTimeInfo"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 

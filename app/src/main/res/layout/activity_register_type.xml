@@ -28,6 +28,24 @@
         <View
             android:layout_width="0dp"
             android:layout_height="30dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sign_with_google"
+            style="@style/RegistrationOption"
+            android:layout_alignParentLeft="true"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardBackgroundColor="#C2252C">
+
+<!--            <com.google.android.gms.common.SignInButton-->
+<!--                android:id="@+id/sign_in_button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="70dp"/>-->
+
+        </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_google"
             style="@style/RegistrationOption"
@@ -39,6 +57,7 @@
             app:cardBackgroundColor="#C2252C">
 
             <LinearLayout
+                android:id="@+id/llGoogleSign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -51,7 +70,9 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/googlelogin" />
 
+
                 <TextView
+                    android:id="@+id/sign_in_button"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,7 +112,7 @@
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="22dp"
                     android:gravity="left"
                     android:text="Sign Up With Facebook"
                     android:textColor="@android:color/white" />
