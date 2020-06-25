@@ -29,6 +29,22 @@
             android:layout_width="0dp"
             android:layout_height="30dp"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+            </ImageView>
+
+        </LinearLayout>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/sign_with_google"
             style="@style/RegistrationOption"
@@ -102,7 +118,13 @@
                 android:layout_margin="16dp"
                 android:orientation="horizontal">
 
-                <ImageView
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="22dp"/>
+                <!--<ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
@@ -115,7 +137,7 @@
                     android:layout_marginLeft="15dp"
                     android:gravity="left"
                     android:text="Sign Up With Facebook"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white" />-->
 
             </LinearLayout>
 
@@ -194,6 +216,7 @@
         </androidx.cardview.widget.CardView>
 
         <RelativeLayout
+            android:id="@+id/rl_terms_and_condition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
