@@ -1,11 +1,13 @@
 package com.opus_bd.lostandfound.Activity.DASHBOARD;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,8 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
     RecyclerView rvGDInfoItem;
     @BindView(R.id.tvVehicleCategoryTitle)
     TextView tvVehicleCategoryTitle;
+
+    int likeCount = 0;
 
     NewsFeedAdapter newsFeedAdapter;
     ArrayList<NewsFeedViewModel> newsFeedViewModelArrayList = new ArrayList<>();

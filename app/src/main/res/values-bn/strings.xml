@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="facebook_app_id">2572460263070929</string>
+    <string name="fb_login_protocol_scheme">fb2572460263070929</string>
+
     <string name="app_name">Lost &amp; Found</string>
     <string name="lost_found_apps"><![CDATA[LOST & FOUND APPS]]></string>
     <string name="welcome_to">Welcome To bangla</string>

@@ -86,6 +86,7 @@
                 android:src="@drawable/ic_like_btn"/>
             
             <TextView
+                android:id="@+id/totalLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -126,23 +127,30 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/llLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true">
+                android:layout_centerInParent="true"
+                android:clickable="true">
                 <ImageView
+                    android:id="@+id/likeimg"
                     android:layout_width="18dp"
                     android:layout_height="10dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_like"/>
+                    android:src="@drawable/ic_like"
+                    android:clickable="true"/>
 
                 <TextView
+                    android:id="@+id/liketext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
                     android:text="Like"
                     android:textSize="13sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:clickable="true"/>
 
             </LinearLayout>
 

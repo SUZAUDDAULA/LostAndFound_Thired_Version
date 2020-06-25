@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
 import com.opus_bd.lostandfound.Model.GDInfoModel.NewsFeedViewModel;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.Utils.Utilities;
@@ -22,16 +24,29 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.TransactionViewHolder> {
     private final Context context;
     public String Language, english, bangla;
     private List<NewsFeedViewModel> items;
 
+    @BindView(R.id.totalLike)
+    TextView totalLike;
+
     public NewsFeedAdapter(List<NewsFeedViewModel> items, Context context) {
         this.items = items;
         this.context = context;
 
+    }
+
+    @OnClick({R.id.llLike,R.id.likeimg, R.id.liketext})
+    public void likeCount() {
+
+        Toast.makeText(new ItemWiseNewsFeedActivity(), "Clicked", Toast.LENGTH_LONG).show();
+        int likes = Integer.parseInt(totalLike.getText().toString());
+        Toast.makeText(new ItemWiseNewsFeedActivity(), likes, Toast.LENGTH_LONG).show();
+        totalLike.setText(likes + 1);
     }
 
     @Override
