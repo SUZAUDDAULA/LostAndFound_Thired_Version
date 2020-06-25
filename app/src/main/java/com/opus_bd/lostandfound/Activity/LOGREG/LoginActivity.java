@@ -25,6 +25,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -36,6 +37,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -89,6 +96,7 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
     @BindView(R.id.ivpassShow)
     ImageView ivpassShow;
 
+
     private final static int REQUEST_CHECK_SETTINGS_GPS = 0x1;
     private final static int REQUEST_ID_MULTIPLE_PERMISSION = 0x3;
     //LOCATION eNABLE
@@ -123,6 +131,7 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
         //LOCATION eNABLE
         //setUpGClient();
         //LOCATION eNABLE
+
     }
 
     @Override

@@ -46,6 +46,27 @@
 
         </androidx.cardview.widget.CardView>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"></ImageView>
+
+            <TextView
+                android:id="@+id/userid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User id here"
+                android:textAlignment="center"></TextView>
+
+        </LinearLayout>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_google"
             style="@style/RegistrationOption"
@@ -57,7 +78,6 @@
             app:cardBackgroundColor="#C2252C">
 
             <LinearLayout
-                android:id="@+id/llGoogleSign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -70,9 +90,7 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/googlelogin" />
 
-
                 <TextView
-                    android:id="@+id/sign_in_button"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,7 +130,7 @@
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="22dp"
+                    android:layout_marginLeft="25dp"
                     android:gravity="left"
                     android:text="Sign Up With Facebook"
                     android:textColor="@android:color/white" />
