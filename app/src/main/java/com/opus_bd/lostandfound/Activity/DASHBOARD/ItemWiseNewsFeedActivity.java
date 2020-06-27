@@ -6,11 +6,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Adapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.opus_bd.lostandfound.Activity.ENRTY.FoundAndRecoveredDetailsActicity;
 import com.opus_bd.lostandfound.Activity.ENRTY.VehicleEntryActivity;
 import com.opus_bd.lostandfound.Adapter.NewsFeedAdapter;
@@ -43,12 +50,36 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
     NewsFeedAdapter newsFeedAdapter;
     ArrayList<NewsFeedViewModel> newsFeedViewModelArrayList = new ArrayList<>();
+    GoogleSignInClient mGoogleSignInClient;
+    @BindView(R.id.user_prifile_pic)
+    ImageView user_prifile_pic;
+
+    @BindView(R.id.profile_Name)
+    TextView profile_Name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_wise_news_feed);
         ButterKnife.bind(this);
         tvVehicleCategoryTitle.setText(Constants.ENTRY_TYPE_Name+" "+Constants.VEHICLE_TYPE_NAME+" List");
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+//            String personGivenName = acct.getGivenName();
+//            String personFamilyName = acct.getFamilyName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+
+            profile_Name.setText(personName);
+            Glide.with(this).load(String.valueOf(personPhoto)).circleCrop().into(user_prifile_pic);
+        }
         getAllNewsFeedInfo();
         intRecyclerView();
 

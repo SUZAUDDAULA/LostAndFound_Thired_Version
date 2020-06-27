@@ -163,7 +163,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             Uri personPhoto = acct.getPhotoUrl();
 
             profile_Name.setText(personName);
-            Glide.with(this).load(String.valueOf(personPhoto)).into(user_prifile_pic);
+            Glide.with(this).load(String.valueOf(personPhoto)).circleCrop().into(user_prifile_pic);
         }
 
         //setUpGClient();

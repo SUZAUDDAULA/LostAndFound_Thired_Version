@@ -3,6 +3,7 @@ package com.opus_bd.lostandfound.Activity.ENRTY;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -10,6 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.DashboardActivity;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
 import com.opus_bd.lostandfound.R;
@@ -48,9 +54,15 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
     @BindView(R.id.Truck)
     ImageView Truck;
 
+    @BindView(R.id.user_prifile_pic)
+    ImageView user_prifile_pic;
+
+    @BindView(R.id.profile_Name)
+    TextView profile_Name;
     @BindView(R.id.tvCategoryTitle)
     TextView tvCategoryTitle;
 
+    GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +79,25 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
         Pickup.setOnClickListener(this);
         Truck.setOnClickListener(this);
         tvCategoryTitle.setText(Constants.ENTRY_TYPE_Name);
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+//            String personGivenName = acct.getGivenName();
+//            String personFamilyName = acct.getFamilyName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+
+            profile_Name.setText(personName);
+            Glide.with(this).load(String.valueOf(personPhoto)).circleCrop().into(user_prifile_pic);
+        }
 
     }
 

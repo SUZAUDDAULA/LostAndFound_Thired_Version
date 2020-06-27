@@ -21,11 +21,11 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.DashboardActivity;
-//import com.facebook.CallbackManager;
-//import com.facebook.FacebookCallback;
-//import com.facebook.FacebookException;
-//import com.facebook.login.LoginResult;
-//import com.facebook.login.widget.LoginButton;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.Utils.Utilities;
 
@@ -40,8 +40,8 @@ public class RegisterTypeActivity extends AppCompatActivity {
     TextView sign_in_button;
     int RC_SIGN_IN=0;
     @SuppressLint("RestrictedApi")
-//    private CallbackManager callbackManager;
-//    private LoginButton fbLogin;
+    private CallbackManager callbackManager;
+    private LoginButton fbLogin;
     private ImageView profile;
     private TextView userid;
 
