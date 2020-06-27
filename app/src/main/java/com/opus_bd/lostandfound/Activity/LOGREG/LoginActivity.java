@@ -298,7 +298,6 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
                             startActivity(intent);
                         }
 
-
                     } else {
                         Toast.makeText(LoginActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
                     }
