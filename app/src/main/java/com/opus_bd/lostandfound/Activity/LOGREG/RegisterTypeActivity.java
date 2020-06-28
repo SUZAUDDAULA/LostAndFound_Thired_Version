@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,7 +13,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -31,13 +34,24 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.opus_bd.lostandfound.Model.User.RegistrationModel;
+import com.opus_bd.lostandfound.Model.User.UserAuthModel;
 import com.opus_bd.lostandfound.R;
+import com.opus_bd.lostandfound.RetrofitService.RetrofitClientInstance;
+import com.opus_bd.lostandfound.RetrofitService.RetrofitService;
+import com.opus_bd.lostandfound.Utils.Constants;
 import com.opus_bd.lostandfound.Utils.Utilities;
+import com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager;
 import com.squareup.picasso.Picasso;
+
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RegisterTypeActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
@@ -100,7 +114,6 @@ public class RegisterTypeActivity extends AppCompatActivity {
                 findViewById(R.id.reg_with_email).setVisibility(View.GONE);
                 findViewById(R.id.reg_with_mobile).setVisibility(View.GONE);
                 findViewById(R.id.rl_terms_and_condition).setVisibility(View.GONE);
-
                 findViewById(R.id.profile).setVisibility(View.VISIBLE);
                 //findViewById(R.id.userid).setVisibility(View.VISIBLE);
             }
@@ -144,9 +157,9 @@ public class RegisterTypeActivity extends AppCompatActivity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            Constants.LOGIN_WITH="google";
+            submitToServer();
 
-            Intent intent=new Intent(RegisterTypeActivity.this, DashboardActivity.class);
-            startActivity(intent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
@@ -154,6 +167,75 @@ public class RegisterTypeActivity extends AppCompatActivity {
         }
 //
 //
+    }
+
+
+    public void submitToServer() {
+
+        SharedPrefManager.getInstance(RegisterTypeActivity.this).clearToken();
+        SharedPrefManager.getInstance(RegisterTypeActivity.this).clearotp();
+        SharedPrefManager.getInstance(RegisterTypeActivity.this).clearUser();
+        final RegistrationModel registrationModel = new RegistrationModel();
+
+        String personName="";
+        String personEmail="";
+        String personId="";
+        String imagePath="";
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            personName = acct.getDisplayName();
+            personEmail = acct.getEmail();
+            personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+            imagePath=personPhoto.toString();
+
+            Constants.EMAIL=personEmail;
+            Constants.PROFILE_NAME=personName;
+            Constants.IMAGE_URI=personPhoto;
+        }
+
+        registrationModel.setUserName(personEmail);
+        registrationModel.setPassword("123456");
+        registrationModel.setConfirmPassword("123456");
+        registrationModel.setFullName(personName);
+        registrationModel.setUserFrom("google");
+        registrationModel.setEmail(personEmail);
+        registrationModel.setImagePath(imagePath);
+        registrationModel.setNationalIdentityType(1);
+        registrationModel.setAddressType(1);
+        Utilities.showLogcatMessage("RegistrationModel :" + registrationModel.toString());
+
+        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
+        Call<UserAuthModel> registrationRequest = retrofitService.Register(registrationModel);
+        registrationRequest.enqueue(new Callback<UserAuthModel>() {
+            @Override
+            public void onResponse(Call<UserAuthModel> call, Response<UserAuthModel> response) {
+                try {
+                    Utilities.showLogcatMessage("Exception Reg : " + response.body());
+                    //Toast.makeText(RegistrationActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+                    if (response.body() != null) {
+
+                        Intent intent=new Intent(RegisterTypeActivity.this, DashboardActivity.class);
+                        startActivity(intent);
+
+                    }
+                    else {
+                        Toast.makeText(RegisterTypeActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Utilities.showLogcatMessage("Exception 2" + e.toString());
+                    Toast.makeText(RegisterTypeActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UserAuthModel> call, Throwable t) {
+                Utilities.showLogcatMessage("Fail to connect " + t.toString());
+                Toast.makeText(RegisterTypeActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     @OnClick({R.id.tvMobile,R.id.reg_with_mobile})

@@ -60,6 +60,9 @@ public interface RetrofitService {
     @POST("api/AccountInfo/Register")
     Call<UserAuthModel> Register(@Body RegistrationModel registrationModel);
 
+    @POST("api/AccountInfo/ProfileUpdate")
+    Call<RegistrationModel> ProfileUpdate( @Path("token") String token,@Body RegistrationModel registrationModel);
+
 
     @GET("api/AddressCategory/SendSMSOTP/{mobile}/{message}/{token}")
     Call<String> SendSMSOTP(@Path("mobile") String mobile, @Path("message") String message, @Path("token") String token);
