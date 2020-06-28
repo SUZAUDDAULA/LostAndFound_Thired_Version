@@ -174,8 +174,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         progress.setMessage("Data Loading.... ");
     }
 
-
-
     @OnClick(R.id.ivappLogo)
     public void ivappLogo() {
         mDrawerLayout.openDrawer(GravityCompat.END);
