@@ -34,6 +34,18 @@ public class NewsFeedViewModel {
     @SerializedName("encodedImage")
     @Expose
     private String encodedImage;
+    @SerializedName("vehicleId")
+    @Expose
+    private Integer vehicleId;
+    @SerializedName("attachmentId")
+    @Expose
+    private Integer attachmentId;
+    @SerializedName("totalLikes")
+    @Expose
+    private Integer totalLikes;
+    @SerializedName("totalComments")
+    @Expose
+    private Integer totalComments;
 
     public String getUserName() {
         return userName;
@@ -105,6 +117,35 @@ public class NewsFeedViewModel {
 
     public void setEncodedImage(String encodedImage) {
         this.encodedImage = encodedImage;
+    }
+    public Integer getVehicleId() {
+        return vehicleId;
+    }
+
+    public void setVehicleId(Integer vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+    public Integer getAttachmentId() {
+        return attachmentId;
+    }
+
+    public void setAttachmentId(Integer attachmentId) {
+        this.attachmentId = attachmentId;
+    }
+
+    public Integer getTotalLikes() {
+        return totalLikes;
+    }
+
+    public void setTotalLikes(Integer totalLikes) {
+        this.totalLikes = totalLikes;
+    }
+    public Integer getTotalComments() {
+        return totalComments;
+    }
+
+    public void setTotalComments(Integer totalComments) {
+        this.totalComments = totalComments;
     }
 
 }

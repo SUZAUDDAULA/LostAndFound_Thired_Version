@@ -21,6 +21,9 @@ public class Likes {
     @SerializedName("total")
     @Expose
     private Integer total;
+    @SerializedName("userName")
+    @Expose
+    private String userName;
 
     public String getApplicationUserId() {
         return applicationUserId;
@@ -60,6 +63,13 @@ public class Likes {
 
     public void setTotal(Integer total) {
         this.total = total;
+    }
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
 }

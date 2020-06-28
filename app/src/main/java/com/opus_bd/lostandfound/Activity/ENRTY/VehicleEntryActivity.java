@@ -751,7 +751,7 @@ public class VehicleEntryActivity extends AppCompatActivity {
         String engineNo=etEngineNo.getText().toString();
         String vehicleDescription=etDescription.getText().toString();
         String modelNo=etModel.getText().toString();
-        Integer GDTYPEID=Constants.ENTRY_TYPE_ID;
+        Integer GDTYPEID=Constants.GD_TYPE_ID;
         Integer VEHICLETYPEID=Constants.VEHICLE_TYPE_ID;
 
         final VehiclePostModel model = new VehiclePostModel(fileInfo,GDTYPEID,VEHICLETYPEID,SELECTED_VEHICLEBANDTYPE_ID,regNo,SELECTED_REGNO_1,SELECTED_REGNO_2,regNoName,modelNo,engineNo,vehicleDescription,UserName);

@@ -173,7 +173,7 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
         final Likes model = new Likes ();
 
-        model.setApplicationUserId("5eeaabd4-0abc-4836-aa58-e1de72a626a8");
+        model.setUserName(UserName);
         model.setVehicleId(26);
         model.setStatusId(1);
 
