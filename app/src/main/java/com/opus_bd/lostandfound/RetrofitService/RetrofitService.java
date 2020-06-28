@@ -35,6 +35,7 @@ import com.opus_bd.lostandfound.Model.User.UserAuthModel;
 import com.opus_bd.lostandfound.Model.User.UserInfo;
 import com.opus_bd.lostandfound.Model.User.UserLoginModel;
 import com.opus_bd.lostandfound.Model.User.UserProfileModel;
+import com.opus_bd.lostandfound.Model.Vehichel.Likes;
 import com.opus_bd.lostandfound.Model.Vehichel.VehicleMasterModel;
 import com.opus_bd.lostandfound.Model.Vehichel.VehiclePostModel;
 import com.opus_bd.lostandfound.Model.VehicleSearch.VehicleSearchListModel;
@@ -115,6 +116,9 @@ public interface RetrofitService {
 
     @POST("api/OthersItem/SaveComputerInfo")
     Call<String> SaveComputerInfo(@Header("Authorization") String token, @Body ComputerInfo model);
+
+    @POST("api/LostFound/SaveLikes")
+    Call<String> SaveLikes(@Header("Authorization") String token, @Body Likes model);
 
 //Global data
 

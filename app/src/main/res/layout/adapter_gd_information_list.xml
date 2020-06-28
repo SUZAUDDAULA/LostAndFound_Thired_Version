@@ -131,15 +131,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:clickable="true">
+                android:onClick="likeOnclick">
                 <ImageView
                     android:id="@+id/likeimg"
                     android:layout_width="18dp"
                     android:layout_height="10dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_like"
-                    android:clickable="true"/>
+                    android:src="@drawable/ic_like"/>
 
                 <TextView
                     android:id="@+id/liketext"
@@ -149,8 +148,7 @@
                     android:layout_marginTop="-5dp"
                     android:text="Like"
                     android:textSize="13sp"
-                    android:textColor="@color/black"
-                    android:clickable="true"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
