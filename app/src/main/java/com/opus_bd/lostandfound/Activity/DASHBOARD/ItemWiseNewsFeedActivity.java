@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +24,8 @@ import com.opus_bd.lostandfound.Activity.ENRTY.VehicleEntryActivity;
 import com.opus_bd.lostandfound.Adapter.NewsFeedAdapter;
 import com.opus_bd.lostandfound.Model.Dashboard.GDInformation;
 import com.opus_bd.lostandfound.Model.GDInfoModel.NewsFeedViewModel;
+import com.opus_bd.lostandfound.Model.Vehichel.Likes;
+import com.opus_bd.lostandfound.Model.Vehichel.VehiclePostModel;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.RetrofitService.RetrofitClientInstance;
 import com.opus_bd.lostandfound.RetrofitService.RetrofitService;
@@ -46,7 +49,6 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
     @BindView(R.id.tvVehicleCategoryTitle)
     TextView tvVehicleCategoryTitle;
 
-    int likeCount = 0;
 
     NewsFeedAdapter newsFeedAdapter;
     ArrayList<NewsFeedViewModel> newsFeedViewModelArrayList = new ArrayList<>();
@@ -56,6 +58,11 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
     @BindView(R.id.profile_Name)
     TextView profile_Name;
+
+    /*@BindView(R.id.totalLike)
+    TextView totalLike;*/
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,6 +148,65 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
         super.onBackPressed();
+    }
+
+    public void likeOnclick(View view) {
+
+/*        totalLike = (TextView) findViewById(R.id.totalLike);
+        int likes = Integer.parseInt(totalLike.getText().toString());
+
+        totalLike.setText(likes + 1);*/
+
+        Toast.makeText(getApplicationContext(), "Total Likes will be show here " , Toast.LENGTH_LONG).show();
+        likesSubmitToServer();
+
+    }
+
+    private void likesSubmitToServer() {
+
+        String token = SharedPrefManager.getInstance(this).getToken();
+        String UserName = SharedPrefManager.getInstance(this).getUser();
+
+        final Likes model = new Likes ();
+
+        model.setApplicationUserId("5eeaabd4-0abc-4836-aa58-e1de72a626a8");
+        model.setVehicleId(26);
+        model.setStatusId(1);
+
+        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
+        Call<String> registrationRequest = retrofitService.SaveLikes(SharedPrefManager.BEARER + token, model);
+        registrationRequest.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                try {
+                    if (response.body() != null) {
+                        Utilities.showLogcatMessage("responce" + response.body());
+                        //progress.dismiss();
+                        Toast.makeText(ItemWiseNewsFeedActivity.this, "Likes Done!", Toast.LENGTH_SHORT).show();
+
+                        /*Intent intent = new Intent(ItemWiseNewsFeedActivity.this, ItemWiseNewsFeedActivity.class);
+                        startActivity(intent);
+                        finish();*/
+
+                    } else {
+                        Toast.makeText(ItemWiseNewsFeedActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Utilities.showLogcatMessage("Exception 2" + e.toString());
+                    //progress.dismiss();
+                    Toast.makeText(ItemWiseNewsFeedActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
+                }
+                //            showProgressBar(false);
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Utilities.showLogcatMessage("Fail to connect " + t.toString());
+                //progress.dismiss();
+                Toast.makeText(ItemWiseNewsFeedActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
 }

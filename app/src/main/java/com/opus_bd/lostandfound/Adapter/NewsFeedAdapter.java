@@ -40,14 +40,14 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
 
     }
 
-    @OnClick({R.id.llLike,R.id.likeimg, R.id.liketext})
+/*    @OnClick({R.id.llLike,R.id.likeimg, R.id.liketext})
     public void likeCount() {
 
         Toast.makeText(new ItemWiseNewsFeedActivity(), "Clicked", Toast.LENGTH_LONG).show();
         int likes = Integer.parseInt(totalLike.getText().toString());
         Toast.makeText(new ItemWiseNewsFeedActivity(), likes, Toast.LENGTH_LONG).show();
         totalLike.setText(likes + 1);
-    }
+    }*/
 
     @Override
     public NewsFeedAdapter.TransactionViewHolder onCreateViewHolder(ViewGroup parent,
