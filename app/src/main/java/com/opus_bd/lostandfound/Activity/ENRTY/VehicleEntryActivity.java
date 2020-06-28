@@ -44,6 +44,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.hbb20.CountryCodePicker;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.DashboardActivity;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
+import com.opus_bd.lostandfound.Activity.DASHBOARD.UserProfileActivity;
 import com.opus_bd.lostandfound.Adapter.CustomAdapter;
 import com.opus_bd.lostandfound.Adapter.CustomColorAdapter;
 import com.opus_bd.lostandfound.Adapter.GalleryAdapter;
@@ -1010,7 +1011,12 @@ public class VehicleEntryActivity extends AppCompatActivity {
     }
 
 
-
+    @OnClick({R.id.profile_Name,R.id.user_prifile_pic})
+    public void profile_Name() {
+        Intent intent = new Intent(VehicleEntryActivity.this, UserProfileActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     //InformationEntryActivity
     @Override

@@ -1,6 +1,8 @@
 package com.opus_bd.lostandfound.Model.User;
 
 
+import android.content.Intent;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -11,13 +13,13 @@ public class RegistrationModel {
     private String citizenship;
     @SerializedName("NationalIdentityType")
     @Expose
-    private String nationalIdentityType;
+    private Integer nationalIdentityType;
     @SerializedName("NationalIdentityNo")
     @Expose
     private String nationalIdentityNo;
     @SerializedName("AddressType")
     @Expose
-    private String addressType;
+    private Integer addressType;
     @SerializedName("PhoneNumber")
     @Expose
     private String phoneNumber;
@@ -34,10 +36,18 @@ public class RegistrationModel {
     @Expose
     private String confirmPassword;
 
-
     @SerializedName("otpCode")
     @Expose
     private String otpCode;
+    @SerializedName("FullName")
+    @Expose
+    private String FullName;
+    @SerializedName("userFrom")
+    @Expose
+    private String userFrom;
+    @SerializedName("imagePath")
+    @Expose
+    private String imagePath;
 
     public String getCitizenship() {
         return citizenship;
@@ -47,11 +57,11 @@ public class RegistrationModel {
         this.citizenship = citizenship;
     }
 
-    public String getNationalIdentityType() {
+    public Integer getNationalIdentityType() {
         return nationalIdentityType;
     }
 
-    public void setNationalIdentityType(String nationalIdentityType) {
+    public void setNationalIdentityType(Integer nationalIdentityType) {
         this.nationalIdentityType = nationalIdentityType;
     }
 
@@ -63,11 +73,11 @@ public class RegistrationModel {
         this.nationalIdentityNo = nationalIdentityNo;
     }
 
-    public String getAddressType() {
+    public Integer getAddressType() {
         return addressType;
     }
 
-    public void setAddressType(String addressType) {
+    public void setAddressType(Integer addressType) {
         this.addressType = addressType;
     }
 
@@ -114,9 +124,29 @@ public class RegistrationModel {
     public String getOtpCode() {
         return otpCode;
     }
-
     public void setOtpCode(String otpCode) {
         this.otpCode = otpCode;
+    }
+
+    public String getFullName() {
+        return FullName;
+    }
+    public void setFullName(String FullName) {
+        this.FullName = FullName;
+    }
+
+    public String getUserFrom() {
+        return userFrom;
+    }
+    public void setUserFrom(String userFrom) {
+        this.userFrom = userFrom;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     @Override
@@ -131,6 +161,9 @@ public class RegistrationModel {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +
+                ", FullName='" + FullName + '\'' +
+                ", userFrom='" + userFrom + '\'' +
+                ", imagePath='" + imagePath + '\'' +
                 '}';
     }
 }

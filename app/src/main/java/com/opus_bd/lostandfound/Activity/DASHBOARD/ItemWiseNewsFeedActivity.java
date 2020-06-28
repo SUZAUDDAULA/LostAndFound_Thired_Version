@@ -50,7 +50,7 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
     NewsFeedAdapter newsFeedAdapter;
     ArrayList<NewsFeedViewModel> newsFeedViewModelArrayList = new ArrayList<>();
-    GoogleSignInClient mGoogleSignInClient;
+
     @BindView(R.id.user_prifile_pic)
     ImageView user_prifile_pic;
 
@@ -66,20 +66,8 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-        if (acct != null) {
-            String personName = acct.getDisplayName();
-//            String personGivenName = acct.getGivenName();
-//            String personFamilyName = acct.getFamilyName();
-            String personEmail = acct.getEmail();
-            String personId = acct.getId();
-            Uri personPhoto = acct.getPhotoUrl();
-
-            profile_Name.setText(personName);
-            Glide.with(this).load(String.valueOf(personPhoto)).circleCrop().into(user_prifile_pic);
-        }
+        profile_Name.setText(Constants.PROFILE_NAME);
+        Glide.with(this).load(String.valueOf(Constants.IMAGE_URI)).circleCrop().into(user_prifile_pic);
         getAllNewsFeedInfo();
         intRecyclerView();
 
@@ -138,6 +126,13 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
     public void ivappLogo() {
         Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick({R.id.profile_Name,R.id.user_prifile_pic})
+    public void profile_Name() {
+        Intent intent = new Intent(ItemWiseNewsFeedActivity.this, UserProfileActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

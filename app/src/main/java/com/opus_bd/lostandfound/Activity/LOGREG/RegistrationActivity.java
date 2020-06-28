@@ -290,9 +290,11 @@ public class RegistrationActivity extends AppCompatActivity{
 //        registrationModel.setEmail("suza@gmail.com");
         registrationModel.setPassword(etPassword.getText().toString());
         registrationModel.setConfirmPassword(etConfirmPassWord.getText().toString());
-        registrationModel.setCitizenship("hardcode");
-        registrationModel.setNationalIdentityType("1");
-        registrationModel.setNationalIdentityNo("hardcode");
+        registrationModel.setConfirmPassword(etConfirmPassWord.getText().toString());
+        registrationModel.setUserFrom("mobile");
+        registrationModel.setNationalIdentityType(1);
+        registrationModel.setAddressType(1);
+        registrationModel.setNationalIdentityNo("12345678");
         Utilities.showLogcatMessage("RegistrationModel :" + registrationModel.toString());
 //
         RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
@@ -306,10 +308,12 @@ public class RegistrationActivity extends AppCompatActivity{
                     if (response.body() != null) {
                         String auth = response.body().getJwt().replace("{\"auth_token\":\"", "");
                         String auth1 = auth.replace("\"}", "");
+                        Constants.PHONE_NO=etPhn.getText().toString();
+                        Constants.PROFILE_NAME=etPhn.getText().toString();
+                        Constants.LOGIN_WITH="mobile";
                         Utilities.showLogcatMessage("token " + auth1);
                         SharedPrefManager.getInstance(RegistrationActivity.this).saveToken(auth1);
                         Utilities.showLogcatMessage("responce");
-
 
                         try {
                             otp = response.body().getUserInfo().getOtpCode();
