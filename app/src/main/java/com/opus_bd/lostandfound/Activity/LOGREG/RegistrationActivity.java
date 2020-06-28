@@ -132,8 +132,8 @@ public class RegistrationActivity extends AppCompatActivity{
     @BindView(R.id.etPhn)
     EditText etPhn;
 
-@BindView(R.id.otpVarified)
-TextView otpVarified;
+    @BindView(R.id.otpVarified)
+    TextView otpVarified;
 
     @BindView(R.id.textNext)
     TextView textNext;
@@ -211,13 +211,13 @@ TextView otpVarified;
 
 
 
-public void  getOTP(){
-    String userNAME = SharedPrefManager.getInstance(RegistrationActivity.this).getUser();
-    String otpCODE = SharedPrefManager.getInstance(RegistrationActivity.this).getotp();
-    if (userNAME != null && otpCODE != null) {
-        submitOTP(userNAME, otpCODE);
+    public void  getOTP(){
+        String userNAME = SharedPrefManager.getInstance(RegistrationActivity.this).getUser();
+        String otpCODE = SharedPrefManager.getInstance(RegistrationActivity.this).getotp();
+        if (userNAME != null && otpCODE != null) {
+            submitOTP(userNAME, otpCODE);
+        }
     }
-}
 
 
 
