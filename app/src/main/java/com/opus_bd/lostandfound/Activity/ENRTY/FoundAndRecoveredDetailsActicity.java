@@ -18,8 +18,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.DashboardActivity;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
+import com.opus_bd.lostandfound.Activity.DASHBOARD.UserProfileActivity;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.Utils.Constants;
+import com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -80,23 +82,13 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
         Truck.setOnClickListener(this);
         tvCategoryTitle.setText(Constants.ENTRY_TYPE_Name);
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-        if (acct != null) {
-            String personName = acct.getDisplayName();
-//            String personGivenName = acct.getGivenName();
-//            String personFamilyName = acct.getFamilyName();
-            String personEmail = acct.getEmail();
-            String personId = acct.getId();
-            Uri personPhoto = acct.getPhotoUrl();
-
-            profile_Name.setText(personName);
-            Glide.with(this).load(String.valueOf(personPhoto)).circleCrop().into(user_prifile_pic);
+        String profileName = SharedPrefManager.getInstance(this).getProfileName();
+        String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+        profile_Name.setText(profileName);
+        if(imageUrl==""){
+            user_prifile_pic.setImageResource(R.drawable.ic_human_db);
+        }else {
+            Glide.with(this).load(imageUrl).circleCrop().into(user_prifile_pic);
         }
 
     }
@@ -106,6 +98,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
         switch(v.getId()) {
             case R.id.Bus:
                 Constants.VEHICLE_TYPE_ID = 1;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Bus";
                 Intent intent = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent);
@@ -113,6 +106,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Car:
                 Constants.VEHICLE_TYPE_ID = 7;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Car";
                 Intent intent1 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent1);
@@ -120,6 +114,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Cng:
                 Constants.VEHICLE_TYPE_ID = 11;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "CNG";
                 Intent intent2 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent2);
@@ -127,6 +122,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.CoveredVan:
                 Constants.VEHICLE_TYPE_ID = 13;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Covered Van";
                 Intent intent3 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent3);
@@ -134,6 +130,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Legona:
                 Constants.VEHICLE_TYPE_ID = 14;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Legona";
                 Intent intent4 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent4);
@@ -141,6 +138,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Microbus:
                 Constants.VEHICLE_TYPE_ID = 12;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Microbus";
                 Intent intent5 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent5);
@@ -148,6 +146,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Motorbike:
                 Constants.VEHICLE_TYPE_ID = 5;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Motorbike";
                 Intent intent6 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent6);
@@ -155,6 +154,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Pickup:
                 Constants.VEHICLE_TYPE_ID = 8;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Pickup Van";
                 Intent intent7 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent7);
@@ -162,6 +162,7 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
                 break;
             case R.id.Truck:
                 Constants.VEHICLE_TYPE_ID = 4;
+                Constants.GD_TYPE_ID = Constants.GD_TYPE_ID;
                 Constants.VEHICLE_TYPE_NAME = "Truck";
                 Intent intent8 = new Intent(FoundAndRecoveredDetailsActicity.this, ItemWiseNewsFeedActivity.class);
                 startActivity(intent8);
@@ -179,6 +180,13 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
 
+    }
+
+    @OnClick({R.id.profile_Name,R.id.user_prifile_pic})
+    public void profile_Name() {
+        Intent intent = new Intent(FoundAndRecoveredDetailsActicity.this, UserProfileActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

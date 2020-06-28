@@ -157,7 +157,6 @@ public class RegisterTypeActivity extends AppCompatActivity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-            Constants.LOGIN_WITH="google";
             submitToServer();
 
         } catch (ApiException e) {
@@ -190,9 +189,9 @@ public class RegisterTypeActivity extends AppCompatActivity {
             Uri personPhoto = acct.getPhotoUrl();
             imagePath=personPhoto.toString();
 
-            Constants.EMAIL=personEmail;
-            Constants.PROFILE_NAME=personName;
-            Constants.IMAGE_URI=personPhoto;
+            SharedPrefManager.getInstance(RegisterTypeActivity.this).saveProfileName(personName);
+            SharedPrefManager.getInstance(RegisterTypeActivity.this).saveImageUrl(imagePath);
+            SharedPrefManager.getInstance(RegisterTypeActivity.this).saveLogInWith("google");
         }
 
         registrationModel.setUserName(personEmail);

@@ -287,7 +287,7 @@ public class RegistrationActivity extends AppCompatActivity{
 
         registrationModel.setPhoneNumber(etPhn.getText().toString());
         registrationModel.setUserName(etPhn.getText().toString());
-//        registrationModel.setEmail("suza@gmail.com");
+        registrationModel.setEmail("");
         registrationModel.setPassword(etPassword.getText().toString());
         registrationModel.setConfirmPassword(etConfirmPassWord.getText().toString());
         registrationModel.setConfirmPassword(etConfirmPassWord.getText().toString());
@@ -308,9 +308,19 @@ public class RegistrationActivity extends AppCompatActivity{
                     if (response.body() != null) {
                         String auth = response.body().getJwt().replace("{\"auth_token\":\"", "");
                         String auth1 = auth.replace("\"}", "");
-                        Constants.PHONE_NO=etPhn.getText().toString();
-                        Constants.PROFILE_NAME=etPhn.getText().toString();
-                        Constants.LOGIN_WITH="mobile";
+                        String profileName="";
+                        String imageUrl="";
+                        if(response.body().getUserInfo().getFullName()==""){
+                            profileName=response.body().getUserInfo().getUserName();
+                        }else {
+                            profileName=response.body().getUserInfo().getFullName();
+                        }
+                        String loginWith=response.body().getUserInfo().getUserFrom();
+                        if(response.body().getUserInfo().getImagePath()==""){
+                            imageUrl=String.valueOf(R.drawable.ic_human_db);
+                        }else{
+                            imageUrl=response.body().getUserInfo().getImagePath();
+                        }
                         Utilities.showLogcatMessage("token " + auth1);
                         SharedPrefManager.getInstance(RegistrationActivity.this).saveToken(auth1);
                         Utilities.showLogcatMessage("responce");
@@ -329,6 +339,9 @@ public class RegistrationActivity extends AppCompatActivity{
 
                             SharedPrefManager.getInstance(RegistrationActivity.this).saveotp(response.body().getUserInfo().getOtpCode());
                             SharedPrefManager.getInstance(RegistrationActivity.this).saveUser(response.body().getUserInfo().getUserName());
+                            SharedPrefManager.getInstance(RegistrationActivity.this).saveProfileName(profileName);
+                            SharedPrefManager.getInstance(RegistrationActivity.this).saveImageUrl(imageUrl);
+                            SharedPrefManager.getInstance(RegistrationActivity.this).saveLogInWith(loginWith);
                         } catch (Exception e) {
                             Utilities.showLogcatMessage("Exception 1" + e.toString());
                             Toast.makeText(RegistrationActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();

@@ -3,6 +3,7 @@ package com.opus_bd.lostandfound.sharedPrefManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 
 
 import java.util.ArrayList;
@@ -18,6 +19,10 @@ public class SharedPrefManager {
     private static final String KEY_USER = "User";
     public static final String BEARER = "Bearer ";
     public static final String KEY_State = "state";
+
+    public static String KEY_LOGIN_WITH = "loginwith";
+    public static String KEY_PROFILE_NAME="profilename";
+    public static String KEY_IMAGE_URI="imageuri";
 
 
     private SharedPrefManager(Context context) {
@@ -95,6 +100,66 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
                 Context.MODE_PRIVATE);
         return sharedPreferences.getString(KEY_TOKEN, null) != null;
+    }
+
+    public void saveProfileName(String profilename) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_PROFILE_NAME, profilename);
+        editor.apply();
+    }
+
+    public void clearProfileName() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        sharedPreferences.edit().remove(KEY_PROFILE_NAME).apply();
+    }
+
+    public String getProfileName() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_PROFILE_NAME, null);
+    }
+
+    public void saveLogInWith(String loginwith) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_LOGIN_WITH, loginwith);
+        editor.apply();
+    }
+
+    public void clearLogInWith() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        sharedPreferences.edit().remove(KEY_LOGIN_WITH).apply();
+    }
+
+    public String getLogInWith() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_LOGIN_WITH, null);
+    }
+
+    public void saveImageUrl(String imageuri) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_IMAGE_URI, imageuri);
+        editor.apply();
+    }
+
+    public void clearImageUrl() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        sharedPreferences.edit().remove(KEY_IMAGE_URI).apply();
+    }
+
+    public String getImageUrl() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_IMAGE_URI, null);
     }
 
     /*public void logout(Context context) {

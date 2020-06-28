@@ -324,7 +324,11 @@ public class VehicleEntryActivity extends AppCompatActivity {
     TextView tvTagPeople;
     @BindView(R.id.tvVehicleInfromation)
     TextView tvVehicleInfromation;
+    @BindView(R.id.user_prifile_pic)
+    ImageView user_prifile_pic;
 
+    @BindView(R.id.profile_Name)
+    TextView profile_Name;
 
 //Multiple Image add
 
@@ -354,6 +358,14 @@ public class VehicleEntryActivity extends AppCompatActivity {
             Language = english;
         } else {
             Language = bangla;
+        }
+        String profileName = SharedPrefManager.getInstance(this).getProfileName();
+        String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+        profile_Name.setText(profileName);
+        if(imageUrl==""){
+            user_prifile_pic.setImageResource(R.drawable.ic_human_db);
+        }else {
+            Glide.with(this).load(imageUrl).circleCrop().into(user_prifile_pic);
         }
         ccp.setDefaultCountryUsingNameCode("JP");
         ccp.resetToDefaultCountry();

@@ -68,6 +68,7 @@ import com.opus_bd.lostandfound.Utils.LocaleHelper;
 import com.opus_bd.lostandfound.Utils.Utilities;
 import com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -276,14 +277,35 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
                 //              Utilities.hideProgress(LoginActivity.this);
                 try {
                     if (response.body() != null) {
-
+                        Utilities.showLogcatMessage("LogInfo :" + response.body().getUserInfo().getImagePath());
                         String auth = response.body().getJwt().replace("{\"auth_token\":\"", "");
                         String userName=response.body().getUserInfo().getUserName();
                         String auth1 = auth.replace("\"}", "");
-                        Utilities.showLogcatMessage("token " + auth1);
+                        String profileName="";
+                        String imageUrl="";
+                        if(response.body().getUserInfo().getFullName()=="" || response.body().getUserInfo().getFullName()==null){
+                            profileName=response.body().getUserInfo().getUserName();
+                        }else {
+                            profileName=response.body().getUserInfo().getFullName();
+                        }
+                        String loginWith=response.body().getUserInfo().getUserFrom();
+                        if(response.body().getUserInfo().getImagePath()=="" || response.body().getUserInfo().getImagePath()==null){
+                            imageUrl="";//String.valueOf(R.drawable.ic_human_db);
+                        }else{
+                            if(loginWith=="google"){
+                                imageUrl=response.body().getUserInfo().getImagePath();
+                            }else {
+                                imageUrl="";//String.valueOf(R.drawable.ic_human_db);
+                            }
+
+                        }
+
+
                         SharedPrefManager.getInstance(LoginActivity.this).saveToken(auth1);
                         SharedPrefManager.getInstance(LoginActivity.this).saveUser(response.body().getUserInfo().getUserName());
-
+                        SharedPrefManager.getInstance(LoginActivity.this).saveProfileName(profileName);
+                        SharedPrefManager.getInstance(LoginActivity.this).saveImageUrl(imageUrl);
+                        SharedPrefManager.getInstance(LoginActivity.this).saveLogInWith(loginWith);
                         Toast.makeText(LoginActivity.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();
 
                         if (userName.equals("8708120435")) {

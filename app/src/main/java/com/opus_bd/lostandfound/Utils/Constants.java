@@ -35,13 +35,9 @@ public class Constants {
     public static int LOST = 1;
     public static int FOUND = 2;
     public static int VEHICLE_TYPE_ID = 1;
+    public static int GD_TYPE_ID = 1;
     public static String VEHICLE_TYPE_NAME = "Bus";
-    public static String LOGIN_WITH = "mobile";
 
-    public static String EMAIL;
-    public static String PROFILE_NAME;
-    public static String PHONE_NO;
-    public static Uri IMAGE_URI;
 
     public static int isAdmin = 1;
 

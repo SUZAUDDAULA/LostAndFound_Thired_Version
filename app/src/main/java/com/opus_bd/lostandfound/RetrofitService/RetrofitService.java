@@ -1,6 +1,7 @@
 package com.opus_bd.lostandfound.RetrofitService;
 
 
+import com.opus_bd.lostandfound.Model.Dashboard.ApplicationUser;
 import com.opus_bd.lostandfound.Model.Dashboard.GDInformation;
 import com.opus_bd.lostandfound.Model.Dashboard.GDInformationModel;
 import com.opus_bd.lostandfound.Model.Dashboard.GDTypeStatusModel;
@@ -31,7 +32,9 @@ import com.opus_bd.lostandfound.Model.OthersItem.ComputerInfo;
 import com.opus_bd.lostandfound.Model.PhysicalInfo.MDPhysicalInformationModel;
 import com.opus_bd.lostandfound.Model.User.RegistrationModel;
 import com.opus_bd.lostandfound.Model.User.UserAuthModel;
+import com.opus_bd.lostandfound.Model.User.UserInfo;
 import com.opus_bd.lostandfound.Model.User.UserLoginModel;
+import com.opus_bd.lostandfound.Model.User.UserProfileModel;
 import com.opus_bd.lostandfound.Model.Vehichel.VehicleMasterModel;
 import com.opus_bd.lostandfound.Model.Vehichel.VehiclePostModel;
 import com.opus_bd.lostandfound.Model.VehicleSearch.VehicleSearchListModel;
@@ -61,7 +64,10 @@ public interface RetrofitService {
     Call<UserAuthModel> Register(@Body RegistrationModel registrationModel);
 
     @POST("api/AccountInfo/ProfileUpdate")
-    Call<RegistrationModel> ProfileUpdate( @Path("token") String token,@Body RegistrationModel registrationModel);
+    Call<RegistrationModel> ProfileUpdate(@Header("Authorization") String token,@Body UserProfileModel model);
+
+    @GET("api/AccountInfo/GetUserInfo/{userName}")
+    Call<RegistrationModel> GetUserInfo(@Header("Authorization") String token, @Path("userName") String userName);
 
 
     @GET("api/AddressCategory/SendSMSOTP/{mobile}/{message}/{token}")
@@ -139,8 +145,8 @@ public interface RetrofitService {
     Call<List<ComputerAccessoriesBrand>> GetAllComputerAccessoriesBrand();
 //Global data
 
-    @GET("api/LostFound/GetALLNewFeedsInfo/{UserName}/{vehicleTypeId}")
-    Call<List<NewsFeedViewModel>> GetALLNewFeedsInfo(@Header("Authorization") String token, @Path("UserName") String userName,@Path("vehicleTypeId") int vehicleTypeId);
+    @GET("api/LostFound/GetALLNewFeedsInfo/{UserName}/{gdTypeId}/{vehicleTypeId}")
+    Call<List<NewsFeedViewModel>> GetALLNewFeedsInfo(@Header("Authorization") String token, @Path("UserName") String userName,@Path("gdTypeId") int gdTypeId,@Path("vehicleTypeId") int vehicleTypeId);
 
 
     @GET("api/LostFound/GetGDInformationByUser/{UserName}")

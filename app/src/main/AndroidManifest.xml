@@ -37,7 +37,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.DASHBOARD.UserProfileActivity"></activity>
+        <activity android:name=".Activity.DASHBOARD.UserProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"  />
         <activity android:name=".Activity.LOGREG.LoginWithGoogleActivity" />
         <activity
             android:name=".Activity.DASHBOARD.ItemWiseNewsFeedActivity"

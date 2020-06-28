@@ -66,8 +66,14 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
 
-        profile_Name.setText(Constants.PROFILE_NAME);
-        Glide.with(this).load(String.valueOf(Constants.IMAGE_URI)).circleCrop().into(user_prifile_pic);
+        String profileName = SharedPrefManager.getInstance(this).getProfileName();
+        String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+        profile_Name.setText(profileName);
+        if(imageUrl==""){
+            user_prifile_pic.setImageResource(R.drawable.ic_human_db);
+        }else {
+            Glide.with(this).load(imageUrl).circleCrop().into(user_prifile_pic);
+        }
         getAllNewsFeedInfo();
         intRecyclerView();
 
@@ -94,11 +100,9 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
         //progress.show();
         String token = SharedPrefManager.getInstance(this).getToken();
         String UserName = SharedPrefManager.getInstance(this).getUser();
-        Utilities.showLogcatMessage(" token " + token);
-        Utilities.showLogcatMessage(" UserName " + UserName);
         RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
         Call<List<NewsFeedViewModel>> listCall = retrofitService.GetALLNewFeedsInfo(SharedPrefManager.BEARER
-                + token, UserName,Constants.VEHICLE_TYPE_ID);
+                + token, UserName,Constants.GD_TYPE_ID,Constants.VEHICLE_TYPE_ID);
         listCall.enqueue(new Callback<List<NewsFeedViewModel>>() {
             @Override
             public void onResponse(Call<List<NewsFeedViewModel>> call, Response<List<NewsFeedViewModel>> response) {

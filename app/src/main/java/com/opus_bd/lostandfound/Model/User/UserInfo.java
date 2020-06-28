@@ -95,6 +95,9 @@ public class UserInfo {
     @SerializedName("AccessFailedCount")
     @Expose
     private Integer accessFailedCount;
+    @SerializedName("userFrom")
+    @Expose
+    private String userFrom;
 
     public Integer getUserTypeId() {
         return userTypeId;
@@ -334,6 +337,14 @@ public class UserInfo {
 
     public void setAccessFailedCount(Integer accessFailedCount) {
         this.accessFailedCount = accessFailedCount;
+    }
+
+    public String getUserFrom() {
+        return userFrom;
+    }
+
+    public void setUserFrom(String userFrom) {
+        this.userFrom = userFrom;
     }
 
 }

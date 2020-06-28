@@ -81,6 +81,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager.KEY_State;
+import static com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager.SHARED_PREF_NAME;
+
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
@@ -133,7 +136,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         BottomAppBar bar = (BottomAppBar) findViewById(R.id.bar);
         setSupportActionBar(bar);
         setSupportActionBar(toolbar);
-
+        getSharedPrefValue();
         toolbar.inflateMenu(R.menu.menu);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -163,12 +166,24 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 //            profile_Name.setText(personName);
 //            Glide.with(this).load(String.valueOf(personPhoto)).circleCrop().into(user_prifile_pic);
 //        }
+        String profileName = SharedPrefManager.getInstance(this).getProfileName();
+        String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+        Utilities.showLogcatMessage("ImageUrlDash "+imageUrl);
+        profile_Name.setText(profileName);
+        if(imageUrl==""){
+            user_prifile_pic.setImageResource(R.drawable.ic_human_db);
+        }else {
+            Glide.with(this).load(imageUrl).circleCrop().into(user_prifile_pic);
+        }
 
-        profile_Name.setText(Constants.PROFILE_NAME);
-        Glide.with(this).load(String.valueOf(Constants.IMAGE_URI)).circleCrop().into(user_prifile_pic);
 
         //setUpGClient();
         //LOCATION eNABLE
+    }
+
+    private boolean getSharedPrefValue() {
+        SharedPreferences tprefs = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+        return tprefs.getBoolean(KEY_State, true);
     }
     public void setProgress() {
         progress = new ProgressDialog(this);
@@ -201,7 +216,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 
     private void displaySelectedScreen(int itemId) {
-
+        String loginwith = SharedPrefManager.getInstance(this).getLogInWith();
         switch (itemId) {
             case R.id.ihelp:
 
@@ -210,8 +225,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 break;
             case R.id.ilogout: {
                 try {
+                    if(loginwith=="google"){
+                        googleSignOut();
+                    }else {
+                        mobileSignOut();
+                    }
 
-                    googleSignOut();
 
                 } catch (Exception e) {
                     Utilities.showLogcatMessage("Logout " + e.toString());
@@ -255,6 +274,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     @OnClick({R.id.fabTheft})
     public void llTheft() {
         Constants.ENTRY_TYPE_ID = 1;
+        Constants.GD_TYPE_ID = 1;
         Constants.ENTRY_TYPE_Name = "Lost/Stolen";
         Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);
@@ -264,6 +284,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     @OnClick({R.id.fablost})
     public void fablost() {
         Constants.ENTRY_TYPE_ID = 2;
+        Constants.GD_TYPE_ID = 2;
         Constants.ENTRY_TYPE_Name = "Found/Recovered";
         Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
         startActivity(intent);

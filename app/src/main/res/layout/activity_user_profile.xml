@@ -76,13 +76,12 @@
                     android:background="@color/grey_20"/>
 
                 <ImageView
-                    android:id="@+id/ivProfilePhoto"
-                    android:layout_width="match_parent"
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="150dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_image_icon" />
 
