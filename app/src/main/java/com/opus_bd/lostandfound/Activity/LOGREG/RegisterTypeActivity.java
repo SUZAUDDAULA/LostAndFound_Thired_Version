@@ -13,6 +13,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -28,6 +33,7 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.Utils.Utilities;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,7 +49,7 @@ public class RegisterTypeActivity extends AppCompatActivity {
     private CallbackManager callbackManager;
     private LoginButton fbLogin;
     private ImageView profile;
-    private TextView userid;
+    //private TextView userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +77,47 @@ public class RegisterTypeActivity extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        findViewById(R.id.profile).setVisibility(View.GONE);
+        //findViewById(R.id.userid).setVisibility(View.GONE);
+
+        fbLogin =  findViewById(R.id.login_button);
+        //userid =  findViewById(R.id.userid);
+        profile =  findViewById(R.id.profile);
+
+        callbackManager = CallbackManager.Factory.create();
+
+        fbLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+                 //userid.setText("User ID: " + loginResult.getAccessToken().getUserId());
+                //userid.setText("User ID: " + loginResult.getAccessToken().getUserId() + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken());
+                String imageUrl = "https://graph.facebook.com/" + loginResult.getAccessToken().getUserId() + "/picture?return_ssl_resources=1";
+                Picasso.get().load(imageUrl).into(profile);
+
+                findViewById(R.id.reg_with_google).setVisibility(View.GONE);
+                findViewById(R.id.reg_with_email).setVisibility(View.GONE);
+                findViewById(R.id.reg_with_mobile).setVisibility(View.GONE);
+                findViewById(R.id.rl_terms_and_condition).setVisibility(View.GONE);
+
+                findViewById(R.id.profile).setVisibility(View.VISIBLE);
+                //findViewById(R.id.userid).setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+                //fbUserId.setText("Login attempt canceled.");
+            }
+
+            @Override
+           public void onError(FacebookException exception) {
+                // App code
+                //fbUserId.setText("Login attempt failed.");
+            }
+        });
+
     }
 
     private void  signIn(){
@@ -89,6 +136,9 @@ public class RegisterTypeActivity extends AppCompatActivity {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
+
+        // When Login with Facebook
+       // callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
@@ -103,53 +153,8 @@ public class RegisterTypeActivity extends AppCompatActivity {
             Utilities.showLogcatMessage("signInResult:failed code=" + e.getStatusCode());
         }
 //
-//        findViewById(R.id.profile).setVisibility(View.GONE);
-//        findViewById(R.id.userid).setVisibility(View.GONE);
 //
-//        fbLogin =  findViewById(R.id.login_button);
-//        userid =  findViewById(R.id.userid);
-//        profile =  findViewById(R.id.profile);
-//
-//        callbackManager = CallbackManager.Factory.create();
-//
-//        fbLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-//            @Override
-//            public void onSuccess(LoginResult loginResult) {
-//                // App code
-//                //userid.setText("User ID: " + loginResult.getAccessToken().getUserId());
-//                userid.setText("User ID: " + loginResult.getAccessToken().getUserId() + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken());
-//                String imageUrl = "https://graph.facebook.com/" + loginResult.getAccessToken().getUserId() + "/picture?return_ssl_resources=1";
-//                Picasso.get().load(imageUrl).into(profile);
-//
-//                findViewById(R.id.reg_with_google).setVisibility(View.GONE);
-//                findViewById(R.id.reg_with_email).setVisibility(View.GONE);
-//                findViewById(R.id.reg_with_mobile).setVisibility(View.GONE);
-//                findViewById(R.id.rl_terms_and_condition).setVisibility(View.GONE);
-//
-//                findViewById(R.id.profile).setVisibility(View.VISIBLE);
-//                findViewById(R.id.userid).setVisibility(View.VISIBLE);
-//            }
-//
-//            @Override
-//            public void onCancel() {
-//                // App code
-//                //fbUserId.setText("Login attempt canceled.");
-//            }
-//
-//            @Override
-//            public void onError(FacebookException exception) {
-//                // App code
-//                //fbUserId.setText("Login attempt failed.");
-//            }
-//        });
     }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode , resultCode , data);
-//
-//        callbackManager.onActivityResult(requestCode, resultCode, data);
-//    }
 
     @OnClick({R.id.tvMobile,R.id.reg_with_mobile})
     public void tvResigtration() {

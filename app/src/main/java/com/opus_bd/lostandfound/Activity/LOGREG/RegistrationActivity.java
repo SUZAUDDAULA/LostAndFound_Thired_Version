@@ -277,71 +277,77 @@ public void  getOTP(){
         Random rand = new Random();
         String id = String.format("%04d", rand.nextInt(10000));
         otp=id;
-        OTPLayout();
-        Toast.makeText(RegistrationActivity.this, "OTP " + otp, Toast.LENGTH_SHORT).show();
+//        OTPLayout();
+//        Toast.makeText(RegistrationActivity.this, "OTP " + otp, Toast.LENGTH_SHORT).show();
 
-//        SharedPrefManager.getInstance(RegistrationActivity.this).clearToken();
-//        SharedPrefManager.getInstance(RegistrationActivity.this).clearotp();
-//        SharedPrefManager.getInstance(RegistrationActivity.this).clearUser();
-//        final RegistrationModel registrationModel = new RegistrationModel();
-//
-//        registrationModel.setPhoneNumber(etPhn.getText().toString());
-//        registrationModel.setUserName(etPhn.getText().toString());
+        SharedPrefManager.getInstance(RegistrationActivity.this).clearToken();
+        SharedPrefManager.getInstance(RegistrationActivity.this).clearotp();
+        SharedPrefManager.getInstance(RegistrationActivity.this).clearUser();
+        final RegistrationModel registrationModel = new RegistrationModel();
+
+        registrationModel.setPhoneNumber(etPhn.getText().toString());
+        registrationModel.setUserName(etPhn.getText().toString());
 //        registrationModel.setEmail("suza@gmail.com");
-//        registrationModel.setPassword(etPassword.getText().toString());
-//        registrationModel.setConfirmPassword(etConfirmPassWord.getText().toString());
-//        Utilities.showLogcatMessage("RegistrationModel " + registrationModel.toString());
+        registrationModel.setPassword(etPassword.getText().toString());
+        registrationModel.setConfirmPassword(etConfirmPassWord.getText().toString());
+        registrationModel.setCitizenship("hardcode");
+        registrationModel.setNationalIdentityType("1");
+        registrationModel.setNationalIdentityNo("hardcode");
+        Utilities.showLogcatMessage("RegistrationModel :" + registrationModel.toString());
 //
-//        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
-//        Call<UserAuthModel> registrationRequest = retrofitService.Register(registrationModel);
-//        registrationRequest.enqueue(new Callback<UserAuthModel>() {
-//            @Override
-//            public void onResponse(Call<UserAuthModel> call, Response<UserAuthModel> response) {
-//                try {
-//                    if (response.body() != null) {
-//                        String auth = response.body().getJwt().replace("{\"auth_token\":\"", "");
-//                        String auth1 = auth.replace("\"}", "");
-//                        Utilities.showLogcatMessage("token " + auth1);
-//                        SharedPrefManager.getInstance(RegistrationActivity.this).saveToken(auth1);
-//                        Utilities.showLogcatMessage("responce");
-//
-//
-//                        try {
-//                            otp = response.body().getUserInfo().getOtpCode();
-//                            if (otp != null && otp != "") {
-//                                getSmSOTP(etPhn.getText().toString(), otp);
-//                                OTPLayout();
-//                                Toast.makeText(RegistrationActivity.this, "OTP " + otp, Toast.LENGTH_SHORT).show();
-//
-//                            } else {
-//                                Toast.makeText(RegistrationActivity.this, "Otp Not get", Toast.LENGTH_SHORT).show();
-//
-//                            }
-//
-//                           SharedPrefManager.getInstance(RegistrationActivity.this).saveotp(response.body().getUserInfo().getOtpCode());
-//                            SharedPrefManager.getInstance(RegistrationActivity.this).saveUser(response.body().getUserInfo().getUserName());
-//                        } catch (Exception e) {
-//                            Utilities.showLogcatMessage("Exception 1" + e.toString());
-//                            Toast.makeText(RegistrationActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
-//                        }
-//
-//
-//                    } else {
-//                        Toast.makeText(RegistrationActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
-//                    }
-//                } catch (Exception e) {
-//                    Utilities.showLogcatMessage("Exception 2" + e.toString());
-//                    Toast.makeText(RegistrationActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<UserAuthModel> call, Throwable t) {
-//                Utilities.showLogcatMessage("Fail to connect " + t.toString());
-//                Toast.makeText(RegistrationActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
+        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
+        Call<UserAuthModel> registrationRequest = retrofitService.Register(registrationModel);
+        registrationRequest.enqueue(new Callback<UserAuthModel>() {
+            @Override
+            public void onResponse(Call<UserAuthModel> call, Response<UserAuthModel> response) {
+                try {
+                    Utilities.showLogcatMessage("Exception Reg : " + response.body());
+                    //Toast.makeText(RegistrationActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+                    if (response.body() != null) {
+                        String auth = response.body().getJwt().replace("{\"auth_token\":\"", "");
+                        String auth1 = auth.replace("\"}", "");
+                        Utilities.showLogcatMessage("token " + auth1);
+                        SharedPrefManager.getInstance(RegistrationActivity.this).saveToken(auth1);
+                        Utilities.showLogcatMessage("responce");
+
+
+                        try {
+                            otp = response.body().getUserInfo().getOtpCode();
+                            if (otp != null && otp != "") {
+                                getSmSOTP(etPhn.getText().toString(), otp);
+                                OTPLayout();
+                                Toast.makeText(RegistrationActivity.this, "OTP " + otp, Toast.LENGTH_SHORT).show();
+
+                            } else {
+                                Toast.makeText(RegistrationActivity.this, "Otp Not get", Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            SharedPrefManager.getInstance(RegistrationActivity.this).saveotp(response.body().getUserInfo().getOtpCode());
+                            SharedPrefManager.getInstance(RegistrationActivity.this).saveUser(response.body().getUserInfo().getUserName());
+                        } catch (Exception e) {
+                            Utilities.showLogcatMessage("Exception 1" + e.toString());
+                            Toast.makeText(RegistrationActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
+                        }
+
+
+                    }
+                    else {
+                        Toast.makeText(RegistrationActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Utilities.showLogcatMessage("Exception 2" + e.toString());
+                    Toast.makeText(RegistrationActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UserAuthModel> call, Throwable t) {
+                Utilities.showLogcatMessage("Fail to connect " + t.toString());
+                Toast.makeText(RegistrationActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
 

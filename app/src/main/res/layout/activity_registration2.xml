@@ -13,7 +13,8 @@
         layout="@layout/registration_progess_steper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
 
     <!-- Reg Layout-->
@@ -22,12 +23,10 @@
         android:id="@+id/llReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/llStepper">
@@ -226,13 +225,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llStepper">
+        app:layout_constraintTop_toBottomOf="@id/llReg">
 
         <TextView
             android:id="@+id/textViewOTP"
