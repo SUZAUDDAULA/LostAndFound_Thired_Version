@@ -107,8 +107,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
 
         public void set(final NewsFeedViewModel item) {
             //UI setting code
-
-
             try {
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 byte[] imageBytes = baos.toByteArray();
