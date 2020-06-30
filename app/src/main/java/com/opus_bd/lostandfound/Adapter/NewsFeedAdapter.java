@@ -118,7 +118,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                 tvtime.setText(item.getGdDate());
                 tvStatus.setText(item.getVehicleDescription());
                 iv_Sub_pic.setImageBitmap(decodedImage);
-                liketext.setId(item.getVehicleId());
                 totalLike.setText(String.valueOf(item.getTotalLikes()));
                 //Glide.with(context).load("http://103.134.88.13:1022/"+item.getAttachImage()).into(iv_Sub_pic);
                 Glide.with(context).load("http://103.134.88.13:1022/"+item.getProfilePic()).into(user_prifile_pic);

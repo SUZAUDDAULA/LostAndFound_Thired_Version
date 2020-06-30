@@ -216,9 +216,52 @@
     <ImageView
         android:id="@+id/ivBellowLine"
         android:layout_width="match_parent"
-        android:layout_height="6dp"
+        android:layout_height="0.5dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/llLCS"
+        android:background="@color/grey_20"/>
+
+    <RelativeLayout
+        android:id="@+id/rlComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivBellowLine"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/comment_user"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/comment_user"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/grey_20"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/ivBellowComment"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rlComments"
         android:background="@color/grey_20"/>
 
 </RelativeLayout>
