@@ -119,6 +119,7 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
                     Utilities.showLogcatMessage("gdin" + response.body().size());
                     newsFeedViewModelArrayList.clear();
                     newsFeedViewModelArrayList.addAll(response.body());
+
                     newsFeedAdapter.notifyDataSetChanged();
 
                 }
@@ -182,9 +183,10 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
         registrationRequest.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
+                Toast.makeText(ItemWiseNewsFeedActivity.this, response.body(), Toast.LENGTH_LONG).show();
                 try {
-                    if (response.body() != null) {
-                        Utilities.showLogcatMessage("responce" + response.body());
+                    if (response.body() == "1" || response.body() == "0") {
+                        Utilities.showLogcatMessage("response" + response.body());
                         //progress.dismiss();
                         Toast.makeText(ItemWiseNewsFeedActivity.this, "Likes Done!", Toast.LENGTH_SHORT).show();
 

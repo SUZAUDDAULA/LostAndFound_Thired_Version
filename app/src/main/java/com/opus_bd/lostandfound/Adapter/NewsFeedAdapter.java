@@ -31,11 +31,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
     public String Language, english, bangla;
     private List<NewsFeedViewModel> items;
 
-    @BindView(R.id.totalLike)
-    TextView totalLike;
-    @BindView(R.id.liketext)
-    TextView liketext;
-
     public NewsFeedAdapter(List<NewsFeedViewModel> items, Context context) {
         this.items = items;
         this.context = context;
@@ -52,8 +47,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
     }*/
 
     @Override
-    public NewsFeedAdapter.TransactionViewHolder onCreateViewHolder(ViewGroup parent,
-                                                                         int viewType) {
+    public NewsFeedAdapter.TransactionViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.adapter_gd_information_list, parent, false);
 //        Boolean languageStatus = getSharedPrefValue();
@@ -98,7 +92,12 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
         ImageView user_prifile_pic;
         @BindView(R.id.iv_Sub_pic)
         ImageView iv_Sub_pic;
-
+        @BindView(R.id.totalLike)
+        TextView totalLike;
+        @BindView(R.id.liketext)
+        TextView liketext;
+        @BindView(R.id.likeimg)
+        ImageView likeimg;
 
         public TransactionViewHolder(View itemView) {
             super(itemView);
@@ -107,8 +106,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
 
         public void set(final NewsFeedViewModel item) {
             //UI setting code
-
-
             try {
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 byte[] imageBytes = baos.toByteArray();
@@ -120,8 +117,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                 tvtime.setText(item.getGdDate());
                 tvStatus.setText(item.getVehicleDescription());
                 iv_Sub_pic.setImageBitmap(decodedImage);
+                totalLike.setText(item.getTotalLikes());
                 liketext.setId(item.getVehicleId());
-                totalLike.setText(String.valueOf(item.getTotalLikes()));
+                //likeimg.setImageResource(R.drawable.ic_like);
+                //Toast.makeText(totalLike.getContext(), "Total Likes : " + item.getTotalLikes(), Toast.LENGTH_SHORT).show();
                 //Glide.with(context).load("http://103.134.88.13:1022/"+item.getAttachImage()).into(iv_Sub_pic);
                 Glide.with(context).load("http://103.134.88.13:1022/"+item.getProfilePic()).into(user_prifile_pic);
                 //Utilities.showLogcatMessage("ImageInfo"+item.getDocumentDescription());
@@ -130,8 +129,6 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
             } catch (Exception e) {
                 Utilities.showLogcatMessage(" Ex date" + e.toString());
             }
-
-
         }
 
 
