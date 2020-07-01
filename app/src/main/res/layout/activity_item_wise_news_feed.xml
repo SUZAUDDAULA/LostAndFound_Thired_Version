@@ -85,6 +85,7 @@
                             android:text="Post"
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                             android:textSize="22sp"
+                            android:visibility="gone"
                             android:textColor="@android:color/white"
                             android:layout_toRightOf="@+id/llProfileName"
                             android:textStyle="bold"/>

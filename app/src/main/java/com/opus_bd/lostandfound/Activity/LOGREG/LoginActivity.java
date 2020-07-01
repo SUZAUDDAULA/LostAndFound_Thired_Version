@@ -277,7 +277,9 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
                 //              Utilities.hideProgress(LoginActivity.this);
                 try {
                     if (response.body() != null) {
-                        Utilities.showLogcatMessage("LogInfo :" + response.body().getUserInfo().getImagePath());
+
+                        /*Utilities.showLogcatMessage("LogInfo :" + response.body().getUserInfo().getImagePath());
+                        Utilities.showLogcatMessage("User Full Info :" + response.body().getUserInfo().getUserTypeId());*/
                         String auth = response.body().getJwt().replace("{\"auth_token\":\"", "");
                         String userName=response.body().getUserInfo().getUserName();
                         String auth1 = auth.replace("\"}", "");
@@ -300,10 +302,12 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
 
                         }
 
+                        String roles = String.valueOf(response.body().getUserInfo().getUserTypeId());
 
                         SharedPrefManager.getInstance(LoginActivity.this).saveToken(auth1);
                         SharedPrefManager.getInstance(LoginActivity.this).saveUser(response.body().getUserInfo().getUserName());
                         SharedPrefManager.getInstance(LoginActivity.this).saveProfileName(profileName);
+                        SharedPrefManager.getInstance(LoginActivity.this).saveUserRoles(roles);
                         SharedPrefManager.getInstance(LoginActivity.this).saveImageUrl(imageUrl);
                         SharedPrefManager.getInstance(LoginActivity.this).saveLogInWith(loginWith);
                         Toast.makeText(LoginActivity.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();

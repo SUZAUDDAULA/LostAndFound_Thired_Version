@@ -75,12 +75,21 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
         String profileName = SharedPrefManager.getInstance(this).getProfileName();
         String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+        String userRoles = SharedPrefManager.getInstance(this).getUserRoles();
+
         profile_Name.setText(profileName);
         if(imageUrl==""){
             user_prifile_pic.setImageResource(R.drawable.ic_human_db);
         }else {
             Glide.with(this).load(imageUrl).circleCrop().into(user_prifile_pic);
         }
+/*        Toast.makeText(getApplicationContext(), userRoles, Toast.LENGTH_LONG).show();
+        Utilities.showLogcatMessage("Roles : " + userRoles);*/
+
+        if (Integer.parseInt(userRoles.trim()) == 2){
+            findViewById(R.id.btnPost).setVisibility(View.VISIBLE);
+        }
+
         getAllNewsFeedInfo();
         intRecyclerView();
 
