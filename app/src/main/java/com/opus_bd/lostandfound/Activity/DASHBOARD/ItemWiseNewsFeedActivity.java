@@ -155,17 +155,12 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    public void likeOnclick(View view) {
-
-/*        totalLike = (TextView) findViewById(R.id.totalLike);
-        int likes = Integer.parseInt(totalLike.getText().toString());
-
-        totalLike.setText(likes + 1);*/
-
-        Toast.makeText(getApplicationContext(), "Total Likes will be show here " , Toast.LENGTH_LONG).show();
-        likesSubmitToServer();
-
-    }
+//    public void likeOnclick(View view) {
+//
+//        Toast.makeText(getApplicationContext(), "Total Likes will be show here " , Toast.LENGTH_LONG).show();
+//        likesSubmitToServer();
+//
+//    }
 
     private void likesSubmitToServer() {
 
