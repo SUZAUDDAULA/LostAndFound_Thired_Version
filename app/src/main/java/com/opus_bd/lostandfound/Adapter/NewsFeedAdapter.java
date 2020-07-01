@@ -1,9 +1,13 @@
 package com.opus_bd.lostandfound.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +18,30 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.opus_bd.lostandfound.Activity.DASHBOARD.ImageViewActivity;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.BagActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.CardsActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.CategoryListActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.CosmeticsActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.DocumentActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.ElectronicsActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.GarmentsActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.GlassActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.JewelryActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.KeysInformationActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.MobilePhoneActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.MoneyActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.OtherItemDetailsActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.PetActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.ShoesActivity;
+import com.opus_bd.lostandfound.Activity.OtherItem.UmbrellaActivity;
 import com.opus_bd.lostandfound.Model.GDInfoModel.NewsFeedViewModel;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.Utils.Utilities;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -28,13 +50,7 @@ import butterknife.OnClick;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.TransactionViewHolder> {
     private final Context context;
-    public String Language, english, bangla;
     private List<NewsFeedViewModel> items;
-
-    @BindView(R.id.totalLike)
-    TextView totalLike;
-    @BindView(R.id.liketext)
-    TextView liketext;
 
     public NewsFeedAdapter(List<NewsFeedViewModel> items, Context context) {
         this.items = items;
@@ -42,35 +58,15 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
 
     }
 
-/*    @OnClick({R.id.llLike,R.id.likeimg, R.id.liketext})
-    public void likeCount() {
-
-        Toast.makeText(new ItemWiseNewsFeedActivity(), "Clicked", Toast.LENGTH_LONG).show();
-        int likes = Integer.parseInt(totalLike.getText().toString());
-        Toast.makeText(new ItemWiseNewsFeedActivity(), likes, Toast.LENGTH_LONG).show();
-        totalLike.setText(likes + 1);
-    }*/
-
     @Override
     public NewsFeedAdapter.TransactionViewHolder onCreateViewHolder(ViewGroup parent,
                                                                          int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.adapter_gd_information_list, parent, false);
-//        Boolean languageStatus = getSharedPrefValue();
-//        english = "en";
-//        bangla = "bn";
-//        if (languageStatus) {
-//            Language = english;
-//        } else {
-//            Language = bangla;
-//        }
+
         return new NewsFeedAdapter.TransactionViewHolder(v);
     }
 
-//    private boolean getSharedPrefValue() {
-//        SharedPreferences tprefs = context.getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
-//        return tprefs.getBoolean(KEY_State, true);
-//    }
 
     @Override
     public void onBindViewHolder(NewsFeedAdapter.TransactionViewHolder holder, int position) {
@@ -98,6 +94,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
         ImageView user_prifile_pic;
         @BindView(R.id.iv_Sub_pic)
         ImageView iv_Sub_pic;
+        @BindView(R.id.totalLike)
+        TextView totalLike;
+        @BindView(R.id.liketext)
+        TextView liketext;
 
 
         public TransactionViewHolder(View itemView) {
@@ -119,8 +119,22 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                 tvStatus.setText(item.getVehicleDescription());
                 iv_Sub_pic.setImageBitmap(decodedImage);
                 totalLike.setText(String.valueOf(item.getTotalLikes()));
+
+
                 //Glide.with(context).load("http://103.134.88.13:1022/"+item.getAttachImage()).into(iv_Sub_pic);
-                Glide.with(context).load("http://103.134.88.13:1022/"+item.getProfilePic()).into(user_prifile_pic);
+                try {
+                    Glide.with(context).load("http://103.134.88.13:1022/"+item.getProfilePic()).into(user_prifile_pic);
+                }catch (Exception e){}
+
+                iv_Sub_pic.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(context, ImageViewActivity.class);
+                        intent.putExtra("image_url",item.getEncodedImage() );
+                        intent.putExtra("image_name", item.getVehicleDescription());
+                        context.startActivity(intent);
+                    }
+                });
                 //Utilities.showLogcatMessage("ImageInfo"+item.getDocumentDescription());
                 Utilities.showLogcatMessage("TotalLike " + item.getTotalLikes());
 
