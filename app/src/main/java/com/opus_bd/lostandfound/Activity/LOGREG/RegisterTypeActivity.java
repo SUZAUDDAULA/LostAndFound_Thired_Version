@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.opus_bd.lostandfound.Activity.OtherItem.SocialLoginFacebook;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.Utils.Utilities;
 
@@ -34,7 +35,7 @@ public class RegisterTypeActivity extends AppCompatActivity {
     @OnClick({R.id.tvFacebook,R.id.reg_with_facebook})
     public void facebookRegistration() {
         try {
-            Intent intent = new Intent(RegisterTypeActivity.this, RegistrationActivity.class);
+            Intent intent = new Intent(RegisterTypeActivity.this, SocialLoginFacebook.class);
             startActivity(intent);
         } catch (Exception e) {
             Utilities.showLogcatMessage("Exception " + e.toString());
