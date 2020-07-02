@@ -34,7 +34,6 @@ public class RegistrationModel {
     @Expose
     private String confirmPassword;
 
-
     @SerializedName("otpCode")
     @Expose
     private String otpCode;
@@ -133,4 +132,5 @@ public class RegistrationModel {
                 ", confirmPassword='" + confirmPassword + '\'' +
                 '}';
     }
+
 }
