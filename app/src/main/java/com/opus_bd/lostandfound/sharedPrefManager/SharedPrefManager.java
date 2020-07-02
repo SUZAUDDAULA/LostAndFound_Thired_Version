@@ -45,6 +45,7 @@ public class SharedPrefManager {
         sharedPreferences.edit().remove(KEY_TOKEN).apply();
     }
 
+
     public String getToken() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
                 Context.MODE_PRIVATE);
