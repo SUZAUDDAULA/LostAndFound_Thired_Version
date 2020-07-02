@@ -8,6 +8,11 @@ public class UserAuthModel {
     @SerializedName("jwt")
     @Expose
     private String jwt;
+
+    @SerializedName("roles")
+    @Expose
+    private String roles;
+
     @SerializedName("otpCode")
     @Expose
     private String otpCode;
@@ -25,6 +30,9 @@ public class UserAuthModel {
     public void setJwt(String jwt) {
         this.jwt = jwt;
     }
+
+    public String getRoles() {  return roles; }
+    public void setRoles(String roles) { this.roles = roles;   }
 
     public String getOtpCode() {
         return otpCode;

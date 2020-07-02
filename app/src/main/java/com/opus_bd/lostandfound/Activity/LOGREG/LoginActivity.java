@@ -302,7 +302,7 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
 
                         }
 
-                        String roles = String.valueOf(response.body().getUserInfo().getUserTypeId());
+                        String roles = String.valueOf(response.body().getRoles());
 
                         SharedPrefManager.getInstance(LoginActivity.this).saveToken(auth1);
                         SharedPrefManager.getInstance(LoginActivity.this).saveUser(response.body().getUserInfo().getUserName());
@@ -312,7 +312,12 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
                         SharedPrefManager.getInstance(LoginActivity.this).saveLogInWith(loginWith);
                         Toast.makeText(LoginActivity.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();
 
-                        if (userName.equals("8708120435")) {
+                        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+
+                        /*if (roles == "Super Admin") {
                             Intent intent = new Intent(LoginActivity.this, PoliceMainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -322,7 +327,7 @@ public class LoginActivity extends AppCompatActivity implements ApiListener.Logi
                             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
-                        }
+                        }*/
 
                     } else {
                         Toast.makeText(LoginActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
