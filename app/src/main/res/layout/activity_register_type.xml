@@ -64,6 +64,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_facebook"
             style="@style/RegistrationOption"
@@ -88,6 +89,7 @@
                     android:src="@drawable/ic_facebook2" />
 
                 <TextView
+                    android:id="@+id/tvFacebook"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -1348,4 +1348,8 @@ You can also use the following media to communicate with us</string>
     <string name="re_capture">Re-Capture</string>
     <string name="please_confirm_that_the_capture_is_clear">Please confirm that the picture is clear</string>
     <string name="submit">Submit</string>
+
+    <string name="facebook_app_id">3217007335012533</string>
+    <string name="fb_login_protocol_scheme">fb3217007335012533</string>
+
 </resources>

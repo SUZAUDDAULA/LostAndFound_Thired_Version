@@ -31,4 +31,14 @@ public class RegisterTypeActivity extends AppCompatActivity {
         }
     }
 
+    @OnClick({R.id.tvFacebook,R.id.reg_with_facebook})
+    public void facebookRegistration() {
+        try {
+            Intent intent = new Intent(RegisterTypeActivity.this, RegistrationActivity.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Utilities.showLogcatMessage("Exception " + e.toString());
+        }
+    }
+
 }

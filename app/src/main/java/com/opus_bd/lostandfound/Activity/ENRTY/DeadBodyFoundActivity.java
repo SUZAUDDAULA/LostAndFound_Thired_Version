@@ -100,7 +100,6 @@ public class DeadBodyFoundActivity extends AppCompatActivity implements DatePick
     @BindView(R.id.mcvReport)
     MaterialCardView mcvReport;
 
-
     boolean isllPersonInfromationChecked = true;
     @BindView(R.id.llPersonInfromation)
     LinearLayout llPersonInfromation;
