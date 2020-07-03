@@ -86,7 +86,7 @@ public interface ApiInterface {
     @POST("AppAPI/OthersItem/SaveComputerInfo")
     Call<String> SaveComputerInfo(@Header("Authorization") String token, @Body ComputerInfo model);
 
-//Global data
+    //Global data
 
     @GET("AppAPI/AddressMaster/GetDivisions")
     Call<List<Division>> GetDivisions();
@@ -97,13 +97,11 @@ public interface ApiInterface {
     @GET("AppAPI/AddressMaster/GetThanaByDistrictId/{id}")
     Call<List<Thana>> GetThanaByDistrictId(@Path("id") int id);
 
-
     @GET("AppAPI/DocumentMaster/GetVehicleTypes")
     Call<List<VehicleType>> GetVehicleTypes();
 
     @GET("AppAPI/DocumentMaster/GetVehicleModelByVehicleId/{id}")
     Call<List<VehicleModel>> GetVehicleModelByVehicleId(@Path("id") int id);
-
 
     @GET("AppAPI/DocumentMaster/GetDocumentCategoryBrandByDocumentTypeId/{id}")
     Call<List<DocumentCategoryBrand>> GetDocumentCategoryBrandByDocumentTypeId(@Path("id") int id);
@@ -113,8 +111,7 @@ public interface ApiInterface {
 
     @GET("AppAPI/DocumentMaster/GetAllComputerAccessoriesBrand/{id}")
     Call<List<ComputerAccessoriesBrand>> GetAllComputerAccessoriesBrand();
-//Global data
-
+    //Global data
 
     @GET("AppAPI/LostFound/GetGDInformationByUser/{UserName}")
     Call<List<GDInformation>> GetGDInformationByUser(@Header("Authorization") String token, @Path("UserName") String userName);
@@ -129,7 +126,6 @@ public interface ApiInterface {
     @GET("AppAPI/LostFound/GetAllGDInformationByFiltering/{UserName}/{statusId}/{gdTypeId}")
     Call<List<GDInformation>> GetAllGDInformationByFiltering(@Header("Authorization") String token, @Path("UserName") String userName, @Path("statusId") int statusId, @Path("gdTypeId") int gdTypeId);
 
-
     @GET("AppAPI/DocumentMaster/GetColors")
     Call<List<Colors>> GetColors();
 
@@ -141,7 +137,6 @@ public interface ApiInterface {
 
     @GET("AppAPI/DocumentMaster/GetOccupationInfo")
     Call<List<Occupation>> GetOccupationInfo();
-
 
     @GET("AppAPI/DocumentMaster/GetVehicleMasterData")
     Call<VehicleMasterModel> GetVehicleMasterData();
@@ -167,11 +162,9 @@ public interface ApiInterface {
                                                                         @Path("engineNo") String engineNo,
                                                                         @Path("chesisNo") String chesisNo,
                                                                         @Path("cc") String cc,
-                                                                        @Path("colorId") int colorId
-    );
+                                                                        @Path("colorId") int colorId );
 
     @GET("AppAPI/LostFound/GetVehicleDetailsInformationByGDId/{id}")
     Call<GDInformation> GetVehicleDetailsInformationByGDId();
-
 
 }

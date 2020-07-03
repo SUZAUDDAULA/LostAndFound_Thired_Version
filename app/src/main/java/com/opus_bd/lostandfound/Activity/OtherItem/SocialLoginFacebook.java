@@ -90,7 +90,6 @@ public class SocialLoginFacebook extends AppCompatActivity {
 
 
         if (!loggedOut) {
-
             Picasso.get().load(Profile.getCurrentProfile().getProfilePictureUri(200, 200)).into(imageView);
             Log.d("TAG", "Username is: " + Profile.getCurrentProfile().getName());
             getUserProfile(AccessToken.getCurrentAccessToken());
