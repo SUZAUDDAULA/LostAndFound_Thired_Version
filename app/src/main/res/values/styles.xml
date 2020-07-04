@@ -200,4 +200,9 @@
         <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
         <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/colorAccent</item>
     </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/popup_background</item>
+    </style>
+
 </resources>

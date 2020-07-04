@@ -29,9 +29,9 @@ public class UserLoginModel {
         this.password = password;
     }
 
-
     public UserLoginModel(String name, String password) {
         this.name = name;
         this.password = password;
     }
+
 }

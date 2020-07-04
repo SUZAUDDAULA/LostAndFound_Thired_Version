@@ -18,7 +18,6 @@ public class RetrofitClientInstance {
             .setLenient()
             .create();
 
-
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
