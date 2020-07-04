@@ -75,12 +75,27 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
         String profileName = SharedPrefManager.getInstance(this).getProfileName();
         String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+        String userRoles = SharedPrefManager.getInstance(this).getUserRoles();
+
         profile_Name.setText(profileName);
         if(imageUrl==""){
             user_prifile_pic.setImageResource(R.drawable.ic_human_db);
         }else {
             Glide.with(this).load(imageUrl).circleCrop().into(user_prifile_pic);
         }
+/*        Toast.makeText(getApplicationContext(), userRoles, Toast.LENGTH_LONG).show();
+        Utilities.showLogcatMessage("Roles : " + userRoles);*/
+
+        //Toast.makeText(getApplicationContext(), "outside : " + userRoles, Toast.LENGTH_LONG).show();
+
+        if ((String.valueOf(userRoles).equals("General User") || String.valueOf(userRoles).equals("System Admin")) && Constants.GD_TYPE_ID == 2){
+
+            findViewById(R.id.btnPost).setVisibility(View.GONE);
+        }
+        else{
+            findViewById(R.id.btnPost).setVisibility(View.VISIBLE);
+        }
+
         getAllNewsFeedInfo();
         intRecyclerView();
 
@@ -96,7 +111,10 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
     }
 
     public void intRecyclerView() {
-        newsFeedAdapter = new NewsFeedAdapter(newsFeedViewModelArrayList, this);
+        String token = SharedPrefManager.getInstance(this).getToken();
+        String UserName = SharedPrefManager.getInstance(this).getUser();
+
+        newsFeedAdapter = new NewsFeedAdapter(newsFeedViewModelArrayList, token, UserName, this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setReverseLayout(true);
         rvGDInfoItem.setLayoutManager(layoutManager);
@@ -105,6 +123,7 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
 
     public void getAllNewsFeedInfo() {
         //progress.show();
+
         String token = SharedPrefManager.getInstance(this).getToken();
         String UserName = SharedPrefManager.getInstance(this).getUser();
         RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
@@ -116,7 +135,7 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
                 Utilities.showLogcatMessage(" r " + response.body());
                 if (response.body() != null) {
                     //progress.dismiss();
-                    Utilities.showLogcatMessage("gdin" + response.body().size());
+                    Utilities.showLogcatMessage("gdin : " + response.body().size());
                     newsFeedViewModelArrayList.clear();
                     newsFeedViewModelArrayList.addAll(response.body());
                     newsFeedAdapter.notifyDataSetChanged();
@@ -152,60 +171,6 @@ public class ItemWiseNewsFeedActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
         super.onBackPressed();
-    }
-
-//    public void likeOnclick(View view) {
-//
-//        Toast.makeText(getApplicationContext(), "Total Likes will be show here " , Toast.LENGTH_LONG).show();
-//        likesSubmitToServer();
-//
-//    }
-
-    private void likesSubmitToServer() {
-
-        String token = SharedPrefManager.getInstance(this).getToken();
-        String UserName = SharedPrefManager.getInstance(this).getUser();
-
-        final Likes model = new Likes ();
-
-        model.setUserName(UserName);
-        model.setVehicleId(26);
-        model.setStatusId(1);
-
-        RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
-        Call<String> registrationRequest = retrofitService.SaveLikes(SharedPrefManager.BEARER + token, model);
-        registrationRequest.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                try {
-                    if (response.body() != null) {
-                        Utilities.showLogcatMessage("responce" + response.body());
-                        //progress.dismiss();
-                        Toast.makeText(ItemWiseNewsFeedActivity.this, "Likes Done!", Toast.LENGTH_SHORT).show();
-
-                        /*Intent intent = new Intent(ItemWiseNewsFeedActivity.this, ItemWiseNewsFeedActivity.class);
-                        startActivity(intent);
-                        finish();*/
-
-                    } else {
-                        Toast.makeText(ItemWiseNewsFeedActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (Exception e) {
-                    Utilities.showLogcatMessage("Exception 2" + e.toString());
-                    //progress.dismiss();
-                    Toast.makeText(ItemWiseNewsFeedActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
-                }
-                //            showProgressBar(false);
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                Utilities.showLogcatMessage("Fail to connect " + t.toString());
-                //progress.dismiss();
-                Toast.makeText(ItemWiseNewsFeedActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
-
-            }
-        });
     }
 
 }

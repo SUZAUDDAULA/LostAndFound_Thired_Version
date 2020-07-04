@@ -277,6 +277,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         Constants.GD_TYPE_ID = 1;
         Constants.ENTRY_TYPE_Name = "Lost/Stolen";
         Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
+
         startActivity(intent);
         finish();
     }
@@ -287,6 +288,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         Constants.GD_TYPE_ID = 2;
         Constants.ENTRY_TYPE_Name = "Found/Recovered";
         Intent intent = new Intent(DashboardActivity.this, FoundAndRecoveredDetailsActicity.class);
+
         startActivity(intent);
         finish();
     }

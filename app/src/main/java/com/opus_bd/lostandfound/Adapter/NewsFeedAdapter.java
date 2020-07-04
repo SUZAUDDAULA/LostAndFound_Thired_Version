@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.ImageViewActivity;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.ItemWiseNewsFeedActivity;
+import com.opus_bd.lostandfound.Activity.DASHBOARD.UserProfileActivity;
 import com.opus_bd.lostandfound.Activity.OtherItem.BagActivity;
 import com.opus_bd.lostandfound.Activity.OtherItem.CardsActivity;
 import com.opus_bd.lostandfound.Activity.OtherItem.CategoryListActivity;
@@ -37,8 +39,12 @@ import com.opus_bd.lostandfound.Activity.OtherItem.PetActivity;
 import com.opus_bd.lostandfound.Activity.OtherItem.ShoesActivity;
 import com.opus_bd.lostandfound.Activity.OtherItem.UmbrellaActivity;
 import com.opus_bd.lostandfound.Model.GDInfoModel.NewsFeedViewModel;
+import com.opus_bd.lostandfound.Model.Vehichel.Likes;
 import com.opus_bd.lostandfound.R;
+import com.opus_bd.lostandfound.RetrofitService.RetrofitClientInstance;
+import com.opus_bd.lostandfound.RetrofitService.RetrofitService;
 import com.opus_bd.lostandfound.Utils.Utilities;
+import com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -47,15 +53,30 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static java.lang.Integer.*;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.TransactionViewHolder> {
     private final Context context;
     private List<NewsFeedViewModel> items;
+    String token;
+    String UserName;
 
-    public NewsFeedAdapter(List<NewsFeedViewModel> items, Context context) {
+   /* public interface OnItemClickListener {
+        void onItemClick( int position);
+
+    }
+
+    private OnItemClickListener mListener;*/
+
+    public NewsFeedAdapter(List<NewsFeedViewModel> items, String token, String UserName, Context context) {
         this.items = items;
+        this.token = token;
+        this.UserName = UserName;
         this.context = context;
-
     }
 
     @Override
@@ -82,7 +103,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
         return items.size();
     }
 
-    public class TransactionViewHolder extends RecyclerView.ViewHolder {
+    public class TransactionViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         @BindView(R.id.tvStatus)
         TextView tvStatus;
@@ -98,6 +119,11 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
         TextView totalLike;
         @BindView(R.id.liketext)
         TextView liketext;
+        @BindView(R.id.likeimg)
+        ImageView likeimg;
+
+        @BindView(R.id.llLike)
+        LinearLayout llLike;
 
 
         public TransactionViewHolder(View itemView) {
@@ -119,7 +145,12 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                 tvStatus.setText(item.getVehicleDescription());
                 iv_Sub_pic.setImageBitmap(decodedImage);
                 totalLike.setText(String.valueOf(item.getTotalLikes()));
-
+                llLike.setId(item.getVehicleId());
+                //llLike.setClickable(true);
+                llLike.setOnClickListener(this);
+/*                if (item.getStatusId() == 1){
+                    likeimg.setImageResource(R.drawable.like_done);
+                }*/
 
                 //Glide.with(context).load("http://103.134.88.13:1022/"+item.getAttachImage()).into(iv_Sub_pic);
                 try {
@@ -136,7 +167,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                     }
                 });
                 //Utilities.showLogcatMessage("ImageInfo"+item.getDocumentDescription());
-                Utilities.showLogcatMessage("TotalLike " + item.getTotalLikes());
+                //Utilities.showLogcatMessage("TotalLike " + item.getTotalLikes());
 
             } catch (Exception e) {
                 Utilities.showLogcatMessage(" Ex date" + e.toString());
@@ -146,6 +177,61 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
         }
 
 
+        Integer vehicleId;
+
+        @Override
+        public void onClick(View v) {
+            Utilities.showLogcatMessage("Clicked ID : " + v.getId() + " Username : " + UserName);
+            vehicleId = v.getId();
+
+            likesSubmitToServer();
+        }
+
+        public void likesSubmitToServer() {
+
+            final Likes model = new Likes ();
+
+            model.setUserName(UserName);
+            model.setVehicleId(vehicleId);
+
+            RetrofitService retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
+            Call<String> registrationRequest = retrofitService.SaveLikes(SharedPrefManager.BEARER + token, model);
+            registrationRequest.enqueue(new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    try {
+                        if (response.body() == "1") {
+                            Utilities.showLogcatMessage("like response : " + response.body());
+                            Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
+                            Integer updateTotalLike = (currentTotalLike + 1);
+                            liketext.setText(updateTotalLike.toString());
+
+                        } else {
+                            Utilities.showLogcatMessage("like response" + response.body());
+                            Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
+                            Integer updateTotalLike = (currentTotalLike - 1);
+                            liketext.setText(updateTotalLike.toString());
+                        }
+                    } catch (Exception e) {
+                        Utilities.showLogcatMessage("Exception 2" + e.toString());
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    Utilities.showLogcatMessage("Fail to connect " + t.toString());
+                    //progress.dismiss();
+                    //Toast.makeText(ItemWiseNewsFeedActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
+
+
+        }
     }
+
 
 }

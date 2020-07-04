@@ -84,6 +84,8 @@ public class FoundAndRecoveredDetailsActicity extends AppCompatActivity implemen
 
         String profileName = SharedPrefManager.getInstance(this).getProfileName();
         String imageUrl = SharedPrefManager.getInstance(this).getImageUrl();
+
+
         profile_Name.setText(profileName);
         if(imageUrl==""){
             user_prifile_pic.setImageResource(R.drawable.ic_human_db);

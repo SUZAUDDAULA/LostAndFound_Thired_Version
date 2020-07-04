@@ -153,20 +153,19 @@
             android:layout_height="@dimen/spacing_medium" />
 
 
-
-        <Button
-            android:id="@+id/btnLogIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/blue_gradient_background"
-            android:text="@string/log_in"
-            android:layout_gravity="end"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textSize="22sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"/>
+            <Button
+                android:id="@+id/btnLogIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:background="@drawable/blue_gradient_background"
+                android:padding="10dp"
+                android:text="@string/log_in"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/ivBellowLine"

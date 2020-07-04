@@ -47,6 +47,10 @@ public class NewsFeedViewModel {
     @Expose
     private Integer totalComments;
 
+    @SerializedName("statusId")
+    @Expose
+    private Integer statusId;
+
     public String getUserName() {
         return userName;
     }
@@ -146,6 +150,13 @@ public class NewsFeedViewModel {
 
     public void setTotalComments(Integer totalComments) {
         this.totalComments = totalComments;
+    }
+
+    public Integer getStatusId() {
+        return statusId;
+    }
+    public void setStatusId(Integer statusId) {
+        this.statusId = statusId;
     }
 
 }

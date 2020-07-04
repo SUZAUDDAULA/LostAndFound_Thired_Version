@@ -22,6 +22,7 @@ public class SharedPrefManager {
 
     public static String KEY_LOGIN_WITH = "loginwith";
     public static String KEY_PROFILE_NAME="profilename";
+    public static String KEY_USER_ROLE="roles";
     public static String KEY_IMAGE_URI="imageuri";
 
 
@@ -111,6 +112,14 @@ public class SharedPrefManager {
         editor.apply();
     }
 
+    public void saveUserRoles(String roles) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_USER_ROLE, roles);
+        editor.apply();
+    }
+
     public void clearProfileName() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
                 Context.MODE_PRIVATE);
@@ -121,6 +130,12 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
                 Context.MODE_PRIVATE);
         return sharedPreferences.getString(KEY_PROFILE_NAME, null);
+    }
+
+    public String getUserRoles() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
+                Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_USER_ROLE, null);
     }
 
     public void saveLogInWith(String loginwith) {
