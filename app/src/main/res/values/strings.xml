@@ -1351,7 +1351,8 @@ You can also use the following media to communicate with us</string>
     <string name="please_confirm_that_the_capture_is_clear">Please confirm that the picture is clear</string>
     <string name="submit">Submit</string>
 
-    <string name="facebook_app_id">3217007335012533</string>
-    <string name="fb_login_protocol_scheme">fb3217007335012533</string>
+    <string name="facebook_app_id">1803414596448942</string>
+    <string name="fb_login_protocol_scheme">fb1803414596448942</string>
+
 
 </resources>

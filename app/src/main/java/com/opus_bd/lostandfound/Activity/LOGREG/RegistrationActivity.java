@@ -146,7 +146,6 @@ public class RegistrationActivity extends AppCompatActivity{
     @BindView(R.id.etConfirmPassWord)
     EditText etConfirmPassWord;
 
-
     @BindView(R.id.llReg)
     LinearLayout llReg;
 
@@ -157,7 +156,6 @@ public class RegistrationActivity extends AppCompatActivity{
     public String otp;
     @BindView(R.id.tvTimer)
     TextView tvTimer;
-
 
     @BindView(R.id.etOtp)
     TextInputEditText etOtp;
@@ -192,9 +190,7 @@ public class RegistrationActivity extends AppCompatActivity{
         llReg.setVisibility(View.VISIBLE);
         llOTP.setVisibility(View.GONE);
         iv1.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorAccent));
-
     }
-
 
 
     @Override
@@ -213,7 +209,6 @@ public class RegistrationActivity extends AppCompatActivity{
     }
 
 
-
     public void  getOTP(){
         String userNAME = SharedPrefManager.getInstance(RegistrationActivity.this).getUser();
         String otpCODE = SharedPrefManager.getInstance(RegistrationActivity.this).getotp();
@@ -221,9 +216,6 @@ public class RegistrationActivity extends AppCompatActivity{
             submitOTP(userNAME, otpCODE);
         }
     }
-
-
-
 
     /*OTP Layout*/
 
@@ -254,7 +246,6 @@ public class RegistrationActivity extends AppCompatActivity{
 
             public void onFinish() {
                 tvTimer.setText("00:00");
-
             }
 
         }.start();
@@ -275,13 +266,13 @@ public class RegistrationActivity extends AppCompatActivity{
         }
     }
 
-
     public void submitToServer() {
         Random rand = new Random();
         String id = String.format("%04d", rand.nextInt(10000));
         otp=id;
-//        OTPLayout();
-//        Toast.makeText(RegistrationActivity.this, "OTP " + otp, Toast.LENGTH_SHORT).show();
+
+        //OTPLayout();
+        //Toast.makeText(RegistrationActivity.this, "OTP " + otp, Toast.LENGTH_SHORT).show();
 
         SharedPrefManager.getInstance(RegistrationActivity.this).clearToken();
         SharedPrefManager.getInstance(RegistrationActivity.this).clearotp();
@@ -343,7 +334,6 @@ public class RegistrationActivity extends AppCompatActivity{
 
                             } else {
                                 Toast.makeText(RegistrationActivity.this, "Otp Not get", Toast.LENGTH_SHORT).show();
-
                             }
 
 
@@ -432,5 +422,12 @@ public class RegistrationActivity extends AppCompatActivity{
         });
     }
 
+    public void onClick(View view) {
 
+
+    }
+
+    public void onClickFacebook(View view) {
+
+    }
 }
