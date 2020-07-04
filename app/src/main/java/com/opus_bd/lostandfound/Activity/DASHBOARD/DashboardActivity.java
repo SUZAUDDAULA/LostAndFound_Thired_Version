@@ -294,7 +294,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     }
 
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         try {

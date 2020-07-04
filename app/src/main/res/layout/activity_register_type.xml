@@ -115,7 +115,7 @@
 
 
             <RelativeLayout
-                android:id="@+id/FrameLayout1"
+                android:id="@+id/frameLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
@@ -142,7 +142,7 @@
                 <TextView
                     android:id="@+id/sign_in_button_facebook"
                     style="@style/RegistrationOptionTextStyle"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/fb_icon"
                     android:layout_marginLeft="25dp"
@@ -150,6 +150,14 @@
                     android:layout_centerInParent="true"
                     android:text="Sign Up With Google"
                     android:textColor="@android:color/white" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/progress_bar_facebook"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"></ProgressBar>
 
             </RelativeLayout>
 

@@ -8,16 +8,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -30,30 +26,21 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.opus_bd.lostandfound.Activity.DASHBOARD.DashboardActivity;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.opus_bd.lostandfound.Model.User.RegistrationModel;
 import com.opus_bd.lostandfound.Model.User.UserAuthModel;
 import com.opus_bd.lostandfound.R;
 import com.opus_bd.lostandfound.RetrofitService.RetrofitClientInstance;
 import com.opus_bd.lostandfound.RetrofitService.RetrofitService;
-import com.opus_bd.lostandfound.Utils.Constants;
 import com.opus_bd.lostandfound.Utils.Utilities;
 import com.opus_bd.lostandfound.sharedPrefManager.SharedPrefManager;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Arrays;
-import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -78,6 +65,9 @@ public class RegisterTypeActivity extends AppCompatActivity {
     //LoginButton loginButton;
     LoginButton login_button_fb_2;
     TextView fb;
+    RelativeLayout frameLayout1;
+    ProgressBar progress_bar_facebook;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,10 +100,22 @@ public class RegisterTypeActivity extends AppCompatActivity {
         findViewById(R.id.profile).setVisibility(View.GONE);
 
         //loginButton = findViewById(R.id.login_button_fb);
+        progress_bar_facebook = findViewById(R.id.progress_bar_facebook);
+
         fb = findViewById(R.id.sign_in_button_facebook);
+        frameLayout1 = findViewById(R.id.frameLayout1);
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                login_button_fb_2.performClick();
+                progress_bar_facebook.setVisibility(View.VISIBLE);
+            }
+        });
+
+        frameLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                progress_bar_facebook.setVisibility(View.VISIBLE);
                 login_button_fb_2.performClick();
             }
         });
@@ -206,7 +208,6 @@ public class RegisterTypeActivity extends AppCompatActivity {
         parameters.putString("fields", "first_name,last_name,email,id");
         request.setParameters(parameters);
         request.executeAsync();
-
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
@@ -288,8 +289,8 @@ public class RegisterTypeActivity extends AppCompatActivity {
             public void onFailure(Call<UserAuthModel> call, Throwable t) {
                 Utilities.showLogcatMessage("Fail to connect " + t.toString());
                 Toast.makeText(RegisterTypeActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
-
             }
+
         });
     }
 
@@ -347,6 +348,8 @@ public class RegisterTypeActivity extends AppCompatActivity {
                     //Toast.makeText(RegistrationActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                     if (response.body() != null) {
 
+                        progress_bar_facebook.setVisibility(View.GONE);
+
                         Intent intent=new Intent(RegisterTypeActivity.this, DashboardActivity.class);
                         startActivity(intent);
 
@@ -378,5 +381,4 @@ public class RegisterTypeActivity extends AppCompatActivity {
             Utilities.showLogcatMessage("Exception " + e.toString());
         }
     }
-
 }
