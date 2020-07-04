@@ -28,11 +28,47 @@
         <View
             android:layout_width="0dp"
             android:layout_height="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sign_with_google"
+            style="@style/RegistrationOption"
+            android:layout_alignParentLeft="true"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardBackgroundColor="#C2252C">
+
+<!--            <com.google.android.gms.common.SignInButton-->
+<!--                android:id="@+id/sign_in_button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="70dp"/>-->
+
+        </androidx.cardview.widget.CardView>
+
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_google"
             style="@style/RegistrationOption"
             android:layout_alignParentLeft="true"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="0dp"
             app:cardElevation="8dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
@@ -49,16 +85,16 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_google" />
+                    android:src="@drawable/googlelogin" />
 
                 <TextView
+                    android:id="@+id/sign_in_button"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Google"
-                    android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -69,7 +105,7 @@
             android:id="@+id/reg_with_facebook"
             style="@style/RegistrationOption"
             android:layout_alignParentLeft="true"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="0dp"
             app:cardElevation="8dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
@@ -82,31 +118,37 @@
                 android:layout_margin="16dp"
                 android:orientation="horizontal">
 
-                <ImageView
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="22dp"/>
+                <!--<ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_facebook2" />
+                    android:src="@drawable/facebooklogin" />
 
                 <TextView
                     android:id="@+id/tvFacebook"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left"
                     android:text="Sign Up With Facebook"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white" />-->
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_email"
             style="@style/RegistrationOption"
             android:layout_alignParentLeft="true"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="0dp"
             app:cardElevation="8dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
@@ -123,26 +165,26 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_email2" />
+                    android:src="@drawable/emaillogin" />
 
                 <TextView
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Email"
-                    android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_mobile"
             style="@style/RegistrationOption"
             android:layout_alignParentLeft="true"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="0dp"
             app:cardElevation="8dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -158,17 +200,16 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_mobile" />
+                    android:src="@drawable/phonelogin" />
 
                 <TextView
                     android:id="@+id/tvMobile"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left"
                     android:text="Sign Up With Mobile"
-                    android:textAlignment="center"
                     android:textColor="@android:color/black" />
 
             </LinearLayout>
@@ -176,6 +217,7 @@
         </androidx.cardview.widget.CardView>
 
         <RelativeLayout
+            android:id="@+id/rl_terms_and_condition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

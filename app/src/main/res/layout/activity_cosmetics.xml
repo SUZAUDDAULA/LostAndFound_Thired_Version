@@ -51,7 +51,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/cosmetics_information"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -313,7 +312,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/identityInfo"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -423,7 +421,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/theftplaceAndTimeInfo"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 

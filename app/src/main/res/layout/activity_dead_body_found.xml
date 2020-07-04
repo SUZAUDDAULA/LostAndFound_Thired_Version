@@ -48,7 +48,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/person_information"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -492,7 +491,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/deadbody_location"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -710,7 +708,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/physical_details"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -1170,7 +1167,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/dress_descrioption"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -1439,7 +1435,6 @@
                                 android:layout_marginLeft="10dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/dna_profile"
-                                android:textAppearance="@style/TextAppearance.CastIntroOverlay.Title"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
