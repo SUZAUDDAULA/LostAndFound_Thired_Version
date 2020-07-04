@@ -65,12 +65,18 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
     String token;
     String UserName;
 
+   /* public interface OnItemClickListener {
+        void onItemClick( int position);
+
+    }
+
+    private OnItemClickListener mListener;*/
+
     public NewsFeedAdapter(List<NewsFeedViewModel> items, String token, String UserName, Context context) {
         this.items = items;
         this.token = token;
         this.UserName = UserName;
         this.context = context;
-
     }
 
     @Override
@@ -177,6 +183,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
         public void onClick(View v) {
             Utilities.showLogcatMessage("Clicked ID : " + v.getId() + " Username : " + UserName);
             vehicleId = v.getId();
+
             likesSubmitToServer();
         }
 
@@ -192,25 +199,23 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
             registrationRequest.enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
-                    //Toast.makeText(ItemWiseNewsFeedActivity.this, response.body(), Toast.LENGTH_LONG).show();
                     try {
-                        if (response.body() == "1" || response.body() == "0") {
-                            Utilities.showLogcatMessage("response" + response.body());
-                            //progress.dismiss();
-
-                        /*Intent intent = new Intent(ItemWiseNewsFeedActivity.this, ItemWiseNewsFeedActivity.class);
-                        startActivity(intent);
-                        finish();*/
+                        if (response.body() == "1") {
+                            Utilities.showLogcatMessage("like response : " + response.body());
+                            Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
+                            Integer updateTotalLike = (currentTotalLike + 1);
+                            liketext.setText(updateTotalLike.toString());
 
                         } else {
-                            //Toast.makeText(ItemWiseNewsFeedActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+                            Utilities.showLogcatMessage("like response" + response.body());
+                            Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
+                            Integer updateTotalLike = (currentTotalLike - 1);
+                            liketext.setText(updateTotalLike.toString());
                         }
                     } catch (Exception e) {
                         Utilities.showLogcatMessage("Exception 2" + e.toString());
-                        //progress.dismiss();
-                        //Toast.makeText(ItemWiseNewsFeedActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
                     }
-                    //            showProgressBar(false);
+
                 }
 
                 @Override
@@ -221,6 +226,10 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
 
                 }
             });
+
+
+
+
         }
     }
 
