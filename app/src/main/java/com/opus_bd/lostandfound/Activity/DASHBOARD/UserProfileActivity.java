@@ -1,6 +1,9 @@
 package com.opus_bd.lostandfound.Activity.DASHBOARD;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,9 +22,14 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.opus_bd.lostandfound.Activity.ENRTY.FoundAndRecoveredDetailsActicity;
 import com.opus_bd.lostandfound.Activity.ENRTY.VehicleEntryActivity;
 import com.opus_bd.lostandfound.Activity.LOGREG.LoginActivity;
 import com.opus_bd.lostandfound.Activity.LOGREG.RegisterTypeActivity;
+import com.opus_bd.lostandfound.Activity.LOGREG.RegistrationActivity;
 import com.opus_bd.lostandfound.Model.Dashboard.ApplicationUser;
 import com.opus_bd.lostandfound.Model.User.RegistrationModel;
 import com.opus_bd.lostandfound.Model.User.UserAuthModel;
@@ -54,6 +63,9 @@ public class UserProfileActivity extends AppCompatActivity {
     @BindView(R.id.user_prifile_pic)
     ImageView user_prifile_pic;
 
+    @BindView(R.id.ivappLogo)
+    ImageView ivappLogo;
+
     @BindView(R.id.profile_Name)
     TextView profile_Name;
 
@@ -70,6 +82,7 @@ public class UserProfileActivity extends AppCompatActivity {
     EditText etConfirmPassWord;
     ProgressDialog progress;
     String fileInfo,fileName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,14 +142,21 @@ public class UserProfileActivity extends AppCompatActivity {
         progress.setMessage("Data Processing.... ");
     }
 
+    @OnClick(R.id.ivappLogo)
+    public void ivappLogo()
+    {
+        Intent intent = new Intent(UserProfileActivity.this, DashboardActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @OnClick(R.id.btnPost)
     public void btnPost() {
         submitToServer();
     }
 
-
     public void submitToServer() {
-        progress.show();
+        //progress.show();
         String token = SharedPrefManager.getInstance(this).getToken();
         String UserName = SharedPrefManager.getInstance(this).getUser();
         String UserFrom = SharedPrefManager.getInstance(this).getLogInWith();
@@ -147,7 +167,7 @@ public class UserProfileActivity extends AppCompatActivity {
         String personEmail=etEmail.getText().toString();
         String phoneNo=etPhone.getText().toString();
 
-        final UserProfileModel model = new UserProfileModel("Bangladeshi",1,"1234321",1,phoneNo,UserName,personEmail,password,conPassword,"",fullName,UserFrom,fileInfo);
+        final UserProfileModel model = new UserProfileModel("Bangladeshi",1,"1234321",1,phoneNo,UserName,personEmail,"123456","123456","",fullName,UserFrom,fileInfo);
 
         Utilities.showLogcatMessage("UserProfileModel :" + model.toString());
 
@@ -157,24 +177,33 @@ public class UserProfileActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<RegistrationModel> call, Response<RegistrationModel> response) {
                 try {
-                    Utilities.showLogcatMessage("Exception Reg : " + response.body());
+                    Utilities.showLogcatMessage("Update Reg : " + response.body());
                     //Toast.makeText(RegistrationActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                     if (response.body() != null) {
-                        progress.dismiss();
-                        Uri imageUri= Uri.parse(response.body().getImagePath());
-                        user_prifile_pic.setImageURI(imageUri);
-                        profile_Name.setText(response.body().getFullName());
-                        SharedPrefManager.getInstance(UserProfileActivity.this).saveProfileName(response.body().getFullName());
-                        SharedPrefManager.getInstance(UserProfileActivity.this).saveImageUrl(String.valueOf(imageUri));
+                        /*progress.dismiss();*/
+
+                        if(response.body().getImagePath() != null){
+
+                            Uri imageUri= Uri.parse(response.body().getImagePath());
+                            user_prifile_pic.setImageURI(imageUri);
+
+                            SharedPrefManager.getInstance(UserProfileActivity.this).saveImageUrl(String.valueOf(imageUri));
+                        }
+                        if(response.body().getFullName() != null){
+
+                            profile_Name.setText(response.body().getFullName());
+                            SharedPrefManager.getInstance(UserProfileActivity.this).saveProfileName(response.body().getFullName());
+                        }
+                        Toast.makeText(UserProfileActivity.this, "Update Successfully!", Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(UserProfileActivity.this, DashboardActivity.class);
                         startActivity(intent);
                     }
                     else {
-                        progress.dismiss();
+                       /* progress.dismiss();*/
                         Toast.makeText(UserProfileActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
-                    progress.dismiss();
+                    /*progress.dismiss();*/
                     Utilities.showLogcatMessage("Exception 2" + e.toString());
                     Toast.makeText(UserProfileActivity.this, "Something went Wrong! Please try again later", Toast.LENGTH_SHORT).show();
                 }
@@ -182,7 +211,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RegistrationModel> call, Throwable t) {
-                progress.dismiss();
+              /*  progress.dismiss();*/
                 Utilities.showLogcatMessage("Fail to connect " + t.toString());
                 Toast.makeText(UserProfileActivity.this, "Fail to connect " + t.toString(), Toast.LENGTH_SHORT).show();
 

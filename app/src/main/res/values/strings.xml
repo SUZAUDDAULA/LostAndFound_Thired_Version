@@ -27,6 +27,7 @@
     <string name="or_new_user">Or New User?</string>
     <string name="nidnum">National ID Number</string>
     <string name="nid">National ID</string>
+    <string name="fullName">Full Name</string>
     <string name="bin">Birth Registration </string>
     <string name="binnum">Birth Registration Number</string>
     <string name="passport">Passport </string>
@@ -1321,7 +1322,7 @@ You can also use the following media to communicate with us</string>
     <string name="password_strength_very_strong">Very Strong</string>
     <string name="select_passport">Tap the passport option below</string>
     <string name="your_password_must_be_at_least_6_characters_with_at_least_1_number_and_1_special_character">Your password must be at least 6 characters</string>
-    <string name="your_mobile_number_must_be_11_characters">11 digit mobile number</string>
+    <string name="your_mobile_number_must_be_11_characters">Mobile number - for user id</string>
     <string name="post_code">Post Code</string>
     <string name="select_region">Select Region</string>
     <string name="roaming">Roaming</string>

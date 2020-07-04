@@ -200,13 +200,21 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
                     try {
-                        if (response.body() == "1") {
+                        if (Integer.valueOf(response.body()) == 1) {
                             Utilities.showLogcatMessage("like response : " + response.body());
                             Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
                             Integer updateTotalLike = (currentTotalLike + 1);
                             liketext.setText(updateTotalLike.toString());
 
-                        } else {
+                        }
+                        else if (Integer.valueOf(response.body()) == 3) {
+                            Utilities.showLogcatMessage("like response : " + response.body());
+                            Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
+                            Integer updateTotalLike = (currentTotalLike + 1);
+                            liketext.setText(updateTotalLike.toString());
+
+                        }
+                        else {
                             Utilities.showLogcatMessage("like response" + response.body());
                             Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
                             Integer updateTotalLike = (currentTotalLike - 1);

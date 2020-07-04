@@ -39,6 +39,51 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:id="@+id/rrFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/ivFullName"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_user" />
+
+                <View
+                    android:id="@+id/vFullName"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/ivFullName"
+                    android:background="@color/colorPrimary"
+                    android:rotation="45" />
+
+                <!--app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"-->
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@id/vFullName"
+                    android:background="@android:color/white"
+                    android:hint="@string/fullName"
+                    android:maxLength="11"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/rrREGNid"
@@ -86,8 +131,6 @@
 
 
             </RelativeLayout>
-
-
 
             <RelativeLayout
                 android:id="@+id/rrPassWord"

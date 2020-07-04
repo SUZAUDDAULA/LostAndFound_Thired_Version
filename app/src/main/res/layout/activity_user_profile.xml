@@ -170,6 +170,7 @@
 
                                 <EditText
                                     android:id="@+id/etPhone"
+                                    android:editable="false"
                                     style="@style/InformationEntryEditText" />
                             </TableRow>
 
@@ -239,7 +240,7 @@
 
                 <Button
                     android:id="@+id/btnPost"
-                    android:text="Post"
+                    android:text="Update"
                     style="@style/BtnNext" />
 
                 <View

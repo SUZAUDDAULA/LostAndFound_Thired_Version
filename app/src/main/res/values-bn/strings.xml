@@ -19,6 +19,7 @@
     <string name="foreigner">বিদেশী</string>
     <string name="citizen">বাংলাদেশী</string>
     <string name="log_in">সাইন ইন</string>
+    <string name="fullName">পুরো নাম</string>
     <string name="registration">নিবন্ধন</string>
     <string name="password_forget">পাসওয়ার্ড ভুলে গেছেন</string>
     <string name="remember_password">পাসওয়ার্ড মনে রাখুন</string>
@@ -1270,7 +1271,7 @@
     <string name="password_strength_very_strong">খুব শক্তিশালী</string>
     <string name="select_passport">নিচের পাসপোর্ট অপশনটি ট্যাপ করুন</string>
     <string name="your_password_must_be_at_least_6_characters_with_at_least_1_number_and_1_special_character">আপনার পাসওয়ার্ড কমপক্ষে 6 টি অক্ষর হতে হবে।</string>
-    <string name="your_mobile_number_must_be_11_characters">11 ডিজিটের মোবাইল নম্বর</string>
+    <string name="your_mobile_number_must_be_11_characters">মোবাইল নম্বর - ব্যবহারকারী আইডির জন্য</string>
     <string name="post_code">পোস্ট কোড</string>
     <string name="select_region">দেশ নির্বাচন করুন</string>
     <string name="roaming">রোমিং</string>
@@ -1285,6 +1286,9 @@
     <string name="resend">পুনরায় পাঠান</string>
     <string name="back">পূর্ববর্তী</string>
     <string name="otpverified">ওটিপি যাচাই</string>
+
+    <string name="facebook_app_id">3217007335012533</string>
+    <string name="fb_login_protocol_scheme">fb3217007335012533</string>
 
     <!--   Search-->
     <string name="vehicle_search_information">যানবাহন অনুসন্ধান তথ্য</string>

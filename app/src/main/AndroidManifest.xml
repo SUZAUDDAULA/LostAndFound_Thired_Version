@@ -67,11 +67,14 @@
         <activity android:name=".Activity.OtherItem.BagActivity" />
         <activity android:name=".Activity.OtherItem.DocumentActivity" />
         <activity android:name=".Activity.OtherItem.PetActivity" />
+        <activity android:name=".Activity.DASHBOARD.UserProfileActivity" />
         <activity android:name=".Activity.OtherItem.UmbrellaActivity" />
         <activity android:name=".Activity.OtherItem.KeysInformationActivity" />
         <activity android:name=".Activity.OtherItem.MobilePhoneActivity" />
         <activity android:name=".Activity.OtherItem.OtherItemDetailsActivity" />
         <activity android:name=".Activity.LOGREG.ForgetPasswordActivity" />
+        <activity android:name=".Activity.ENRTY.FoundAndRecoveredDetailsActicity" />
+        <activity android:name=".Activity.DASHBOARD.ItemWiseNewsFeedActivity" />
         <activity android:name=".Activity.LOGREG.RegistrationActivity"></activity>
         <activity android:name=".Activity.DASHBOARD.HardwareInformationActivity" />
         <activity android:name=".Activity.OtherItem.CategoryListActivity" />
