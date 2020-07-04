@@ -31,6 +31,7 @@ public class SharedPrefManager {
     }
 
     public static synchronized SharedPrefManager getInstance(Context context) {
+
         if (mInstance == null) {
             mInstance = new SharedPrefManager(context);
         }
@@ -104,11 +105,11 @@ public class SharedPrefManager {
         return sharedPreferences.getString(KEY_TOKEN, null) != null;
     }
 
-    public void saveProfileName(String profilename) {
+    public void saveProfileName(String profileName) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(KEY_PROFILE_NAME, profilename);
+        editor.putString(KEY_PROFILE_NAME, profileName);
         editor.apply();
     }
 

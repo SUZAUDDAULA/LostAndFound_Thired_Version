@@ -93,9 +93,14 @@
         <activity
             android:name=".Activity.ENRTY.InformationEntryActivity"
             android:label="@string/information_entry" />
+
         <activity
             android:name=".Activity.DASHBOARD.DashboardActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activity.ENRTY.FoundAndRecoveredDetailsActicity"/>
+        <activity android:name=".Activity.DASHBOARD.ItemWiseNewsFeedActivity"/>
+
         <activity
             android:name=".Activity.LOGREG.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -129,6 +134,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
 
     </application>
 

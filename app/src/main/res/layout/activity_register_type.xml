@@ -70,6 +70,7 @@
             android:layout_alignParentLeft="true"
             app:cardCornerRadius="0dp"
             app:cardElevation="8dp"
+            android:layout_height="70dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:cardBackgroundColor="#C2252C">
@@ -107,40 +108,50 @@
             android:layout_alignParentLeft="true"
             app:cardCornerRadius="0dp"
             app:cardElevation="8dp"
+            android:layout_height="70dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:cardBackgroundColor="#3B579A">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="horizontal">
 
-                <com.facebook.login.widget.LoginButton
-                    android:id="@+id/login_button_fb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="22dp"/>
-                <!--<ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/facebooklogin" />
+            <RelativeLayout
+                android:id="@+id/FrameLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_button_fb_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:id="@+id/fb_icon"
+                    android:src="@drawable/facebook"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+                </ImageView>
 
                 <TextView
-                    android:id="@+id/tvFacebook"
+                    android:id="@+id/sign_in_button_facebook"
                     style="@style/RegistrationOptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="left"
-                    android:text="Sign Up With Facebook"
-                    android:textColor="@android:color/white" />-->
+                    android:layout_toRightOf="@id/fb_icon"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Sign Up With Google"
+                    android:textColor="@android:color/white" />
 
-            </LinearLayout>
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -176,10 +187,10 @@
                     android:gravity="left"
                     android:text="Sign Up With Email"
                     android:textColor="@android:color/white" />
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/reg_with_mobile"
@@ -242,7 +253,6 @@
                 android:text="I have read and accepted the Terms and Conditons"
                 android:textAlignment="center"></TextView>
         </RelativeLayout>
-
 
     </LinearLayout>
 
