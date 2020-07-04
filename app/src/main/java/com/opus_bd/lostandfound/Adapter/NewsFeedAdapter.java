@@ -207,17 +207,18 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
                             liketext.setText(updateTotalLike.toString());
 
                         }
-                        else if (Integer.valueOf(response.body()) == 3) {
-                            Utilities.showLogcatMessage("like response : " + response.body());
+                        else if (Integer.valueOf(response.body()) == 0) {
+
+                            Utilities.showLogcatMessage("like response" + response.body());
                             Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
-                            Integer updateTotalLike = (currentTotalLike + 1);
+                            Integer updateTotalLike = (currentTotalLike - 1);
                             liketext.setText(updateTotalLike.toString());
 
                         }
                         else {
-                            Utilities.showLogcatMessage("like response" + response.body());
+                            Utilities.showLogcatMessage("like response : " + response.body());
                             Integer currentTotalLike = Integer.valueOf(liketext.getText().toString());
-                            Integer updateTotalLike = (currentTotalLike - 1);
+                            Integer updateTotalLike = (currentTotalLike + 1);
                             liketext.setText(updateTotalLike.toString());
                         }
                     } catch (Exception e) {
