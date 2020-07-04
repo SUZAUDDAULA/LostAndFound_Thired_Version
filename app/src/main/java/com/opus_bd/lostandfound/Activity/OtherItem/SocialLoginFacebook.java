@@ -44,7 +44,6 @@ public class SocialLoginFacebook extends AppCompatActivity {
     TextView txtUsername, txtEmail;
     String image_url_public;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,6 +130,7 @@ public class SocialLoginFacebook extends AppCompatActivity {
     }
 
     private void getUserProfile(AccessToken currentAccessToken) {
+
         GraphRequest request = GraphRequest.newMeRequest(
                 currentAccessToken, new GraphRequest.GraphJSONObjectCallback() {
                     @Override

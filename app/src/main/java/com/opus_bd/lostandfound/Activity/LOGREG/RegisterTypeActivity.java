@@ -54,6 +54,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterTypeActivity extends AppCompatActivity {
+
     GoogleSignInClient mGoogleSignInClient;
 
     @BindView(R.id.sign_in_button)
@@ -95,7 +96,7 @@ public class RegisterTypeActivity extends AppCompatActivity {
         findViewById(R.id.profile).setVisibility(View.GONE);
         //findViewById(R.id.userid).setVisibility(View.GONE);
 
-        fbLogin =  findViewById(R.id.login_button);
+        fbLogin =  findViewById(R.id.login_button_fb);
         //userid =  findViewById(R.id.userid);
         profile =  findViewById(R.id.profile);
 
@@ -182,6 +183,7 @@ public class RegisterTypeActivity extends AppCompatActivity {
         String imagePath="";
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+
         if (acct != null) {
             personName = acct.getDisplayName();
             personEmail = acct.getEmail();
