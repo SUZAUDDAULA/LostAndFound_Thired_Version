@@ -6,7 +6,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
     //private static final String BASE_URL = "http://103.134.88.13:1022/";
-    private static final String BASE_URL = "https://704a45c4199b.ngrok.io/";
+    private static final String BASE_URL = "https://efee77d681e1.ngrok.io/";
     private static Retrofit retrofit = null;
 
     private static Retrofit getClient() {

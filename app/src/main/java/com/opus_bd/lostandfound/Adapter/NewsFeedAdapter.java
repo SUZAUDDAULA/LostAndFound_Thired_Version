@@ -199,6 +199,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.Transa
             registrationRequest.enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
+
+                    Utilities.showLogcatMessage("like response : " + response.body());
+
                     try {
                         if (Integer.valueOf(response.body()) == 1) {
                             Utilities.showLogcatMessage("like response : " + response.body());
